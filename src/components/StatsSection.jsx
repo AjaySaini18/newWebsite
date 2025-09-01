@@ -24,8 +24,8 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="pt-10 pb-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="pt-7 pb-20 bg-gray-50 font-gilroy">
+      <div className="container mx-auto px-24">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">

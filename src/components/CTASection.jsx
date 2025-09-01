@@ -48,26 +48,26 @@ const CTASection = () => {
 
   return (
     <section
-      className="relative w-full pt-15 pb-20 lg:px-28 bg-cover bg-center"
+      className="relative w-full pt-15 pb-20 lg:px-24 bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/bg_casestudy.png')" }}
     >
       <div className="max-w-[1676px] mx-auto">
         {/* Heading + Arrows */}
-        <div className="flex items-center justify-between mb-12">
-          <h2 className="text-2xl md:text-[34px] font-gilroy font-semibold leading-[47px] text-white">
+        <div className="flex items-center justify-between mb-6">
+          <h2 className="text-xl md:text-[26px] font-gilroy font-semibold leading-[47px] text-white">
             Partnership Success Stories, In Their Own Words
           </h2>
 
-          <div className="flex gap-4">
+          <div className="flex gap-1">
             <button
               onClick={prevSlide}
-              className="flex items-center justify-center w-[55px] h-[55px] rounded-full bg-[#1E1E1E] hover:bg-[#333]"
+              className="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#1E1E1E] hover:bg-[#333]"
             >
               <ChevronLeft className="text-white w-6 h-6" />
             </button>
             <button
               onClick={nextSlide}
-              className="flex items-center justify-center w-[55px] h-[55px] rounded-full bg-[#1E1E1E] hover:bg-[#333]"
+              className="flex items-center justify-center w-[40px] h-[40px] rounded-full bg-[#1E1E1E] hover:bg-[#333]"
             >
               <ChevronRight className="text-white w-6 h-6" />
             </button>
@@ -85,23 +85,23 @@ const CTASection = () => {
             {testimonials.map((item, index) => (
               <div
                 key={item.id}
-                className={`min-w-[66.66%] md:min-w-[50%] lg:min-w-[70%] px-4 transition-opacity duration-500 ${
-                  index === current ? "opacity-100" : "opacity-60"
+                className={`min-w-[66.66%] md:min-w-[50%] lg:min-w-[70%] transition-opacity duration-500 ${
+                  index === current ? "opacity-100" : "opacity-30"
                 }`}
               >
                 <div className="bg-[#1E1E1E] rounded-2xl p-6 md:p-10 text-white h-[341px] flex flex-col justify-between shadow-lg">
                   {/* Title & Desc */}
                   <div>
-                    <h3 className="text-[22px] font-bold text-[#AFAFAF] mb-4">
+                    <h3 className="text-[18px] font-bold text-[#AFAFAF] mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-[15px] leading-[21px] text-[#D4D4D4]">
+                    <p className="text-[12px] leading-[18px] text-[#D4D4D4]">
                       {item.description}
                     </p>
                   </div>
 
                   {/* Divider */}
-                  <div className="border-t border-[#2B2B2B] my-4"></div>
+                  <div className="border-t border-[#2B2B2B]"></div>
 
                   {/* Profile & Logo */}
                   <div className="flex items-center justify-between">
@@ -109,16 +109,16 @@ const CTASection = () => {
                       <img
                         src={item.profileImg}
                         alt={item.name}
-                        className="w-[84px] h-[84px] rounded-md object-cover"
+                        className="w-[70px] h-[70px] rounded-md object-cover"
                       />
                       <div>
-                        <p className="text-[16px] font-semibold text-white">
+                        <p className="text-[12px] font-semibold text-[#D4D4D4]">
                           {item.name}
                         </p>
-                        <p className="text-[14px] text-[#AFAFAF]">
+                        <p className="text-[15px] text-[#D4D4D4]">
                           {item.role}
                         </p>
-                        <p className="text-[14px] font-semibold text-white">
+                        <p className="text-[12px] text-[#D4D4D4]">
                           {item.company}
                         </p>
                       </div>
@@ -127,7 +127,7 @@ const CTASection = () => {
                     <img
                       src={item.companyLogo}
                       alt="Company Logo"
-                      className="w-[163px] h-[32px] object-contain"
+                      className="w-[153px] h-[28px] object-contain"
                     />
                   </div>
                 </div>
