@@ -28,3 +28,28 @@
 @theme {
   --font-gilroy: "Gilroy", sans-serif;
 }
+
+
+
+
+/* Hide scrollbar arrows in Safari/iOS */
+.custom-scroll {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #c1c1c1 transparent; 
+}
+
+/* For WebKit (Chrome, Safari, Edge) */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px; /* Slim scrollbar */
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 4px;
+}
+.custom-scroll::-webkit-scrollbar-button {
+  display: none; /* Removes up/down arrows */
+}
+
