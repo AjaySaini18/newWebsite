@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-24 pt-44">
+      <div className="relative z-10 container mx-auto px-24 pt-40">
         {/* Heading + Right Content */}
         <div className="flex flex-col lg:flex-row justify-between items-start relative">
           {/* Headings */}
@@ -64,7 +64,7 @@ const HeroSection = () => {
         {/* Service Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-32">
           <div
-            className="relative h-[446px] w-full bg-cover bg-center overflow-hidden"
+            className="relative h-[350px] w-full bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: "url('/assets/ai.png')" }}
           >
             <div className="absolute top-6 left-6 text-white font-extrabold text-l">
@@ -72,7 +72,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div
-            className="relative h-[446px] w-full bg-cover bg-center overflow-hidden"
+            className="relative h-[350px] w-full bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: "url('/assets/appDevelopment.png')" }}
           >
             <div className="absolute top-6 left-6 text-white font-extrabold text-l">
@@ -80,7 +80,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div
-            className="relative h-[446px] w-full bg-cover bg-center overflow-hidden"
+            className="relative h-[350px] w-full bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: "url('/assets/cloudService.png')" }}
           >
             <div className="absolute top-6 left-6 text-white font-extrabold text-l">
@@ -88,7 +88,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div
-            className="relative h-[446px] w-full bg-cover bg-center overflow-hidden"
+            className="relative h-[350px] w-full bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: "url('/assets/ideation&design.png')" }}
           >
             <div className="absolute top-6 left-6 text-white font-extrabold text-l">
@@ -99,7 +99,7 @@ const HeroSection = () => {
       </div>
 
       {/* Black divider under cards */}
-      <div className="bg-black h-[100px] w-full"></div>
+      <div className="bg-black h-[90px] w-full"></div>
     </section>
   );
 };
