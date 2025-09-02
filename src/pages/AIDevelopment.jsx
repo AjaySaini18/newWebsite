@@ -6,6 +6,7 @@ import IndustriesSection from '../components/IndustriesSection'
 import CTASection from '../components/CTASection'
 import ContactCTA from '../components/ContactCTA'
 import FAQSection from '../components/FAQSection'
+import ContactSection from '../components/ContactSection'
 
 const AIDevelopment = () => {
   return (
@@ -15,6 +16,7 @@ const AIDevelopment = () => {
     <AiServiceSection/>
     <IndustriesSection/>
     <FAQSection/>
+    <ContactSection/>
     <CTASection/>
     <ContactCTA/>
     
