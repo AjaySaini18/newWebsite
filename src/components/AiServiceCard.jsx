@@ -3,15 +3,15 @@ import React from "react";
 
 const AiServiceCard = ({ icon: Icon, title, description }) => {
   return (
-    
-    <div  className="bg-white rounded-xl shadow-sm p-8">
-        <img src={Icon} alt="Service Icon" className="h-15 w-15 mx-auto mb-6" />
-        <h3 className="text-xl font-bold text-gray-800 text-center mb-4">{title}</h3>
-        <p className="text-gray-600 text-center">
-            {description}
-        </p>
+    <div className="bg-[#FCFCFC] rounded-2xl shadow-sm p-4 flex flex-col items-center text-center min-h-[220px] w-full hover:shadow-md transition">
+      <img
+        src={Icon}
+        alt={`${title} Icon`}
+        className="h-12 w-12 mb-3"
+      />
+      <h3 className="text-md font-bold text-gray-800 mb-3">{title}</h3>
+      <p className="text-[11px] text-[#585858] line-clamp-5 text-center  leading-3.5 font-medium">{description}</p>
     </div>
-   
   );
 };
 
