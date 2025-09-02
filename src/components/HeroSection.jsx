@@ -15,38 +15,26 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-24 pt-40">
-        {/* Heading + Right Content */}
-        <div className="flex flex-col lg:flex-row justify-between items-start relative">
-          {/* Headings */}
-          <div className="relative w-full lg:w-auto">
-            <h1
-              className="absolute font-extrabold text-[clamp(24px,5vw,56px)] leading-tight"
-              style={{ top: "0px", left: "0px", width: "876px", height: "98px" }}
-            >
+      <div className="relative z-10 container mx-auto px-4 sm:px-8 lg:px-24 pt-24 sm:pt-36 lg:pt-40">
+        {/* Row: Headings (left) + Right block */}
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-10">
+          {/* Left Headings */}
+          <div className="w-full lg:w-[720px]">
+            <h1 className="font-extrabold text-[clamp(22px,6vw,60px)] leading-tight sm:leading-[60px] text-left">
               CREATE. COLLABORATE.
             </h1>
-
-            <h1
-              className="absolute font-extrabold text-[clamp(24px,5vw,56px)] leading-tight bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-              style={{
-                top: "75px",
-                left: "120px",
-                width: "785px",
-                height: "98px",
-              }}
-            >
+            <h1 className="mt-2 sm:mt-4 font-extrabold text-[clamp(22px,6vw,60px)] leading-tight sm:leading-[60px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-right">
               CHANGE THE WORLD.
             </h1>
           </div>
 
           {/* Right aligned text block */}
-          <div className="relative max-w-[320px] mt-20 lg:mt-0 lg:ml-auto flex flex-col">
+          <div className="max-w-full sm:max-w-[300px] flex flex-col justify-start mt-4 lg:mt-3">
             {/* Grad strip */}
             <div className="w-[54px] h-[5px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 mb-3"></div>
 
             {/* Text */}
-            <p className="text-gray-200 mb-3 leading-relaxed text-[12px] font-light">
+            <p className="text-gray-200 mb-3 leading-relaxed text-[10px] sm:text-[11px] font-light">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -54,20 +42,24 @@ const HeroSection = () => {
             </p>
 
             {/* CTA */}
-            <div className="flex items-center gap-[9px] font-bold cursor-pointer hover:opacity-80 text-sm md:text-base lg:text-sm">
+            <div className="flex items-center gap-2 font-semibold cursor-pointer hover:opacity-80 text-[12px] sm:text-[14px]">
               <span>See what we do</span>
-              <img src="/assets/arrow.svg" alt="Arrow" className="h-5 w-5" />
+              <img
+                src="/assets/arrow.svg"
+                alt="Arrow"
+                className="h-3 w-3 sm:h-4 sm:w-4"
+              />
             </div>
           </div>
         </div>
 
         {/* Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-16 sm:mt-24 lg:mt-32">
           <div
             className="relative h-[350px] w-full bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: "url('/assets/ai.png')" }}
           >
-            <div className="absolute top-6 left-6 text-white font-extrabold text-l">
+            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-extrabold text-sm sm:text-base md:text-lg">
               AI DEVELOPMENT
             </div>
           </div>
@@ -75,7 +67,7 @@ const HeroSection = () => {
             className="relative h-[350px] w-full bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: "url('/assets/appDevelopment.png')" }}
           >
-            <div className="absolute top-6 left-6 text-white font-extrabold text-l">
+            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-extrabold text-sm sm:text-base md:text-lg">
               APP DEVELOPMENT
             </div>
           </div>
@@ -83,7 +75,7 @@ const HeroSection = () => {
             className="relative h-[350px] w-full bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: "url('/assets/cloudService.png')" }}
           >
-            <div className="absolute top-6 left-6 text-white font-extrabold text-l">
+            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-extrabold text-sm sm:text-base md:text-lg">
               CLOUD SERVICES
             </div>
           </div>
@@ -91,7 +83,7 @@ const HeroSection = () => {
             className="relative h-[350px] w-full bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: "url('/assets/ideation&design.png')" }}
           >
-            <div className="absolute top-6 left-6 text-white font-extrabold text-l">
+            <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-extrabold text-sm sm:text-base md:text-lg">
               IDEATION & DESIGN
             </div>
           </div>
@@ -99,7 +91,7 @@ const HeroSection = () => {
       </div>
 
       {/* Black divider under cards */}
-      <div className="bg-black h-[90px] w-full"></div>
+      <div className="bg-black h-[50px] sm:h-[70px] lg:h-[90px] w-full"></div>
     </section>
   );
 };

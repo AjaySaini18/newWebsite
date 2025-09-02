@@ -4,14 +4,21 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './pages/Home'
 import AIDevelopment from './pages/AIDevelopment'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from './components/Navbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    {/* <Home/> */}
-    <AIDevelopment/>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/ai" element={<AIDevelopment />} />
+        </Routes>
+    </Router>
     </>
   )
 }
