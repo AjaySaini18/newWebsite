@@ -46,15 +46,12 @@
   font-style: normal;
 }
 
-<<<<<<< HEAD
-=======
 @font-face {
   font-family: "Gilroy";
   src: url("/font/gilroy/Gilroy-Thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
 }
->>>>>>> origin/main
 /* You can add Light / Medium / SemiBold too if you have them */
 
 /* ====== Tailwind @theme config ====== */
