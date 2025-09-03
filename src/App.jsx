@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import AIDevelopment from './pages/AIDevelopment'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import InsightsPage from './pages/InsightsPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,8 +19,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ai" element={<AIDevelopment />} />
+          <Route path="/insights" element={<InsightsPage />} />
         </Routes>
-    </Router>
+        <Footer />
+      </Router>
     </>
   )
 }

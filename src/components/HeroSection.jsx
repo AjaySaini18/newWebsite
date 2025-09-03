@@ -65,7 +65,7 @@ const HeroSection = () => {
           </div>
           <div
             className="relative h-[350px] w-full bg-cover bg-center overflow-hidden"
-            style={{ backgroundImage: "url('/assets/appDevelopment.png')" }}
+            style={{ backgroundImage: "url('/assets/appDevelopment.jpg')" }}
           >
             <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-extrabold text-sm sm:text-base md:text-lg">
               APP DEVELOPMENT
