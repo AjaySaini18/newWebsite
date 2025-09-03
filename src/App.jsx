@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import InsightsPage from './pages/InsightsPage'
+import Team from './pages/Team'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/ai" element={<AIDevelopment />} />
           <Route path="/insights" element={<InsightsPage />} />
+          <Route path="/team" element={<Team />} />
         </Routes>
         <Footer />
       </Router>
