@@ -7,6 +7,7 @@ import AIDevelopment from './pages/AIDevelopment'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import GetInTouch from './pages/GetInTouch'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/ai" element={<AIDevelopment />} />
+          <Route path="/get-in-touch" element={<GetInTouch/>} />
         </Routes>
         <Footer/>
     </Router>
