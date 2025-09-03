@@ -15,7 +15,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-8 lg:px-24 pt-24 sm:pt-36 lg:pt-40">
+      <div className="relative z-10 container mx-auto px-4 sm:px-8 lg:px-24 pt-20 sm:pt-36 lg:pt-40">
         {/* Row: Headings (left) + Right block */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-10">
           {/* Left Headings */}
@@ -34,7 +34,7 @@ const HeroSection = () => {
             <div className="w-[54px] h-[5px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 mb-3"></div>
 
             {/* Text */}
-            <p className="text-gray-200 mb-3 leading-relaxed text-[10px] sm:text-[11px] font-light">
+            <p className="text-gray-200 mb-3 leading-relaxed text-[10px] sm:text-[11px] font-semibold">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -54,7 +54,7 @@ const HeroSection = () => {
         </div>
 
         {/* Service Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-16 sm:mt-24 lg:mt-32">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mt-14 sm:mt-20 lg:mt-26">
           <div
             className="relative h-[350px] w-full bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: "url('/assets/ai.png')" }}
