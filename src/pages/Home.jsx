@@ -22,7 +22,6 @@ const Home = () => {
       <ClientsSection />
       <CTASection/>
       <ContactCTA/>
-      <Footer />
     </div>
   )
 }
