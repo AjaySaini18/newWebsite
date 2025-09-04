@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import GetInTouch from './pages/GetInTouch'
 import InsightsPage from './pages/InsightsPage'
+import Team from './pages/Team'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +23,7 @@ function App() {
           <Route path="/ai" element={<AIDevelopment />} />
           <Route path="/insights" element={<InsightsPage />} />
           <Route path="/get-in-touch" element={<GetInTouch/>} />
+          <Route path="/team" element={<Team />} />
         </Routes>
         <Footer/>
     </Router>

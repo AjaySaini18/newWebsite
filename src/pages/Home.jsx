@@ -8,7 +8,6 @@ import TestimonialsSection from '../components/TestimonialsSection'
 import ClientsSection from '../components/ClientsSection'
 import CTASection from '../components/CTASection'
 import ContactCTA from '../components/ContactCTA'
-import Footer from '../components/Footer'
 
 const Home = () => {
   return (

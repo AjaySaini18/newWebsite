@@ -6,38 +6,38 @@ const Navbar = () => {
 
   return (
     <nav className="font-gilroy fixed top-0 w-full bg-black/70 backdrop-blur-sm z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-24 py-3 flex justify-between items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-24 py-5 flex justify-between items-center">
         
         {/* Logo */}
         <div className="flex items-center">
-          <img src="/assets/logo.svg" alt="Logo" className="h-8 w-8 mr-2 sm:mr-3" />
-          <span className="text-white font-bold text-lg sm:text-xl">SYNOPIX</span>
+          <img src="/assets/logo.svg" alt="Logo" className="h-6 w-6 mr-2 sm:mr-3" />
+          <span className="text-white font-bold font-gilroy text-md sm:text-lg">SYNOPIX</span>
         </div>
 
         {/* Desktop Menu (only from lg:1024px and above) */}
-        <div className="hidden lg:flex space-x-6 xl:space-x-8">
+        <div className="hidden lg:flex space-x-4 font-opensans xl:space-x-5 text-[12px]">
           <div className="flex items-center text-white cursor-pointer">
             <span>What we do</span>
-            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-4 w-4 ml-1" />
+            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
           </div>
           <div className="text-white cursor-pointer">What we think</div>
           <div className="flex items-center text-white cursor-pointer">
             <span>Who we are</span>
-            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-4 w-4 ml-1" />
+            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
           </div>
           <div className="flex items-center text-white cursor-pointer">
             <span>Careers</span>
-            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-4 w-4 ml-1" />
+            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
           </div>
         </div>
 
         {/* Right section (only from lg and above) */}
-        <div className="hidden lg:flex items-center space-x-6">
-          <img src="/assets/search.svg" alt="Search" className="h-5 w-5 cursor-pointer" />
-          <div className="flex items-center text-white cursor-pointer">
-            <img src="/assets/earth-line.svg" alt="Language" className="h-5 w-5 mr-1" />
+        <div className="hidden lg:flex items-center space-x-4">
+          <img src="/assets/search.svg" alt="Search" className="h-4 w-4 cursor-pointer" />
+          <div className="flex items-center text-white cursor-pointer text-[12px]">
+            <img src="/assets/earth-line.svg" alt="Language" className="h-4 w-4 mr-1" />
             <span>India</span>
-            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-4 w-4 ml-1" />
+            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
           </div>
         </div>
 
@@ -51,7 +51,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-black/90 backdrop-blur-md px-6 py-4 space-y-4">
+        <div className="lg:hidden bg-black/90 backdrop-blur-md px-6 py-4 space-y-4 text-sm">
           <div className="flex flex-col space-y-3 text-white">
             <div className="flex items-center cursor-pointer">
               <span>What we do</span>

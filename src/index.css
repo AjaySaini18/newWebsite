@@ -3,8 +3,43 @@
 /* ====== Gilroy Font Setup ====== */
 @font-face {
   font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
+  src: url("/font/gilroy/Gilroy-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/font/gilroy/Gilroy-UltraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/font/gilroy/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/font/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/font/gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/font/gilroy/Gilroy-SemiBold.ttf") format("truetype");
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -17,42 +52,17 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/font/gilroy/Gilroy-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/font/gilroy/Gilroy-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-
-
-@font-face {
-  font-family: 'Gilroy';
-  src: url('/font/gilroy/Gilroy-Medium.ttf') format('truetype');
-  font-weight: 400;
+  src: url("/font/gilroy/Gilroy-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-Thin.ttf") format("truetype");
-  font-weight: 100;
+  src: url("/font/gilroy/Gilroy-Black.ttf") format("truetype");
+  font-weight: 900;
   font-style: normal;
 }
-/* You can add Light / Medium / SemiBold too if you have them */
 
 /* ====== Tailwind @theme config ====== */
 @theme {

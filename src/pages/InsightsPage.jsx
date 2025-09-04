@@ -3,6 +3,9 @@ import InsightsFeatureOne from '../components/InsightsFeatureOne'
 import InsightsFeatureTwo from '../components/InsightsFeatureTwo'
 import InsightsFeatureThree from '../components/InsightsFeatureThree'
 import InsightsHero from '../components/InsightsHero'
+import CTASection from '../components/CTASection'
+import ContactCTA from '../components/ContactCTA'
+
 
 const InsightsPage = () => {
   return (
@@ -11,6 +14,9 @@ const InsightsPage = () => {
       <InsightsFeatureOne />
       <InsightsFeatureTwo />
       <InsightsFeatureThree />
+      <CTASection />
+      <ContactCTA />
+
     </>
   )
 }
