@@ -4,7 +4,7 @@ import React from "react";
 const InnovationSection = () => {
   return (
     <section
-      className="relative w-full min-h-screen bg-cover bg-center px-6 sm:px-10 md:px-16 lg:px-24 py-12 md:py-16 lg:py-20"
+      className="relative w-full min-h-screen bg-cover bg-center px-6 sm:px-10 md:px-16 lg:px-24 py-12 md:py-12 lg:py-18 font-gilroy"
       style={{
         backgroundImage: "url('/assets/Rectangle-26.png')",
       }}
@@ -20,7 +20,7 @@ const InnovationSection = () => {
         </div>
 
         {/* Client Logos Grid */}
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 lg:mb-16">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 lg:mb-13">
           {["27", "28", "29", "30"].map((num) => (
             <div
               key={num}
@@ -37,7 +37,7 @@ const InnovationSection = () => {
 
         {/* Button */}
         <div className="w-full flex justify-center">
-          <button className="flex items-center justify-center gap-2 py-2.5 sm:py-3 px-5 sm:px-6 w-full max-w-[200px] sm:max-w-[220px] rounded-lg border border-white text-white font-heading font-medium text-base sm:text-lg hover:bg-white/10 transition-all duration-300">
+          <button className="hover:text-black hover:bg-white text-[20px]  flex items-center justify-center gap-2 py-2 w-full max-w-[200px] sm:max-w-[150px] rounded-md border border-white text-white font-heading font-normal text-base sm:text-sm  transition-all duration-300">
             See All Testimonials
           </button>
         </div>

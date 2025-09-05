@@ -2,12 +2,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="relative w-full bg-[#F9F9F9] font-gilroy">
+    <footer className="relative w-full font-gilroy">
       {/* Top Section */}
-      <div className="max-w-full mx-auto px-6 md:px-12 lg:px-24 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-8">
+      <div className="bg-[#F4F4F4] px-6 md:px-12 lg:px-24 py-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-16">
           {/* Logo + Address */}
-          <div className="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 space-y-4">
+          <div className="space-y-4">
             {/* Logo */}
             <div className="flex items-center gap-2">
               <img src="/assets/logo.svg" alt="Synopix Logo" className="w-6 h-6" />
@@ -35,8 +35,8 @@ const Footer = () => {
           </div>
 
           {/* About */}
-          <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
-            <h3 className="text-[16px] font-semibold mb-2 text-[#525252]">About</h3>
+          <div className="min-w-[120px] lg:pl-10">
+            <h3 className="text-[14px] font-semibold mb-3 text-[#525252]">About</h3>
             <ul className="space-y-1 font-medium text-[12px] text-[#525252]">
               <li>Our Company</li>
               <li>Core Team</li>
@@ -47,8 +47,8 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-3">
-            <h3 className="text-[16px] font-semibold mb-2 text-[#525252]">Services</h3>
+          <div className="min-w-[120px]">
+            <h3 className="text-[14px] font-semibold mb-3 text-[#525252]">Services</h3>
             <ul className="space-y-1 font-medium text-[12px] text-[#525252]">
               <li>iOS App Development</li>
               <li>Android App Development</li>
@@ -59,8 +59,8 @@ const Footer = () => {
           </div>
 
           {/* Technology */}
-          <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-2">
-            <h3 className="text-[16px] font-semibold mb-2 text-[#525252]">Technology</h3>
+          <div className="min-w-[120px] lg:pl-6">
+            <h3 className="text-[14px] font-semibold mb-3 text-[#525252]">Technology</h3>
             <ul className="space-y-1 font-medium text-[12px] text-[#525252]">
               <li>Blockchain</li>
               <li>Artificial Intelligence</li>
@@ -71,8 +71,8 @@ const Footer = () => {
           </div>
 
           {/* Industries */}
-          <div className="col-span-1 sm:col-span-1 md:col-span-1 lg:col-span-1">
-            <h3 className="text-[16px] font-semibold mb-2 text-[#525252]">Industries</h3>
+          <div className="min-w-[120px] lg:pl-10">
+            <h3 className="text-[14px] font-semibold mb-3 text-[#525252]">Industries</h3>
             <ul className="space-y-1 font-medium text-[12px] text-[#525252]">
               <li>Healthcare</li>
               <li>Education</li>
@@ -85,10 +85,10 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-200 bg-[#FAFAFA]">
-        <div className="max-w-full mx-auto px-6 md:px-12 lg:px-24 text-[12px] py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[#525252]">
+      <div className="bg-[#FAFAFA]">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 text-[12px] py-6 flex flex-col md:flex-row items-center justify-between gap-6 text-[#525252]">
           <p>© 2022–2025 Synopix LLC</p>
-          <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-12">
+          <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-12">
             <span>Contact us</span>
             <span>Sustainability</span>
             <span>Accessibility</span>
