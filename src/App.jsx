@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import GetInTouch from './pages/GetInTouch'
 import InsightsPage from './pages/InsightsPage'
 import Team from './pages/Team'
+import CareersPage from './pages/CareersPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,6 +25,7 @@ function App() {
           <Route path="/insights" element={<InsightsPage />} />
           <Route path="/contact" element={<GetInTouch/>} />
           <Route path="/team" element={<Team />} />
+          <Route path="/Careers" element={<CareersPage />} />
         </Routes>
         <Footer/>
     </Router>
