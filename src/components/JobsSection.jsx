@@ -102,20 +102,23 @@ const JobsSection = () => {
         </div>
 
         {/* Filters Buttons */}
-        <div className="flex items-center justify-center md:justify-start w-full md:w-auto mt-2 md:mt-0 bg-[#F6FAFD] border border-[#E5EEF5] rounded-full px-2 py-1">
-        {["All", "Finance", "Business", "Development", "Design"].map((filter, idx) => (
-            <button
-            key={idx}
-            className={`px-5 py-2 text-sm font-medium rounded-full transition-all ${
-                filter === "All"
-                ? "bg-white text-gray-900 shadow-xs"
-                : "text-gray-500 hover:text-gray-900"
-            }`}
-            >
-            {filter}
-            </button>
-        ))}
-        </div>
+<div className="flex items-center justify-center md:justify-start w-full md:w-auto mt-2 md:mt-0 bg-[#F6FAFD] border border-[#E5EEF5] rounded-full px-1.5 py-1">
+  {["All", "Finance", "Business", "Development", "Design"].map((filter, idx) => (
+    <button
+      key={idx}
+      className={`px-3 md:px-5 py-1.5 md:py-2 text-xs md:text-sm font-medium rounded-full transition-all ${
+        filter === "All"
+          ? "bg-white text-gray-900 shadow-xs"
+          : "text-gray-500 hover:text-gray-900"
+      }`}
+    >
+      {filter}
+    </button>
+  ))}
+</div>
+
+
+
 
       </div>
 

@@ -69,7 +69,7 @@ const CaseStudySection = () => {
             </div>
 
             {/* Button */}
-            <button className="w-[134px] h-[35px] text-[12px] sm:text-[13px] border border-[#D6D6D6] text-[#D6D6D6] rounded-[5px] flex items-center justify-center hover:bg-white/10 transition-colors mt-8">
+            <button className=" hover:border-hidden w-[134px] h-[35px] text-[12px] sm:text-[13px] border border-[#D6D6D6] text-[#D6D6D6] rounded-[5px] flex items-center justify-center hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] transition-colors mt-8">
               View Case Study
             </button>
           </div>
