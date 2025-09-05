@@ -26,7 +26,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-center text-white font-gilroy"
+      className="relative min-h-screen flex flex-col justify-center text-white font-figtree"
       style={{
         backgroundImage: "url('/assets/herosection_background.png')",
         backgroundPosition: "center",
@@ -77,7 +77,7 @@ const HeroSection = () => {
         </div>
 
         {/* Service Cards */}
-        <div className="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-10 mt-14 sm:mt-20 lg:mt-26">
+        <div className="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-10 mt-14 sm:mt-20 lg:mt-26 cursor-pointer">
           {cards.map((card, idx) => (
             <div
               key={idx}

@@ -15,7 +15,7 @@ const clients = [
 
 const ClientsSection = () => {
   return (
-    <section className="w-full bg-white py-7 sm:py-11 md:py-15 px-6 lg:px-24 font-gilroy">
+    <section className="w-full bg-white py-7 sm:py-11 md:py-15 px-6 lg:px-24 font-figtree">
       <div className="max-w-[1421px] mx-auto">
         {/* Heading */}
         <div className="grid grid-cols-12 mb-9">

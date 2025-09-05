@@ -4,7 +4,7 @@ import { Phone } from "lucide-react";
 const ContactCTA = () => {
   return (
     <section
-      className="w-full relative py-8 sm:py-12 px-6 sm:px-12 lg:px-24 font-gilroy"
+      className="w-full relative py-8 sm:py-12 px-6 sm:px-12 lg:px-24 font-figtree"
       style={{
         backgroundImage: "url('/assets/Rectangle35.png')",
         backgroundSize: "cover",

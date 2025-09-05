@@ -39,7 +39,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 font-gilroy">
+    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 font-figtree">
       <div className="max-w-3xl mx-auto">
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">

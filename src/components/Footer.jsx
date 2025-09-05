@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="relative w-full font-gilroy">
+    <footer className="relative w-full font-figtree">
       {/* Top Section */}
       <div className="bg-[#F4F4F4] px-6 md:px-12 lg:px-24 py-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-16">

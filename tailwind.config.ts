@@ -11,7 +11,7 @@ const config: Config = {
         brandPink: "#EC4899",
       },
       fontFamily: {
-        heading: ["Gilroy", "sans-serif"],
+        heading: ["figtree", "sans-serif"],
         body: ["Open Sans", "sans-serif"],
       },
     },

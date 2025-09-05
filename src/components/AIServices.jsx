@@ -24,7 +24,7 @@ export default function AIServices() {
   };
 
   return (
-    <section className="w-full bg-[#F8F8F8] py-10 px-4 sm:px-8 md:px-12 lg:px-24 font-gilroy">
+    <section className="w-full bg-[#F8F8F8] py-10 px-4 sm:px-8 md:px-12 lg:px-24 font-figtree">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
         {/* Left Section */}
         <div>

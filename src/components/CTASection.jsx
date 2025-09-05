@@ -54,7 +54,7 @@ const CTASection = () => {
       <div className="max-w-[1676px] mx-auto">
         {/* Heading + Arrows */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-          <h2 className="text-lg sm:text-xl md:text-[26px] font-gilroy font-semibold leading-[28px] sm:leading-[36px] text-white">
+          <h2 className="text-lg sm:text-xl md:text-[26px] font-figtree font-semibold leading-[28px] sm:leading-[36px] text-white">
             Partnership Success Stories, In Their Own Words
           </h2>
 

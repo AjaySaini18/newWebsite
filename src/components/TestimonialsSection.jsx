@@ -62,7 +62,7 @@ const services = [
 const TestimonialsSection = () => {
   return (
     <section
-      className="w-full bg-cover bg-center text-white py-16 sm:py-20 md:py-24 px-6 sm:px-12 md:px-16 lg:px-24 font-gilroy"
+      className="w-full bg-cover bg-center text-white py-16 sm:py-20 md:py-24 px-6 sm:px-12 md:px-16 lg:px-24 font-figtree"
       style={{ backgroundImage: "url('/assets/Rectangle19.png')" }}
     >
       <div className="max-w-[1676px] mx-auto">

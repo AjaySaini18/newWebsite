@@ -23,7 +23,7 @@ const WhatWeDoModal = () => {
   ];
 
   return (
-    <div className="absolute font-gilroy left-0 top-full mt-2 w-[680px] bg-[#1C1C1C] text-white p-6 rounded-xl shadow-lg z-50">
+    <div className="absolute font-figtree left-0 top-full mt-2 w-[680px] bg-[#1C1C1C] text-white p-6 rounded-xl shadow-lg z-50">
       {/* Title */}
       <h3 className="text-lg font-semibold mb-4">
         What we Do?
