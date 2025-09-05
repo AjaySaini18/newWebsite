@@ -1,95 +1,99 @@
 @import "tailwindcss";
 
-/* ====== Gilroy Font Setup ====== */
+/* ====== Figtree Font Setup ====== */
 @font-face {
-  font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-UltraLight.ttf") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-Light.ttf") format("truetype");
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-SemiBold.ttf") format("truetype");
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-ExtraBold.ttf") format("truetype");
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gilroy";
-  src: url("/font/gilroy/Gilroy-Black.ttf") format("truetype");
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
 
+/* Italic versions */
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/font/figtree/Figtree-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+
 /* ====== Tailwind @theme config ====== */
 @theme {
-  --font-gilroy: "Gilroy", sans-serif;
+  --font-figtree: "Figtree", sans-serif;
 }
-
-
-
-
-/* Hide scrollbar arrows in Safari/iOS */
-.custom-scroll {
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: #c1c1c1 transparent; 
-}
-
-/* For WebKit (Chrome, Safari, Edge) */
-.custom-scroll::-webkit-scrollbar {
-  width: 6px; /* Slim scrollbar */
-}
-.custom-scroll::-webkit-scrollbar-track {
-  background: transparent;
-}
-.custom-scroll::-webkit-scrollbar-thumb {
-  background-color: #c1c1c1;
-  border-radius: 4px;
-}
-.custom-scroll::-webkit-scrollbar-button {
-  display: none; /* Removes up/down arrows */
-}
-

@@ -1,37 +1,48 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import WhatWeDoModal from "../modals/WhatWeDoModal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showWhatWeDo, setShowWhatWeDo] = useState(false);
 
   return (
     <nav className="font-gilroy fixed top-0 w-full bg-black/70 backdrop-blur-sm z-50">
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 py-5 flex justify-between items-center">
-        
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 py-5 flex justify-between items-center relative">
         {/* Logo */}
         <div className="flex items-center">
           <img src="/assets/logo.svg" alt="Logo" className="h-6 w-6 mr-2 sm:mr-3" />
           <span className="text-white font-bold font-gilroy text-md sm:text-lg">SYNOPIX</span>
         </div>
 
-        {/* Desktop Menu (only from lg:1024px and above) */}
-        <div className="hidden lg:flex space-x-4 font-opensans xl:space-x-5 text-[12px]">
-          <div className="flex items-center text-white cursor-pointer">
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex space-x-6 font-opensans text-[12px] relative">
+          {/* What we do (with modal) */}
+          <div
+            className="flex items-center text-white cursor-pointer relative"
+            onMouseEnter={() => setShowWhatWeDo(true)}
+            onMouseLeave={() => setShowWhatWeDo(false)}
+          >
             <span>What we do</span>
             <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
+
+            {showWhatWeDo && <WhatWeDoModal />}
           </div>
+
           <div className="text-white cursor-pointer">What we think</div>
+
           <div className="flex items-center text-white cursor-pointer">
             <span>Who we are</span>
             <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
           </div>
+
           <div className="flex items-center text-white cursor-pointer">
             <span>Careers</span>
             <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
           </div>
         </div>
 
-        {/* Right section (only from lg and above) */}
+        {/* Right section */}
         <div className="hidden lg:flex items-center space-x-4">
           <img src="/assets/search.svg" alt="Search" className="h-4 w-4 cursor-pointer" />
           <div className="flex items-center text-white cursor-pointer text-[12px]">
@@ -41,7 +52,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Hamburger (visible until lg) */}
+        {/* Mobile Hamburger */}
         <div className="lg:hidden flex items-center">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X className="text-white h-6 w-6" /> : <Menu className="text-white h-6 w-6" />}
