@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <nav className="font-gilroy fixed top-0 w-full bg-black/70 backdrop-blur-sm z-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-12 xl:px-24 py-5 flex justify-between items-center">
+      <div className="container mx-auto px-6 md:px-12 lg:px-24 py-5 flex justify-between items-center">
         
         {/* Logo */}
         <div className="flex items-center">
