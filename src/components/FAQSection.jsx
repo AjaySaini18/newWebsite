@@ -1,6 +1,6 @@
-// components/FAQSection.jsx
 import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react"; // npm install lucide-react
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion"; // <-- added
 
 const faqs = [
   {
@@ -42,16 +42,34 @@ const FAQSection = () => {
     <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 font-gilroy">
       <div className="max-w-3xl mx-auto">
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8">
+        <motion.h2
+          className="text-2xl sm:text-3xl font-bold text-center mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           FAQs Related to AI Application Development
-        </h2>
+        </motion.h2>
 
         {/* Accordion */}
-        <div className="space-y-4">
+        <motion.div
+          className="space-y-4"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={{
+            show: { transition: { staggerChildren: 0.1 } },
+          }}
+        >
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-[#EEEEEE] rounded-md shadow-sm overflow-hidden"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+              }}
             >
               <button
                 className="w-full flex justify-between items-center text-left px-6 py-4 text-gray-800 font-medium focus:outline-none"
@@ -59,19 +77,30 @@ const FAQSection = () => {
               >
                 <span>{faq.question}</span>
                 {openIndex === index ? (
-  <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 flex-shrink-0" />
-) : (
-  <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 flex-shrink-0" />
-)}
+                  <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 flex-shrink-0" />
+                ) : (
+                  <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 flex-shrink-0" />
+                )}
               </button>
-              {openIndex === index && (
-                <div className="px-6 pb-4 text-gray-600 text-sm">
-                  {faq.answer}
-                </div>
-              )}
-            </div>
+
+              {/* AnimatePresence for smooth open/close */}
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
+                  <motion.div
+                    key="content"
+                    className="px-6 pb-4 text-gray-600 text-sm"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                  >
+                    {faq.answer}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

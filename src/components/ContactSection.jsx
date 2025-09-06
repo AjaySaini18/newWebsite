@@ -1,8 +1,20 @@
-// components/ContactSection.jsx
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   const [enabled, setEnabled] = useState(false);
+
+  const containerVariants = {
+    hidden: {},
+    show: {
+      transition: { staggerChildren: 0.1 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  };
 
   return (
     <section className="relative py-16 lg:px-24 sm:px-6 font-gilroy">
@@ -25,24 +37,38 @@ const ContactSection = () => {
       </div>
 
       {/* Content Wrapper */}
-      <div className="relative max-w-3xl text-white 
-        px-4 sm:px-0
-        flex flex-col sm:block items-center sm:items-start">
-        
+      <motion.div
+        className="relative max-w-3xl text-white px-4 sm:px-0 flex flex-col sm:block items-center sm:items-start"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
         {/* Heading */}
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-11 mb-2 text-center sm:text-left">
+        <motion.h2
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-11 mb-2 text-center sm:text-left"
+          variants={itemVariants}
+        >
           Looking to build a digital product?
           <br />
           Let’s build it together.
-        </h2>
-        <p className="text-sm sm:text-base mb-8 text-center sm:text-left">
+        </motion.h2>
+
+        {/* Paragraph */}
+        <motion.p
+          className="text-sm sm:text-base mb-8 text-center sm:text-left"
+          variants={itemVariants}
+        >
           Please fill the details
-        </p>
+        </motion.p>
 
         {/* Form */}
-        <form className="space-y-6 w-full">
+        <motion.form className="space-y-6 w-full" variants={containerVariants}>
           {/* First Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            variants={itemVariants}
+          >
             <input
               type="text"
               placeholder="First Name"
@@ -53,10 +79,13 @@ const ContactSection = () => {
               placeholder="Last Name"
               className="w-full px-4 py-4 rounded-md text-[#282828] placeholder-[#282828] focus:outline-none bg-[#FFFF]"
             />
-          </div>
+          </motion.div>
 
           {/* Second Row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <motion.div
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            variants={itemVariants}
+          >
             <input
               type="email"
               placeholder="Email ID"
@@ -67,47 +96,52 @@ const ContactSection = () => {
               placeholder="Contact Number"
               className="w-full px-4 py-4 rounded-md text-[#282828] placeholder-[#282828] bg-[#FFFF] focus:outline-none"
             />
-          </div>
+          </motion.div>
 
           {/* Message Box */}
-          <textarea
+          <motion.textarea
             placeholder="Tell us more (optional)"
             rows="4"
             className="w-full px-4 py-3 rounded-md bg-[#FFFF] text-[#282828] placeholder-[#282828] focus:outline-none"
-          ></textarea>
+            variants={itemVariants}
+          />
 
           {/* Toggle Switch */}
-          <div className="flex items-center space-x-2 -mt-4">
+          <motion.div
+            className="flex items-center space-x-2 -mt-4"
+            variants={itemVariants}
+          >
             <button
-            type="button"
-            onClick={() => setEnabled(!enabled)}
-            className={`relative inline-flex 
-                h-2 w-4 sm:h-4 sm:w-7  /* smaller on mobile, normal on larger */
+              type="button"
+              onClick={() => setEnabled(!enabled)}
+              className={`relative inline-flex 
+                h-2 w-4 sm:h-4 sm:w-7
                 items-center rounded-full transition 
                 ${enabled ? "bg-green-600" : "bg-gray-300"}`}
             >
-            <span
+              <span
                 className={`inline-block 
-                h-1 w-1 sm:h-2 sm:w-2  /* adjust circle size */
+                h-1 w-1 sm:h-2 sm:w-2
                 transform rounded-full bg-white transition 
                 ${enabled ? "translate-x-2 sm:translate-x-4" : "translate-x-0.5 sm:translate-x-1"}`}
-            />
+              />
             </button>
 
             <label className="text-xs sm:text-sm text-[#A8C2E7]">
               I consent to receive marketing communication from Synopix LLC
             </label>
-          </div>
+          </motion.div>
 
           {/* Submit Button */}
-          <button
+          <motion.button
             type="submit"
             className="px-6 py-3 bg-white text-[#050505] font-semibold rounded-md hover:bg-gray-100 transition w-full sm:w-auto"
+            variants={itemVariants}
           >
             Submit
-          </button>
-        </form>
-      </div>
+          </motion.button>
+        </motion.form>
+      </motion.div>
     </section>
   );
 };
