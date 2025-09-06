@@ -11,6 +11,7 @@ import GetInTouch from './pages/GetInTouch'
 import InsightsPage from './pages/InsightsPage'
 import Team from './pages/Team'
 import CareersPage from './pages/CareersPage'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop/>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

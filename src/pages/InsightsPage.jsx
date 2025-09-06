@@ -5,6 +5,7 @@ import InsightsFeatureThree from '../components/InsightsFeatureThree'
 import InsightsHero from '../components/InsightsHero'
 import CTASection from '../components/CTASection'
 import ContactCTA from '../components/ContactCTA'
+import FAQSection from '../components/FAQSection'
 
 
 const InsightsPage = () => {
@@ -14,6 +15,7 @@ const InsightsPage = () => {
       <InsightsFeatureOne />
       <InsightsFeatureTwo />
       <InsightsFeatureThree />
+      <FAQSection/>
       <CTASection />
       <ContactCTA />
 

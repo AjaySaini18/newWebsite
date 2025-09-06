@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import WhatWeDoModal from "../modals/WhatWeDoModal";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showWhatWeDo, setShowWhatWeDo] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <nav className="font-gilroy fixed top-0 w-full bg-black/70 backdrop-blur-sm z-50">
       <div className="container mx-auto px-6 md:px-12 lg:px-24 py-5 flex justify-between items-center relative">
         {/* Logo */}
-        <div className="flex items-center">
-          <img src="/assets/logo.svg" alt="Logo" className="h-6 w-6 mr-2 sm:mr-3" />
-          <span className="text-white font-bold font-gilroy text-md sm:text-lg">SYNOPIX</span>
-        </div>
+        <Link to={"/"}>
+          <div className="flex items-center">
+            <img src="/assets/logo.svg" alt="Logo" className="h-6 w-6 mr-2 sm:mr-3" />
+            <span className="text-white font-bold font-gilroy text-md sm:text-lg">SYNOPIX</span>
+          </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-6 font-opensans text-[12px] relative">
@@ -29,14 +32,22 @@ const Navbar = () => {
             {showWhatWeDo && <WhatWeDoModal />}
           </div>
 
-          <div className="text-white cursor-pointer">What we think</div>
+          <Link to={"/insights"}>
+            <div className="text-white cursor-pointer"
+            // onClick={()=> navigate('/insights')}
+            >What we think</div>
+          </Link>
 
-          <div className="flex items-center text-white cursor-pointer">
-            <span>Who we are</span>
-            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
-          </div>
+          <Link to={"/team"}>
+            <div className="flex items-center text-white cursor-pointer">
+              <span>Who we are</span>
+              <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
+            </div>
+          </Link>
 
-          <div className="flex items-center text-white cursor-pointer">
+          <div className="flex items-center text-white cursor-pointer"
+          onClick={()=> navigate('/careers')}
+          >
             <span>Careers</span>
             <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
           </div>

@@ -34,7 +34,7 @@ const IndustriesSection = () => {
             A Unified Vision That Caters To Diverse Industry Demands
           </h2>
           <div>
-            <button className="px-4 py-2 border text-[12px] border-[#D6D6D6] text-[#D6D6D6] rounded-sm hover:bg-white hover:text-black transition">
+            <button className="hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] hover:border-hidden px-4 py-2 border text-[12px] border-[#D6D6D6] text-[#D6D6D6] rounded-sm  transition">
               Learn More
             </button>
           </div>

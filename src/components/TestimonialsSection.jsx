@@ -1,4 +1,6 @@
+// components/TestimonialsSection.jsx
 import React from "react";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -67,53 +69,66 @@ const TestimonialsSection = () => {
     >
       <div className="max-w-[1676px] mx-auto">
         {/* Heading + Button */}
-        <div className="grid grid-cols-12 items-start mb-12 gap-6">
+        <motion.div
+          className="grid grid-cols-12 items-start mb-12 gap-6"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="col-span-12 md:col-span-9 text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight">
             Pioneering Innovation Through <br /> World-Class Engineering
           </h2>
 
           <div className="col-span-12 md:col-span-3 flex md:justify-end">
-            <button className="hover:border-hidden px-4 sm:px-6 py-2 text-[11px] sm:text-[12px] border border-gray-400 rounded-sm hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] transition-all duration-500 ease-in-out">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              className="hover:border-hidden px-4 sm:px-6 py-2 text-[11px] sm:text-[12px] border border-gray-400 rounded-sm hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] transition-all duration-500 ease-in-out"
+            >
               All Services
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
 
+        {/* Services Grid */}
         <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-  {services.map((service) => (
-    <div
-      key={service.id}
-      className="group relative rounded-2xl transition-all duration-500 ease-in-out hover:scale-[1.02]"
-    >
-      {/* Gradient Border Layer */}
-      <span className="absolute inset-0 rounded-2xl p-[1.5px] bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-        {/* Inner background (default dark card background) */}
-        <span className="block w-full h-full rounded-2xl bg-[#171717]"></span>
-      </span>
+          {services.map((service, index) => (
+            <motion.div
+              key={service.id}
+              className="group relative rounded-2xl transition-all duration-500 ease-in-out hover:scale-[1.02]"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1 }}
+            >
+              {/* Gradient Border Layer */}
+              <span className="absolute inset-0 rounded-2xl p-[1.5px] bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                <span className="block w-full h-full rounded-2xl bg-[#171717]"></span>
+              </span>
 
-      {/* Card Content */}
-      <div className="relative z-10 bg-[#171717] border border-[#2B2B2B] rounded-2xl p-4 sm:p-6 min-h-[200px] sm:min-h-[220px] shadow-md hover:shadow-lg transition">
-        {/* Icon */}
-        <img
-          src={service.icon}
-          alt={service.title}
-          className="w-10 h-10 sm:w-[51px] sm:h-[51px] mb-4"
-        />
+              {/* Card Content */}
+              <div className="relative z-10 bg-[#171717] border border-[#2B2B2B] rounded-2xl p-4 sm:p-6 min-h-[200px] sm:min-h-[220px] shadow-md hover:shadow-lg transition">
+                {/* Icon */}
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  className="w-10 h-10 sm:w-[51px] sm:h-[51px] mb-4"
+                />
 
-        {/* Title */}
-        <h3 className="text-sm sm:text-base text-[#AFAFAF] font-semibold mb-2">
-          {service.title}
-        </h3>
+                {/* Title */}
+                <h3 className="text-sm sm:text-base text-[#AFAFAF] font-semibold mb-2">
+                  {service.title}
+                </h3>
 
-        {/* Description */}
-        <p className="text-[11px] sm:text-[12px] font-medium text-[#AFAFAF] leading-relaxed">
-          {service.description}
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
-
+                {/* Description */}
+                <p className="text-[11px] sm:text-[12px] font-medium text-[#AFAFAF] leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

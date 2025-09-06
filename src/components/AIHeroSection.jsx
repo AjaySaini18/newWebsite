@@ -34,7 +34,7 @@ const AIHeroSection = () => {
               help businesses to achieve intelligent process automation, leading to better 
               productivity and competitive growth.
             </p>
-            <button className="mt-5 px-5 py-2 border border-white rounded-md hover:bg-white hover:text-black transition text-sm sm:text-base">
+            <button className="hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-5 px-5 py-2 hover:border-hidden border border-white rounded-md hover:bg-white transition-colors duration-500 ease-in-out text-sm sm:text-base ">
               Consult Now
             </button>
           </div>

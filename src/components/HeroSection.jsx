@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   const cards = [
@@ -39,32 +40,36 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-24 pt-20 sm:pt-36 lg:pt-40">
-        {/* Row: Headings (left) + Right block */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-10">
           {/* Left Headings */}
-          <div className="w-full lg:w-[730px]">
+          <motion.div
+            className="w-full lg:w-[730px]"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <h1 className="font-bold text-[clamp(22px,6vw,60px)] leading-tight sm:leading-[60px] text-left">
               CREATE. COLLABORATE.
             </h1>
             <h1 className="mt-2 sm:mt-4 font-bold text-[clamp(22px,6vw,60px)] leading-tight sm:leading-[60px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-right">
               CHANGE THE WORLD.
             </h1>
-          </div>
+          </motion.div>
 
           {/* Right aligned text block */}
-          <div className="max-w-full sm:max-w-[300px] flex flex-col justify-start mt-4 lg:mt-3">
-            {/* Grad strip */}
+          <motion.div
+            className="max-w-full sm:max-w-[300px] flex flex-col justify-start mt-4 lg:mt-3"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
             <div className="w-[54px] h-[5px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 mb-3"></div>
-
-            {/* Text */}
             <p className="text-gray-200 mb-3 leading-relaxed text-[10px] sm:text-[11px] font-semibold">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip.
             </p>
-
-            {/* CTA */}
             <div className="flex items-center gap-2 font-semibold cursor-pointer hover:opacity-80 text-[12px] sm:text-[14px]">
               <span>See what we do</span>
               <img
@@ -73,16 +78,32 @@ const HeroSection = () => {
                 className="h-3 w-3 sm:h-4 sm:w-4"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Service Cards */}
-        <div className="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-10 mt-14 sm:mt-20 lg:mt-26 cursor-pointer">
+        <motion.div
+          className="grid lg:grid-cols-4 grid-cols-1 md:grid-cols-2 gap-10 mt-14 sm:mt-20 lg:mt-26 cursor-pointer"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.2 },
+            },
+          }}
+        >
           {cards.map((card, idx) => (
-            <div
+            <motion.div
               key={idx}
               className="relative h-[350px] w-full bg-cover bg-center overflow-hidden group"
               style={{ backgroundImage: `url(${card.img})` }}
+              variants={{
+                hidden: { opacity: 0, scale: 0.9, y: 30 },
+                visible: { opacity: 1, scale: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              whileHover={{ scale: 1.03 }}
             >
               {/* Gradient overlay on hover */}
               <div
@@ -93,7 +114,7 @@ const HeroSection = () => {
                 }}
               ></div>
 
-              {/* Title (always visible, above everything) */}
+              {/* Title */}
               <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-extrabold text-sm sm:text-base md:text-lg z-30">
                 {card.title}
               </div>
@@ -103,17 +124,15 @@ const HeroSection = () => {
                 <p className="text-[12px] leading-relaxed mb-4 mt-10">
                   {card.desc}
                 </p>
-
-                {/* Read More bottom-right */}
                 <div className="absolute bottom-4 right-4">
                   <span className="text-xs font-semibold cursor-pointer hover:underline">
                     Read More
                   </span>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Black divider under cards */}

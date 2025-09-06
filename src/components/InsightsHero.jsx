@@ -28,7 +28,7 @@ const InsightsHero = () => {
           <br className="hidden sm:block" /> to better productivity and
           competitive growth.
         </p>
-        <button className="mt-6 sm:mt-8 px-4 py-2 border border-white font-medium rounded-md text-xs sm:text-sm md:text-base hover:bg-white/10 transition-colors">
+        <button className="hover:border-hidden hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-6 sm:mt-8 px-4 py-2 border border-white font-light rounded-md text-xs sm:text-sm   transition-colors">
           Consult Now
         </button>
       </div>

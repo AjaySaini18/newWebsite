@@ -1,5 +1,6 @@
 // components/CaseStudySection.jsx
 import React from "react";
+import { motion } from "framer-motion";
 
 const CaseStudySection = () => {
   return (
@@ -13,10 +14,15 @@ const CaseStudySection = () => {
           backgroundPosition: "center",
         }}
       >
-        {/* Flex layout */}
         <div className="flex flex-col lg:flex-row items-start justify-center gap-10 lg:gap-16 w-full">
           {/* Left Content */}
-          <div className="lg:w-[380px] flex flex-col">
+          <motion.div
+            className="lg:w-[380px] flex flex-col"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {/* Label */}
             <div className="mb-4">
               <img
@@ -42,7 +48,13 @@ const CaseStudySection = () => {
             {/* Metrics */}
             <div className="flex items-start sm:items-end">
               {/* Left Metric */}
-              <div className="pr-8 sm:pr-10">
+              <motion.div
+                className="pr-8 sm:pr-10"
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
                 <div className="text-[12px] sm:text-[13px] text-[#9F9F9F]">
                   Result
                 </div>
@@ -52,30 +64,49 @@ const CaseStudySection = () => {
                 <div className="text-[12px] sm:text-[13px] text-[#9F9F9F]">
                   App downloads
                 </div>
-              </div>
+              </motion.div>
 
               {/* Divider */}
               <div className="w-px bg-[#0E3F48] h-[50px] hidden sm:block"></div>
 
               {/* Right Metric */}
-              <div className="pl-8 sm:pl-10">
+              <motion.div
+                className="pl-8 sm:pl-10"
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+              >
                 <div className="text-[18px] sm:text-[20px] font-medium text-white mb-1 sm:mb-2">
                   15M+
                 </div>
                 <div className="text-[12px] sm:text-[13px] text-[#9F9F9F]">
                   Monthly Traffic
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Button */}
-            <button className=" hover:border-hidden w-[134px] h-[35px] text-[12px] sm:text-[13px] border border-[#D6D6D6] text-[#D6D6D6] rounded-[5px] flex items-center justify-center hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] transition-colors mt-8">
+            <motion.button
+              className="hover:border-hidden w-[134px] h-[35px] text-[12px] sm:text-[13px] border border-[#D6D6D6] text-[#D6D6D6] rounded-[5px] flex items-center justify-center hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] transition-colors mt-8"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 0px 12px rgba(6, 247, 196, 0.5)",
+              }}
+              whileTap={{ scale: 0.97 }}
+            >
               View Case Study
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
 
           {/* Right Image Box */}
-          <div className="flex-1 flex items-start justify-center relative">
+          <motion.div
+            className="flex-1 flex items-start justify-center relative"
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             <img
               src="/assets/Rectangle20.png"
               alt="Microsoft Case Study"
@@ -88,7 +119,7 @@ const CaseStudySection = () => {
                 <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-cyan-400 to-blue-600 rounded-full"></div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,4 +1,10 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
 
 const Footer = () => {
   return (
@@ -7,7 +13,13 @@ const Footer = () => {
       <div className="bg-[#F4F4F4] px-6 md:px-12 lg:px-24 py-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-16">
           {/* Logo + Address */}
-          <div className="space-y-4">
+          <motion.div
+            className="space-y-4"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {/* Logo */}
             <div className="flex items-center gap-2">
               <img src="/assets/logo.svg" alt="Synopix Logo" className="w-6 h-6" />
@@ -16,15 +28,20 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex items-center gap-3">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/fb.svg" alt="Facebook" className="w-5 h-5 hover:opacity-80" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/linkedin.svg" alt="LinkedIn" className="w-5 h-5 hover:opacity-80" />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                <img src="/assets/insta.svg" alt="Instagram" className="w-5 h-5 hover:opacity-80" />
-              </a>
+              {["fb", "linkedin", "insta"].map((icon, idx) => (
+                <motion.a
+                  key={idx}
+                  href="#"
+                  whileHover={{ scale: 1.2 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <img
+                    src={`/assets/${icon}.svg`}
+                    alt={icon}
+                    className="w-5 h-5"
+                  />
+                </motion.a>
+              ))}
             </div>
 
             {/* Address */}
@@ -32,10 +49,16 @@ const Footer = () => {
               6065 Roswell Road, Suite 450, <br />
               Atlanta, GA 30328-4011
             </p>
-          </div>
+          </motion.div>
 
           {/* About */}
-          <div className="min-w-[120px] lg:pl-10">
+          <motion.div
+            className="min-w-[120px] lg:pl-10"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <h3 className="text-[14px] font-semibold mb-3 text-[#525252]">About</h3>
             <ul className="space-y-1 font-medium text-[12px] text-[#525252]">
               <li>Our Company</li>
@@ -44,10 +67,16 @@ const Footer = () => {
               <li>CSR</li>
               <li>How We Work</li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Services */}
-          <div className="min-w-[120px]">
+          <motion.div
+            className="min-w-[120px]"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <h3 className="text-[14px] font-semibold mb-3 text-[#525252]">Services</h3>
             <ul className="space-y-1 font-medium text-[12px] text-[#525252]">
               <li>iOS App Development</li>
@@ -56,10 +85,16 @@ const Footer = () => {
               <li>Ideation & Design</li>
               <li>Research & Innovation</li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Technology */}
-          <div className="min-w-[120px] lg:pl-6">
+          <motion.div
+            className="min-w-[120px] lg:pl-6"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <h3 className="text-[14px] font-semibold mb-3 text-[#525252]">Technology</h3>
             <ul className="space-y-1 font-medium text-[12px] text-[#525252]">
               <li>Blockchain</li>
@@ -68,10 +103,16 @@ const Footer = () => {
               <li>Cloud Computing</li>
               <li>Internet of Things</li>
             </ul>
-          </div>
+          </motion.div>
 
           {/* Industries */}
-          <div className="min-w-[120px] lg:pl-10">
+          <motion.div
+            className="min-w-[120px] lg:pl-10"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             <h3 className="text-[14px] font-semibold mb-3 text-[#525252]">Industries</h3>
             <ul className="space-y-1 font-medium text-[12px] text-[#525252]">
               <li>Healthcare</li>
@@ -80,12 +121,18 @@ const Footer = () => {
               <li>SaaS</li>
               <li>eCommerce</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-[#FAFAFA]">
+      <motion.div
+        className="bg-[#FAFAFA]"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 text-[12px] py-6 flex flex-col md:flex-row items-center justify-between gap-6 text-[#525252]">
           <p>© 2022–2025 Synopix LLC</p>
           <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-12">
@@ -98,16 +145,20 @@ const Footer = () => {
             <span>Sitemap</span>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Comment Box */}
-      <div className="absolute bottom-3 right-3">
+      <motion.div
+        className="absolute bottom-3 right-3"
+        animate={{ y: [0, -6, 0] }}
+        transition={{ repeat: Infinity, duration: 2 }}
+      >
         <img
           src="/assets/comment.svg"
           alt="Comment"
           className="w-[45px] h-[45px] md:w-[50px] md:h-[50px] cursor-pointer"
         />
-      </div>
+      </motion.div>
     </footer>
   );
 };
