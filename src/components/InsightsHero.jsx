@@ -60,6 +60,8 @@ const InsightsHero = () => {
 
         {/* Button */}
         <motion.button
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300 }}
           className="hover:border-hidden hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-6 sm:mt-8 px-4 py-2 border border-white font-light rounded-md text-xs sm:text-sm transition-colors"
           variants={itemVariants}
         >

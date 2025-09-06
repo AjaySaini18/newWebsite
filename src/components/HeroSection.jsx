@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   const cards = [
     {
       title: "AI DEVELOPMENT",
@@ -95,6 +98,7 @@ const HeroSection = () => {
         >
           {cards.map((card, idx) => (
             <motion.div
+              onClick={()=> navigate("/ai")}
               key={idx}
               className="relative h-[350px] w-full bg-cover bg-center overflow-hidden group"
               style={{ backgroundImage: `url(${card.img})` }}
