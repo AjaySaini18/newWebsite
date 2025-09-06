@@ -10,7 +10,7 @@ const AIHeroSection = () => {
 
   return (
     <section 
-      className="relative min-h-screen flex flex-col justify-center text-white font-figtree" 
+      className="relative min-h-screen flex flex-col justify-center text-white font-gilroy" 
       style={{
         backgroundImage:"url('/assets/Rectangle 1.png')",
         backgroundPosition: "center",

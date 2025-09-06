@@ -61,7 +61,7 @@ const teamMembers = [
 
 const TeamSection = () => {
   return (
-    <section className="w-full bg-white py-16 px-6 md:px-12 lg:px-24 font-figtree">
+    <section className="w-full bg-white py-16 px-6 md:px-12 lg:px-24 font-gilroy">
       {/* Heading */}
       <div className="text-center mb-10">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mt-10 lg:mt-25 text-gray-900">

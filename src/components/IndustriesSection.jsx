@@ -20,7 +20,7 @@ const IndustriesSection = () => {
 
   return (
     <section
-      className="relative py-12 px-4 sm:py-16 sm:px-12 lg:px-24 font-figtree"
+      className="relative py-12 px-4 sm:py-16 sm:px-12 lg:px-24 font-gilroy"
       style={{
         backgroundImage: "url('/assets/Rectangle19.png')",
         backgroundSize: "cover",

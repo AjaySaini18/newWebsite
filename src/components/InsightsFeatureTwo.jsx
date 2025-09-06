@@ -2,7 +2,7 @@ import React from "react";
 
 const InsightsFeatureTwo = () => {
   return (
-    <section className="w-full bg-white py-10 lg:py-16 px-6 md:px-12 lg:px-24 font-figtree">
+    <section className="w-full bg-white py-10 lg:py-16 px-6 md:px-12 lg:px-24 font-gilroy">
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 lg:gap-8">
         
         {/* Left Content - Image */}

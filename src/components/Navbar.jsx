@@ -7,12 +7,12 @@ const Navbar = () => {
   const [showWhatWeDo, setShowWhatWeDo] = useState(false);
 
   return (
-    <nav className="font-figtree fixed top-0 w-full bg-black/70 backdrop-blur-sm z-50">
+    <nav className="font-gilroy fixed top-0 w-full bg-black/70 backdrop-blur-sm z-50">
       <div className="container mx-auto px-6 md:px-12 lg:px-24 py-5 flex justify-between items-center relative">
         {/* Logo */}
         <div className="flex items-center">
           <img src="/assets/logo.svg" alt="Logo" className="h-6 w-6 mr-2 sm:mr-3" />
-          <span className="text-white font-bold font-figtree text-md sm:text-lg">SYNOPIX</span>
+          <span className="text-white font-bold font-gilroy text-md sm:text-lg">SYNOPIX</span>
         </div>
 
         {/* Desktop Menu */}

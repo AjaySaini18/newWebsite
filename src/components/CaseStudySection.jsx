@@ -3,7 +3,7 @@ import React from "react";
 
 const CaseStudySection = () => {
   return (
-    <section className="relative w-full overflow-hidden font-figtree">
+    <section className="relative w-full overflow-hidden font-gilroy">
       {/* Main Container with Background */}
       <div
         className="w-full max-w-[1676px] px-6 md:px-12 lg:px-24 py-12 md:py-16 lg:py-20 backdrop-blur-[52.9px]"

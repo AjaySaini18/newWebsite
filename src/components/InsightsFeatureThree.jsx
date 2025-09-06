@@ -3,7 +3,7 @@ import React from "react";
 const InsightsFeatureThree = () => {
   return (
     <section
-      className="w-full relative py-10 lg:py-20 px-6 md:px-12 lg:px-24 font-figtree text-white"
+      className="w-full relative py-10 lg:py-20 px-6 md:px-12 lg:px-24 font-gilroy text-white"
       style={{
         backgroundImage: "url('/assets/Rectangle-19.png')",
         backgroundSize: "cover",

@@ -13,7 +13,7 @@ const JobCard = ({
   locationType,
 }) => {
   return (
-    <div className="relative rounded-xl p-4 sm:p-5 bg-white shadow-sm hover:shadow-md transition font-figtree">
+    <div className="relative rounded-xl p-4 sm:p-5 bg-white shadow-sm hover:shadow-md transition font-gilroy">
       {/* Location Badge Top Right */}
       <div
         className={`absolute top-3 right-3 sm:top-4 sm:right-4 inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 text-[10px] sm:text-xs font-medium rounded-full border ${

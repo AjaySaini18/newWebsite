@@ -3,7 +3,7 @@ import React from "react";
 const InsightsHero = () => {
   return (
     <section
-      className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] font-figtree flex pt-32 sm:pt-40 md:pt-50 justify-center text-center text-white px-4"
+      className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] font-gilroy flex pt-32 sm:pt-40 md:pt-50 justify-center text-center text-white px-4"
       style={{
         backgroundImage: "url('/assets/insightBg.jpg')",
         backgroundSize: "cover",

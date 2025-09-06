@@ -40,7 +40,7 @@ const services = [
 const AiServiceSection = () => {
   return (
 
-    <section className="pt-10 pb-10 bg-white font-figtree">
+    <section className="pt-10 pb-10 bg-white font-gilroy">
       <div className="container mx-auto px-6 sm:px-12 lg:px-24">
         {/* Heading */}
         <h2 className="text-[22px] sm:text-3xl md:text-4xl lg:text-[30px] font-bold text-left text-gray-800 mb-12 leading-tight">

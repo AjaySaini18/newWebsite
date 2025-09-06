@@ -4,7 +4,7 @@ import { MapPin, Mail, Phone } from "lucide-react";
 
 const GetInTouchSection = () => {
   return (
-    <section className="py-12 bg-white my-10 font-figtree px-6 md:px-12 lg:px-24">
+    <section className="py-12 bg-white my-10 font-gilroy px-6 md:px-12 lg:px-24">
       <div className="container">
         {/* Heading */}
         <div className="text-left mb-10">

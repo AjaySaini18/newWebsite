@@ -56,7 +56,7 @@ const JobsSection = () => {
   ];
 
   return (
-    <section className="relative mt-16 bg-white py-12 px-6 md:px-12 lg:px-24 font-figtree">
+    <section className="relative mt-16 bg-white py-12 px-6 md:px-12 lg:px-24 font-gilroy">
       {/* Circle vector at top right */}
       <img
         src="/assets/Ellipse 2.svg"

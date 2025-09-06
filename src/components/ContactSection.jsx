@@ -5,7 +5,7 @@ const ContactSection = () => {
   const [enabled, setEnabled] = useState(false);
 
   return (
-    <section className="relative py-16 lg:px-24 sm:px-6 font-figtree">
+    <section className="relative py-16 lg:px-24 sm:px-6 font-gilroy">
       {/* Background Gradient */}
       <div className="absolute inset-0">
         <img
