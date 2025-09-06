@@ -1,12 +1,30 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const InsightsFeatureOne = () => {
+  // Variants for staggered text animation
+  const textVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
   return (
     <section className="w-full bg-[#F8F8F8] py-10 lg:py-16 px-6 md:px-12 lg:px-24 font-gilroy">
       <div className="flex flex-col md:flex-row items-start gap-10">
-        
+
         {/* Left Content */}
-        <div className="flex-1 text-center md:text-left">
+        <motion.div
+          className="flex-1 text-center md:text-left"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={textVariants}
+        >
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 lg:mb-6 lg:leading-snug">
             We Transform Businesses & Society 
             Through Our Data Science Service
@@ -17,11 +35,17 @@ const InsightsFeatureOne = () => {
           <p className="text-sm font-medium text-[#393939] leading-[1.5]">
             Fusce pretium porttitor nisi, eget volutpat odio facilisis et. Nam fermentum lectus a justo ultrices, non efficitur nunc sollicitudin. Quisque ut sapien vel felis bibendum porttitor. Duis sodales, magna ac vulputate suscipit, nisl turpis condimentum nunc, ac ultrices enim nulla a purus.
           </p>
-        </div>
+        </motion.div>
 
         {/* Right Content - Images */}
-        <div className="flex-1 relative flex justify-center min-h-[360px] sm:min-h-[400px] md:min-h-[420px]">
-          {/* Main App Image (absolute, but responsive sizes) */}
+        <motion.div
+          className="flex-1 relative flex justify-center min-h-[360px] sm:min-h-[400px] md:min-h-[420px]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={imageVariants}
+        >
+          {/* Main App Image */}
           <img
             src="/assets/appDevelopment.jpg"
             alt="App Development"
@@ -32,7 +56,7 @@ const InsightsFeatureOne = () => {
                        object-cover z-10"
           />
 
-          {/* Rectangle Image (remains in flow, responsive) */}
+          {/* Rectangle Image */}
           <img
             src="/assets/Rectangle-7772.png"
             alt="Data Science"
@@ -41,7 +65,7 @@ const InsightsFeatureOne = () => {
                        h-[200px] sm:h-[250px] md:h-[260px] lg:h-[290px]
                        ml-auto"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );
