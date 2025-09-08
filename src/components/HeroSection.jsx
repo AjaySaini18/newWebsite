@@ -42,32 +42,33 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1676px] container mx-auto px-6 md:px-12 lg:px-24 pt-20 sm:pt-36 lg:pt-40">
+      <div className="relative z-10 max-w-full container mx-auto px-6 md:px-12 lg:px-24 pt-20 sm:pt-36 lg:pt-40">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-10">
           {/* Left Headings */}
           <motion.div
-            className="w-full lg:w-[730px]"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="font-bold text-[clamp(22px,6vw,60px)] leading-tight sm:leading-[60px] text-left">
-              CREATE. COLLABORATE.
-            </h1>
-            <h1 className="mt-2 sm:mt-4 font-bold text-[clamp(22px,6vw,60px)] leading-tight sm:leading-[60px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-right">
-              CHANGE THE WORLD.
-            </h1>
-          </motion.div>
+  className="w-full lg:w-[1600px]"
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <h1 className="font-bold text-[clamp(24px,5vw,75px)] leading-snug sm:leading-[80px] text-left">
+    CREATE. COLLABORATE.
+  </h1>
+  <h1 className="mt-2 sm:mt-4 font-bold text-[clamp(24px,5vw,75px)] leading-tight sm:leading-[80px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-right">
+    CHANGE THE WORLD.
+  </h1>
+</motion.div>
+
 
           {/* Right aligned text block */}
           <motion.div
-            className="max-w-full sm:max-w-[300px] flex flex-col justify-start mt-4 lg:mt-3"
+            className="max-w-full sm:max-w-[300px] lg:max-w-[350px] flex flex-col justify-start mt-4 lg:mt-3"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <div className="w-[54px] h-[5px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 mb-3"></div>
-            <p className="text-gray-200 mb-3 leading-relaxed text-[10px] sm:text-[11px] font-semibold">
+            <p className="text-gray-200 mb-3 leading-relaxed text-[10px] sm:text-[11px] lg:text-[14px] font-semibold">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris

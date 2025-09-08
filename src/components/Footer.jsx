@@ -10,8 +10,8 @@ const Footer = () => {
   return (
     <footer className="relative w-full font-gilroy">
       {/* Top Section */}
-      <div className="bg-[#F4F4F4] px-6 md:px-12 lg:px-24 py-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-16">
+      <div className="bg-[#F4F4F4] max-w-full px-6 md:px-12 lg:px-24 py-12">
+        <div className="max-w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-16">
           {/* Logo + Address */}
           <motion.div
             className="space-y-4"
@@ -125,27 +125,27 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <motion.div
-        className="bg-[#FAFAFA]"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 text-[12px] py-6 flex flex-col md:flex-row items-center justify-between gap-6 text-[#525252]">
-          <p>© 2022–2025 Synopix LLC</p>
-          <div className="flex flex-wrap justify-center md:justify-start gap-6 md:gap-12">
-            <span>Contact us</span>
-            <span>Sustainability</span>
-            <span>Accessibility</span>
-            <span>Terms of use</span>
-            <span>Privacy</span>
-            <span>Cookie Policy</span>
-            <span>Sitemap</span>
-          </div>
-        </div>
-      </motion.div>
+  className="bg-[#FAFAFA]"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+  viewport={{ once: true }}
+>
+  <div className="max-w-full mx-auto px-6 md:px-12 lg:px-24 text-[12px] py-6 flex flex-col md:flex-row items-start justify-start gap-6 text-[#525252]">
+    <p>© 2022–2025 Synopix LLC</p>
+    <div className=" lg:ml-50 flex flex-wrap justify-start gap-6 md:gap-14">
+      <span>Contact us</span>
+      <span>Sustainability</span>
+      <span>Accessibility</span>
+      <span>Terms of use</span>
+      <span>Privacy</span>
+      <span>Cookie Policy</span>
+      <span>Sitemap</span>
+    </div>
+  </div>
+</motion.div>
+
 
       {/* Comment Box */}
       <motion.div

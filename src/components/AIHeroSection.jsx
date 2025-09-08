@@ -44,7 +44,7 @@ const AIHeroSection = () => {
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-snug">
               AI ML DEVELOPMENT
             </h1>
-            <p className="mt-3 text-sm sm:text-md font-medium text-[#D1D4E7] max-w-xl leading-6">
+            <p className="mt-3 text-sm sm:text-md lg:text-lg font-medium text-[#D1D4E7] max-w-xl leading-6">
               A progressive AI ML development company, winning the trust of global businesses 
               across industries. We offer a suite of end-to-end AI ML development services that 
               help businesses to achieve intelligent process automation, leading to better 

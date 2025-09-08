@@ -1,8 +1,11 @@
 // components/InnovationSection.jsx
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const InnovationSection = () => {
+  // Track which image is hovered
+  const [hovered, setHovered] = useState(null);
+
   return (
     <section
       className="relative w-full min-h-screen bg-cover bg-center px-6 sm:px-10 md:px-16 lg:px-24 py-12 md:py-12 lg:py-18 font-gilroy"
@@ -37,9 +40,15 @@ const InnovationSection = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
+              onMouseEnter={() => setHovered(index)}
+              onMouseLeave={() => setHovered(null)}
             >
               <img
-                src={`/assets/Rectangle-${num}.png`}
+                src={
+                  hovered === index
+                    ? `/assets/gif${index + 1}.gif`
+                    : `/assets/Rectangle-${num}.png`
+                }
                 className="w-full h-full object-cover"
                 alt="Client"
               />

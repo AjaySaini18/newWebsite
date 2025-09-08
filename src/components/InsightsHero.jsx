@@ -24,8 +24,8 @@ const InsightsHero = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      {/* Overlay for better text visibility
+      <div className="absolute inset-0 bg-black/40"></div> */}
 
       {/* Content */}
       <motion.div
