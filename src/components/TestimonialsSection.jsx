@@ -95,36 +95,36 @@ const TestimonialsSection = () => {
           {services.map((service, index) => (
             <motion.div
               key={service.id}
-              className="group relative rounded-2xl transition-all duration-500 ease-in-out hover:scale-[1.02]"
+              className="group relative rounded-2xl transition-all duration-500 ease-in-out"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1 }}
             >
-              {/* Gradient Border Layer */}
-              <span className="absolute inset-0 rounded-2xl p-[1.5px] bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                <span className="block w-full h-full rounded-2xl bg-[#171717]"></span>
-              </span>
+              {/* Gradient Border Wrapper */}
+              <div className="relative rounded-2xl p-[1.5px]">
+                {/* Gradient Layer (hidden until hover) */}
+                <span className="absolute inset-0 rounded-2xl bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></span>
 
-              {/* Card Content */}
-              <div className="relative z-10 bg-[#171717] border border-[#2B2B2B] rounded-2xl p-4 sm:p-6 min-h-[200px] sm:min-h-[220px] shadow-md hover:shadow-lg transition">
-                {/* Icon */}
-                <img
-                  src={service.icon}
-                  alt={service.title}
-                  className="w-10 h-10 sm:w-[51px] sm:h-[51px] mb-4"
-                />
+                {/* Card Content */}
+                <div className="relative z-10 bg-[#171717] border border-[#2B2B2B] rounded-2xl p-4 sm:p-6 min-h-[200px] sm:min-h-[220px] shadow-md hover:shadow-lg transition">
+                  {/* Icon */}
+                  <img
+                    src={service.icon}
+                    alt={service.title}
+                    className="w-10 h-10 sm:w-[51px] sm:h-[51px] mb-4"
+                  />
 
-                {/* Title */}
-                <h3 className="text-sm sm:text-base text-[#AFAFAF] font-semibold mb-2">
-                  {service.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="text-sm sm:text-base text-[#AFAFAF] font-semibold mb-2">
+                    {service.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-[11px] sm:text-[12px] font-medium text-[#AFAFAF] leading-relaxed">
-                  {service.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-[11px] sm:text-[12px] font-medium text-[#AFAFAF] leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
               </div>
             </motion.div>
           ))}
