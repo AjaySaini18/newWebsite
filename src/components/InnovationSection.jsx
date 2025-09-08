@@ -11,7 +11,7 @@ const InnovationSection = () => {
       }}
     >
       {/* Main Container */}
-      <div className="max-w-[1676px] mx-auto h-full flex flex-col items-start">
+      <div className="max-w-full mx-auto h-full flex flex-col items-start">
         {/* Heading */}
         <motion.div
           className="w-full text-left mb-8 sm:mb-10 md:mb-12 lg:mb-16"

@@ -26,7 +26,7 @@ const StatsSection = () => {
 
   return (
     <section className="pt-4 lg:pt-7 md:pb-10 lg:pb-20 bg-gray-50 font-gilroy">
-      <div className="container mx-auto px-6 md:px-12 lg:px-24">
+      <div className="container max-w-full mx-auto px-6 md:px-12 lg:px-24">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-12"
           initial="hidden"

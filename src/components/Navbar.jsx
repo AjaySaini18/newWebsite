@@ -9,7 +9,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <nav className="font-gilroy fixed top-0 w-full bg-black/70 backdrop-blur-sm z-50">
-      <div className="container mx-auto px-6 md:px-12 lg:px-24 py-5 flex justify-between items-center relative">
+      <div className="max-w-full container mx-auto px-6 md:px-12 lg:px-24 py-5 flex justify-between items-center relative">
         {/* Logo */}
         <Link to={"/"}>
           <div className="flex items-center">

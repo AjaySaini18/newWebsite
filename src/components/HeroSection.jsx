@@ -42,7 +42,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-24 pt-20 sm:pt-36 lg:pt-40">
+      <div className="relative z-10 max-w-[1676px] container mx-auto px-6 md:px-12 lg:px-24 pt-20 sm:pt-36 lg:pt-40">
         <div className="flex flex-col lg:flex-row justify-between items-start gap-8 lg:gap-10">
           {/* Left Headings */}
           <motion.div
