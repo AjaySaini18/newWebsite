@@ -53,7 +53,7 @@ const CTASection = () => {
       className="relative w-full pt-10 pb-20 px-4 sm:px-6 lg:px-24 bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/bg_casestudy.png')" }}
     >
-      <div className="max-w-[1676px] mx-auto">
+      <div className="max-w-full mx-auto">
         {/* Heading + Arrows */}
         <motion.div
           className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6"

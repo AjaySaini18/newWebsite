@@ -29,7 +29,7 @@ const InsightsHero = () => {
 
       {/* Content */}
       <motion.div
-        className="relative z-10 max-w-3xl"
+        className="relative z-10 max-w-full"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"

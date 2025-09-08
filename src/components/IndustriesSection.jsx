@@ -35,7 +35,7 @@ const cardVariants = {
 const IndustriesSection = () => {
   return (
     <section
-      className="relative py-12 px-4 sm:py-16 sm:px-12 lg:px-24 font-gilroy"
+      className="relative py-16 px-4 sm:py-16 sm:px-12 lg:px-24 font-gilroy"
       style={{
         backgroundImage: "url('/assets/Rectangle19.png')",
         backgroundSize: "cover",
@@ -43,10 +43,10 @@ const IndustriesSection = () => {
       }}
     >
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto text-center">
+      <div className="relative py-10 z-10 max-w-full mx-auto text-center">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 gap-4">
           <motion.h2
-            className="text-base sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-left text-white max-w-[700px]"
+            className="text-base sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-left text-white max-w-[900px]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

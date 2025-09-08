@@ -29,7 +29,7 @@ const AIHeroSection = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-24 pt-28 pb-20">
+      <div className="container max-w-full mx-auto px-4 sm:px-6 lg:px-24 pt-28 pb-20">
         
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-10 items-center">
