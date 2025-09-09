@@ -42,7 +42,7 @@ const ServicesSection = () => {
                 visible: { opacity: 1, scale: 1, y: 0 },
               }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.0 }}
             >
               {/* Icon Swap */}
               <img

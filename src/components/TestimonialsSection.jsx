@@ -103,7 +103,7 @@ const TestimonialsSection = () => {
               viewport={{ once: true }}
             >
               {/* Gradient Border Wrapper */}
-              <div className="relative rounded-2xl p-[1.5px]">
+              <div className="relative rounded-2xl p-[1px]">
                 {/* Gradient Layer (hidden until hover) */}
                 <span className="absolute inset-0 rounded-2xl bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></span>
 
