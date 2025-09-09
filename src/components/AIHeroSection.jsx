@@ -76,7 +76,7 @@ const AIHeroSection = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-16 flex flex-wrap justify-center lg:justify-between gap-6">
+        <div className="mt-16 flex flex-wrap justify-center lg:justify-between gap-y-4 sm:gap-2 md:gap-2 lg:gap-4 2xl:gap-6">
           {stats.map((item, idx) => (
             <motion.div
               key={idx}
@@ -85,15 +85,14 @@ const AIHeroSection = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={statsVariants}
-              className="flex-1 min-w-[220px] sm:min-w-[250px] max-w-[300px] border border-[#2B2B2B] bg-zinc-900/60 rounded-2xl p-6 shadow-md hover:shadow-lg transition"
+              className="flex-1 min-w-[220px] sm:min-w-[250px] max-w-full border border-[#2B2B2B] bg-zinc-900/60 rounded-2xl p-6 shadow-md hover:shadow-lg transition"
             >
               <div className="text-left">
                 <h3 className="text-xl sm:text-2xl font-semibold text-white">{item.value}</h3>
-                <img 
-                  src="/assets/Rectangle 23.svg" 
-                  alt="gradient line" 
-                  className="w-10 h-1"
-                />
+                <div className="relative w-[48px] h-[3px] mb-3 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600"></div>
+              <div className="absolute inset-0 shimmer"></div>
+            </div>
               </div>
               <p className="mt-3 text-[#A9A9A9] text-xs sm:text-sm text-left leading-5">
                 {item.text}

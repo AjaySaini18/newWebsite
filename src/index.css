@@ -196,3 +196,12 @@
     background-position: 200% 50%;
   }
 }
+
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }               /* Chrome/Safari/Opera */
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }/* IE/Edge + Firefox */
+  /* optional fallback if some WebKit versions ignore display:none */
+  .no-scrollbar::-webkit-scrollbar-thumb { background: transparent; }
+  .no-scrollbar::-webkit-scrollbar-track { background: transparent; }
+}
