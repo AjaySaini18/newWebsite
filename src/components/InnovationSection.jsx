@@ -8,7 +8,7 @@ const InnovationSection = () => {
 
   return (
     <section
-      className="relative w-full min-h-screen bg-cover bg-center px-6 sm:px-10 md:px-16 lg:px-24 py-12 md:py-12 lg:py-18 font-gilroy"
+      className="relative w-full bg-cover bg-center px-6 sm:px-10 md:px-16 lg:px-24 py-12 md:py-12 lg:py-18 font-gilroy"
       style={{
         backgroundImage: "url('/assets/Rectangle-26.png')",
       }}

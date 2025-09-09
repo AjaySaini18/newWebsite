@@ -31,7 +31,7 @@ const CaseStudySection = () => {
     <section className="relative w-full overflow-hidden font-gilroy">
       {/* Main Container with Background */}
       <div
-        className="w-full max-w-full px-6 md:px-12 lg:px-24 py-12 md:py-16 lg:py-20 backdrop-blur-[52.9px]"
+        className="w-full px-6 md:px-12 lg:px-24 py-12 md:py-16 lg:py-20 backdrop-blur-[52.9px]"
         style={{
           backgroundImage: "url('/assets/bg_casestudy.png')",
           backgroundSize: "cover",
