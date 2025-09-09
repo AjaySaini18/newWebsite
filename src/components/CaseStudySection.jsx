@@ -99,24 +99,28 @@ const CaseStudySection = () => {
             </motion.button>
           </motion.div>
 
-          {/* Right Image Box */}
+          {/* Right Image + Scroller */}
           <motion.div
-            className="flex-1 flex items-start justify-center relative"
+            className="flex-1 flex items-start justify-center"
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <img
-              src="/assets/Rectangle20.png"
-              alt="Microsoft Case Study"
-              className="w-full max-w-[825px] h-auto sm:h-[350px] md:h-[410px] object-cover rounded-[11px] shadow-xl"
-            />
+            {/* Wrapper for Image and Scroller */}
+            <div className="relative flex">
+              {/* Case Study Image */}
+              <img
+                src="/assets/Rectangle20.png"
+                alt="Microsoft Case Study"
+                className="w-full max-w-[825px] h-auto sm:h-[350px] md:h-[410px] object-cover rounded-[11px] shadow-xl"
+              />
 
-            {/* Scroll Indicator */}
-            <div className="absolute right-[-10px] sm:right-[-14px] top-0 h-full hidden sm:flex items-center">
-              <div className="w-[3px] h-full bg-gray-600/50 rounded-full relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-cyan-400 to-blue-600 rounded-full"></div>
+              {/* Scroll Indicator */}
+              <div className="absolute right-[-10px] sm:right-[-14px] top-0 h-full hidden sm:flex items-center">
+                <div className="w-[3px] h-full bg-gray-600/50 rounded-full relative overflow-hidden">
+                  <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-cyan-400 to-blue-600 rounded-full animate-scroll-indicator"></div>
+                </div>
               </div>
             </div>
           </motion.div>
