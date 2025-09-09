@@ -66,7 +66,7 @@ const ServicesSection = () => {
 
               {/* Description */}
               <p
-                className="text-[12px] text-gray-600 leading-relaxed transition-all duration-300 
+                className="text-[12px] 2xl:text-[15px] text-gray-600 font-semibold leading-relaxed transition-all duration-300 
                            group-hover:text-white"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod

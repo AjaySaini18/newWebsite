@@ -43,43 +43,49 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-full container mx-auto px-6 md:px-12 lg:px-24 pt-20 sm:pt-36 lg:pt-40">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-13 gap-8 lg:gap-10 2xl:gap-12 items-start">
           {/* Left Headings */}
           <motion.div
-            className="w-full lg:col-span-8"
+            className="w-full lg:col-span-9 2xl:col-span-9"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-extrabold text-[clamp(22px,6vw,60px)] lg:text-[clamp(24px,8vw,60px)] leading-tight sm:leading-[60px] text-left">
+            <h1 className="font-extrabold text-[clamp(22px,6vw,60px)] lg:text-[clamp(22px,6vw,60px)] 2xl:text-[clamp(30px,10vw,80px)] 2xl:leading-[80px] sm:leading-[60px] text-left">
               CREATE. COLLABORATE.
             </h1>
-            <h1 className="mt-2 sm:mt-4 font-extrabold text-[clamp(22px,6vw,60px)] lg:text-[clamp(24px,8vw,60px)] leading-tight sm:leading-[60px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-right">
+            <h1 className="mt-2 sm:mt-4 font-extrabold text-[clamp(22px,6vw,60px)] lg:text-[clamp(22px,6vw,60px)] 2xl:text-[clamp(30px,10vw,80px)] 2xl:leading-[80px] sm:leading-[60px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-right">
               CHANGE THE WORLD.
             </h1>
           </motion.div>
 
           {/* Right aligned text block */}
           <motion.div
-            className="lg:col-span-4 flex flex-col justify-start mt-4 lg:mt-3 max-w-[380px]"
+            className="lg:col-span-4 2xl:col-span- flex flex-col justify-start mt-4 lg:mt-3 max-w-[380px] xl:max-w-[420px] 2xl:max-w-[480px]"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className="w-[54px] h-[5px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 mb-3"></div>
-            <p className="text-gray-200 mb-3 leading-relaxed text-[10px] sm:text-[11px] lg:text-[13px] font-medium">
+            {/* Sparkling / Shimmer Strip */}
+            <div className="relative w-[54px] h-[5px] mb-3 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600"></div>
+              <div className="absolute inset-0 shimmer"></div>
+            </div>
+            <p className="text-gray-200 mb-3 leading-relaxed text-[10px] sm:text-[11px] font-figtree lg:text-[12px] 2xl:text-[15px] font-medium">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip.
             </p>
-            <div className="flex items-center gap-2 font-semibold cursor-pointer hover:opacity-80 text-[12px] sm:text-[14px]">
+            <div className="flex items-center gap-2 font-semibold cursor-pointer hover:opacity-80 text-[12px] sm:text-[11px] 2xl:text-[16px]">
               <span>See what we do</span>
-              <img
-                src="/assets/arrow.svg"
-                alt="Arrow"
-                className="h-3 w-3 sm:h-4 sm:w-4"
-              />
+              <div className="relative inline-block p-[2px] rounded-sm overflow-hidden animate-border-shimmer">
+                <img
+                  src="/assets/arrow.svg"
+                  alt="Arrow"
+                  className="h-3 w-3 sm:h-4 sm:w-4 block bg-black rounded-sm"
+                />
+              </div>
             </div>
           </motion.div>
         </div>
@@ -100,7 +106,7 @@ const HeroSection = () => {
             <motion.div
               onClick={() => navigate("/ai")}
               key={idx}
-              className="relative h-[350px] w-full bg-cover bg-center overflow-hidden group"
+              className="relative h-[350px] 2xl:h-[450px] w-full bg-cover bg-center overflow-hidden group"
               style={{ backgroundImage: `url(${card.img})` }}
               variants={{
                 hidden: { opacity: 0, scale: 0.9, y: 30 },
