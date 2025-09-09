@@ -80,7 +80,7 @@ const CTASection = () => {
               <button
                 key={idx}
                 onClick={btn.onClick}
-                className="group relative rounded-full p-[1.5px] transition-all duration-300"
+                className="group relative rounded-full p-[1px] transition-all duration-300"
               >
                 {/* Gradient Border */}
                 <span className="absolute inset-0 rounded-full bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
@@ -114,7 +114,7 @@ const CTASection = () => {
                   transition={{ duration: 0.6 }}
                 >
                   {/* Gradient Border Wrapper */}
-                  <div className="relative rounded-2xl p-[1.5px]">
+                  <div className="relative rounded-2xl p-[1px]">
                     {/* Gradient border */}
                     <span className="absolute inset-0 rounded-2xl bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></span>
 
