@@ -38,7 +38,7 @@ const ContactCTA = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.0 }}
             viewport={{ once: true }}
           >
             <Phone size={16} />

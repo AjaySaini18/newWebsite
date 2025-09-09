@@ -83,7 +83,8 @@ const TestimonialsSection = () => {
           <div className="col-span-12 md:col-span-3 flex md:justify-end">
             <motion.button
               whileHover={{ scale: 1.05 }}
-              className="hover:border-hidden px-4 sm:px-6 py-2 text-[11px] sm:text-[12px] border border-gray-400 rounded-sm hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] transition-all duration-500 ease-in-out"
+              transition={{ type: "spring", stiffness: 300 }}
+              className="hover:border-hidden px-4 sm:px-6 py-2 text-[11px] sm:text-[12px] border border-white rounded-sm hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] transition-colors duration-500 ease-in-out"
             >
               All Services
             </motion.button>

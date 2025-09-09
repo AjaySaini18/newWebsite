@@ -28,10 +28,16 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex items-center gap-3">
-              {["fb", "linkedin", "insta"].map((icon, idx) => (
+              {[
+                { icon: "fb", link: "https://facebook.com" },
+                { icon: "linkedin", link: "https://www.linkedin.com/company/synopix/posts/?feedView=all" },
+                { icon: "insta", link: "https://instagram.com" },
+              ].map(({ icon, link }, idx) => (
                 <motion.a
                   key={idx}
-                  href="#"
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.2 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -43,6 +49,7 @@ const Footer = () => {
                 </motion.a>
               ))}
             </div>
+
 
             {/* Address */}
             <p className="text-[#525252] text-xs font-medium">
@@ -134,7 +141,7 @@ const Footer = () => {
 >
   <div className="max-w-full mx-auto px-6 md:px-12 lg:px-24 text-[12px] py-6 flex flex-col md:flex-row items-start justify-start gap-6 text-[#525252]">
     <p>© 2022–2025 Synopix LLC</p>
-    <div className=" lg:ml-50 flex flex-wrap justify-start gap-6 md:gap-14">
+    <div className=" lg:ml-50 flex flex-wrap justify-start gap-6 md:gap-10">
       <span>Contact us</span>
       <span>Sustainability</span>
       <span>Accessibility</span>
