@@ -58,7 +58,7 @@ const ServicesSection = () => {
 
               {/* Title */}
               <h3
-                className="text-md font-bold text-gray-800 mb-3 transition-all duration-300 
+                className="text-md  xl:text-lg font-bold text-gray-800 mb-3 transition-all duration-300 
                            group-hover:text-white"
               >
                 AI ML Development
@@ -66,7 +66,7 @@ const ServicesSection = () => {
 
               {/* Description */}
               <p
-                className="text-[12px] 2xl:text-[15px] text-gray-600 font-semibold leading-relaxed transition-all duration-300 
+                className="text-[12px] 2xl:text-[15px] text-gray-600 font-medium font-figtree leading-relaxed transition-all duration-300 
                            group-hover:text-white"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod

@@ -8,8 +8,8 @@ const testimonials = [
     id: 1,
     title: "AI ML Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    profileImg: "/assets/Rectangle38.png",
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." ,   
+profileImg: "/assets/Rectangle38.png",
     name: "Milan Anshuman",
     role: "Sr. UI UX Designer",
     company: "American Instant Food (Subway Group)",
@@ -105,7 +105,7 @@ const CTASection = () => {
               <AnimatePresence key={item.id} mode="wait">
                 <motion.div
                   key={item.id}
-                  className={`group relative min-w-[90%] sm:min-w-[66.66%] md:min-w-[50%] lg:min-w-[70%] transition-opacity duration-500 ${
+                  className={`   group relative min-w-[90%] sm:min-w-[66.66%] md:min-w-[50%] lg:min-w-[70%] transition-opacity duration-500 ${
                     index === current ? "opacity-100" : "opacity-30"
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -122,10 +122,10 @@ const CTASection = () => {
                     <div className="relative z-10 bg-[#1E1E1E] rounded-2xl p-4 sm:p-6 md:p-8 text-white flex flex-col justify-between shadow-lg min-h-[240px] sm:min-h-[260px]">
                       {/* Title & Desc */}
                       <div>
-                        <h3 className="text-[14px] sm:text-[16px] font-bold text-[#AFAFAF] mb-2">
+                        <h3 className="text-[14px] 2xl:text-[18px] sm:text-[16px] font-bold text-[#AFAFAF] mb-2">
                           {item.title}
                         </h3>
-                        <p className="text-[11px] sm:text-[12px] leading-[16px] sm:leading-[18px] text-[#D4D4D4] line-clamp-3 sm:line-clamp-4">
+                        <p className="text-[11px] sm:text-[12px] xl:text-[15px] font-figtree leading-[16px] sm:leading-[18px] text-[#D4D4D4] line-clamp-3 sm:line-clamp-4">
                           {item.description}
                         </p>
                       </div>
@@ -142,13 +142,13 @@ const CTASection = () => {
                             className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-md object-cover"
                           />
                           <div>
-                            <p className="text-[11px] sm:text-[12px] font-semibold text-[#D4D4D4]">
+                            <p className="2xl:text-[13px] text-[11px] sm:text-[12px] font-semibold text-[#D4D4D4]">
                               {item.name}
                             </p>
-                            <p className="text-[11px] sm:text-[13px] text-[#D4D4D4]">
+                            <p className="text-[11px] 2xl:text-md sm:text-[13px] text-[#D4D4D4]">
                               {item.role}
                             </p>
-                            <p className="text-[11px] sm:text-[12px] text-[#D4D4D4]">
+                            <p className="text-[11px] 2xl:text-md sm:text-[12px] text-[#D4D4D4]">
                               {item.company}
                             </p>
                           </div>

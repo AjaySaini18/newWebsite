@@ -23,7 +23,7 @@ const ContactCTA = () => {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-white text-base sm:text-lg md:text-xl lg:text-[22px] xl:text-[24px] font-semibold leading-snug"
+            className="text-white text-base sm:text-lg md:text-xl lg:text-[22px] 2xl:text-[28px] font-semibold leading-snug"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -76,10 +76,10 @@ const ContactCTA = () => {
                 className="w-[55px] sm:w-[65px] h-[55px] sm:h-[65px] object-contain"
               />
             </div>
-            <h3 className="text-[13px] sm:text-[14px] font-bold mb-1">
+            <h3 className="text-[13px] sm:text-[14px] 2xl:text-[17px] font-bold mb-1">
               United States of America
             </h3>
-            <p className="text-[10px] sm:text-[11px] font-semibold text-[#E5E5E5]">
+            <p className="text-[10px] sm:text-[11px] 2xl:text-[14px] font-semibold text-[#E5E5E5]">
               6065 Roswell Road, Suite 450,
               <br />
               Atlanta, GA 30328-4011
@@ -102,8 +102,8 @@ const ContactCTA = () => {
                 className="w-[55px] sm:w-[65px] h-[55px] sm:h-[65px] object-contain"
               />
             </div>
-            <h3 className="text-[13px] sm:text-[14px] font-bold mb-1">India</h3>
-            <p className="text-[10px] sm:text-[11px] font-semibold text-[#E5E5E5]">
+            <h3 className="text-[13px] sm:text-[14px] 2xl:text-[17px] font-bold mb-1">India</h3>
+            <p className="text-[10px] sm:text-[11px] 2xl:text-[14px] font-semibold text-[#E5E5E5]">
               6065 Roswell Road, Suite 450,
               <br />
               Atlanta, GA 30328-4011

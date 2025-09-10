@@ -36,20 +36,18 @@ const Navbar = () => {
             onMouseEnter={() => setShowWhatWeDo(true)}
             onMouseLeave={() => setShowWhatWeDo(false)}
           >
-            <span>What we do</span>
-            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
-
+            <span className="2xl:text-[18px] text-[14px]">What we do</span>
+  
             {showWhatWeDo && <WhatWeDoModal />}
           </div>
 
           <Link to={"/insights"}>
-            <div className="text-white cursor-pointer">What we think</div>
+            <div className="text-white cursor-pointer 2xl:text-[18px] text-[14px]">What we think</div>
           </Link>
 
           <Link to={"/team"}>
             <div className="flex items-center text-white cursor-pointer">
-              <span>Who we are</span>
-              <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
+              <span className="2xl:text-[18px] text-[14px]">Who we are</span>
             </div>
           </Link>
 
@@ -57,15 +55,15 @@ const Navbar = () => {
             className="flex items-center text-white cursor-pointer"
             onClick={() => navigate("/careers")}
           >
-            <span>Careers</span>
-            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
+            <span className="2xl:text-[18px] text-[14px]">Careers</span>
+           
           </div>
         </div>
 
         {/* Right section */}
         <div className="hidden lg:flex items-center space-x-4 relative">
           {/* Search Toggle */}
-          <div className="flex items-center">
+          <div className="flex items-center -ml-12 w-32 justify-end">
             {!showSearch ? (
               <img
                 src="/assets/search.svg"
@@ -79,24 +77,25 @@ const Navbar = () => {
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-white text-black px-2 py-1 rounded-md text-sm outline-none"
+                className="bg-white text-black px-2 py-1 rounded-md text-sm outline-none w-full"
                 autoFocus
                 onBlur={() => setShowSearch(false)}
               />
             )}
           </div>
 
+
           {/* Language Dropdown */}
           <div
-            className="flex items-center text-white cursor-pointer text-[12px] relative"
+            className="flex items-center text-white cursor-pointer text-[14px] w-10 mr-6 relative"
             onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
           >
-            <img src="/assets/earth-line.svg" alt="Language" className="h-4 w-4 mr-1" />
-            <span>{selectedLanguage}</span>
-            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-3 w-3 ml-1 mt-1" />
+            <img src="/assets/earth-line.svg" alt="Language" className="h-5 w-5 mr-1" />
+            <span className="text-md">{selectedLanguage}</span>
+            <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-4 w-4 ml-1 " />
 
             {showLanguageDropdown && (
-              <div className="absolute top-full mt-2 bg-black text-white rounded-md shadow-lg text-sm py-2 w-28">
+              <div className="absolute top-full mt-2 bg-black text-white rounded-md shadow-lg text-md py-2 w-28">
                 <div
                   className="px-4 py-2 hover:bg-white/10 cursor-pointer"
                   onClick={() => handleLanguageSelect("India")}
@@ -104,7 +103,7 @@ const Navbar = () => {
                   India
                 </div>
                 <div
-                  className="px-4 py-2 hover:bg-white/10 cursor-pointer"
+                  className="px-4 py-2 text-md hover:bg-white/10 cursor-pointer"
                   onClick={() => handleLanguageSelect("USA")}
                 >
                   USA
