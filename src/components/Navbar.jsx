@@ -36,18 +36,18 @@ const Navbar = () => {
             onMouseEnter={() => setShowWhatWeDo(true)}
             onMouseLeave={() => setShowWhatWeDo(false)}
           >
-            <span className="2xl:text-[18px] text-[14px]">What we do</span>
+            <span className="2xl:text-[17px] text-[14px]">What we do</span>
   
             {showWhatWeDo && <WhatWeDoModal />}
           </div>
 
           <Link to={"/insights"}>
-            <div className="text-white cursor-pointer 2xl:text-[18px] text-[14px]">What we think</div>
+            <div className="text-white cursor-pointer 2xl:text-[17px] text-[14px]">What we think</div>
           </Link>
 
           <Link to={"/team"}>
             <div className="flex items-center text-white cursor-pointer">
-              <span className="2xl:text-[18px] text-[14px]">Who we are</span>
+              <span className="2xl:text-[17px] text-[14px]">Who we are</span>
             </div>
           </Link>
 
@@ -55,7 +55,7 @@ const Navbar = () => {
             className="flex items-center text-white cursor-pointer"
             onClick={() => navigate("/careers")}
           >
-            <span className="2xl:text-[18px] text-[14px]">Careers</span>
+            <span className="2xl:text-[17px] text-[14px]">Careers</span>
            
           </div>
         </div>

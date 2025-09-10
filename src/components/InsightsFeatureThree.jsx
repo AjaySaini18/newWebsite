@@ -47,23 +47,20 @@ const InsightsFeatureThree = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={textVariants}
         >
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-[#CACACA]">
+          <h2 className="2xl:text-4xl text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-[#CACACA]">
             Providing Different Artificial <br className="hidden md:block"/>
             Intelligence Development Services
           </h2>
-          <p className="text-sm font-base text-[#B7B7B7] leading-[1.4] mb-4 lg:mb-6">
+          <p className="2xl:text-lg text-sm font-medium font-base text-[#B7B7B7] leading-[1.4] mb-4 lg:mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus eros 
             aliquet convallis ultricies. Morbi vitae ligula id nunc ullamcorper viverra. Sed 
             id urna sed leo hendrerit tincidunt sit amet at massa. Suspendisse potenti. Cras 
             sit amet aliquet lorem. Integer posuere ligula non sapien semper, in vulputate 
             risus commodo.
           </p>
-          <p className="text-sm font-medium text-[#B7B7B7] leading-[1.4]">
+          <p className="2xl:text-lg text-sm font-medium text-[#B7B7B7] leading-[1.4]">
             Nullam id felis a arcu maximus pretium. Sed euismod purus ac purus sollicitudin, 
             vel pulvinar orci viverra. Etiam sed dapibus sem, nec ultricies magna. Curabitur 
-            auctor ligula eu dui dictum varius. Maecenas volutpat massa at lectus vestibulum 
-            egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada 
-            fames ac turpis egestas.
           </p>
         </motion.div>
 

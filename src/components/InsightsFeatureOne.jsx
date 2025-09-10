@@ -25,14 +25,14 @@ const InsightsFeatureOne = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={textVariants}
         >
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 lg:mb-6 lg:leading-snug">
+          <h2 className="2xl:text-4xl text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 lg:mb-6 lg:leading-snug">
             We Transform Businesses & Society 
             Through Our Data Science Service
           </h2>
-          <p className="text-sm font-medium text-[#393939] leading-[1.5] mb-3 lg:mb-6">
+          <p className="text-sm 2xl:text-lg font-medium text-[#393939] leading-[1.5] mb-3 lg:mb-6">
             Phasellus vitae justo id sapien volutpat vulputate vitae sed eros. Aliquam ac felis nec velit fermentum suscipit a sit amet orci. Sed gravida, ex nec commodo bibendum, magna libero tristique mi, non varius nisl elit in libero. Etiam sit amet dapibus odio, nec ultrices magna. Ut tempor augue nec nisi fermentum, et feugiat nisi egestas. 
           </p>
-          <p className="text-sm font-medium text-[#393939] leading-[1.5]">
+          <p className="text-sm 2xl:text-lg font-medium text-[#393939] leading-[1.5]">
             Fusce pretium porttitor nisi, eget volutpat odio facilisis et. Nam fermentum lectus a justo ultrices, non efficitur nunc sollicitudin. Quisque ut sapien vel felis bibendum porttitor. Duis sodales, magna ac vulputate suscipit, nisl turpis condimentum nunc, ac ultrices enim nulla a purus.
           </p>
         </motion.div>

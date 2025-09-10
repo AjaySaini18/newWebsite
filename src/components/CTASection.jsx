@@ -122,10 +122,10 @@ const CTASection = () => {
                     <div className="relative z-10 bg-[#1E1E1E] rounded-2xl p-4 sm:p-6 md:p-8 text-white flex flex-col justify-between shadow-lg min-h-[240px] sm:min-h-[260px]">
                       {/* Title & Desc */}
                       <div>
-                        <h3 className="text-[14px] 2xl:text-[18px] sm:text-[16px] font-bold text-[#AFAFAF] mb-2">
+                        <h3 className="text-[14px] 2xl:text-[18px] sm:text-[16px]  font-bold text-[#AFAFAF] mb-2">
                           {item.title}
                         </h3>
-                        <p className="text-[11px] sm:text-[12px] xl:text-[15px] font-figtree leading-[16px] sm:leading-[18px] text-[#D4D4D4] line-clamp-3 sm:line-clamp-4">
+                        <p className="text-[13px] sm:text-[13px] 2xl:text-[15px] leading-snug font-figtree  sm:leading-[18px] text-[#D4D4D4] line-clamp-3 sm:line-clamp-4">
                           {item.description}
                         </p>
                       </div>

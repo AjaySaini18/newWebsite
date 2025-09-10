@@ -117,7 +117,7 @@ const TestimonialsSection = () => {
                   />
 
                   {/* Title */}
-                  <h3 className="text-sm sm:text-base text-[#AFAFAF] font-semibold mb-2">
+                  <h3 className="text-sm 2xl:text-lg sm:text-base text-[#AFAFAF] font-semibold mb-2">
                     {service.title}
                   </h3>
 

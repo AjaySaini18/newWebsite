@@ -17,7 +17,7 @@ const InsightsHero = () => {
 
   return (
     <section
-      className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] font-gilroy flex pt-32 sm:pt-40 md:pt-50 justify-center text-center text-white px-4"
+      className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] font-gilroy flex items-center justify-center text-center text-white px-4"
       style={{
         backgroundImage: "url('/assets/insightBg.jpg')",
         backgroundSize: "cover",
@@ -37,7 +37,7 @@ const InsightsHero = () => {
       >
         {/* Heading */}
         <motion.h1
-          className="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-6 sm:mb-8 md:mb-10"
+          className="text-2xl sm:text-3xl md:text-5xl 2xl:text-6xl  font-extrabold mb-6 sm:mb-8 md:mb-10"
           variants={itemVariants}
         >
           WHAT WE THINK
@@ -45,7 +45,7 @@ const InsightsHero = () => {
 
         {/* Paragraph */}
         <motion.p
-          className="text-xs sm:text-sm md:text-base leading-relaxed sm:leading-[1.4] md:leading-[1.3] text-[#D1D4E7]"
+          className="2xl:text-lg font-medium text-xs sm:text-sm md:text-base leading-relaxed sm:leading-[1.4] md:leading-[1.3] text-[#D1D4E7]"
           variants={itemVariants}
         >
           A progressive AI ML development company, winning the trust of global
@@ -62,7 +62,7 @@ const InsightsHero = () => {
         <motion.button
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="hover:border-hidden hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-6 sm:mt-8 px-4 py-2 border border-white font-light rounded-md text-xs sm:text-sm transition-colors"
+          className="hover:border-hidden hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-6 sm:mt-8 px-5 py-2 border border-white font-light rounded-md 2xl:text-lg text-xs sm:text-sm transition-colors"
           variants={itemVariants}
         >
           Consult Now

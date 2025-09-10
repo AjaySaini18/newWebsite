@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion"; // <-- added
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
@@ -30,6 +30,58 @@ const faqs = [
       "AI and ML help businesses make data-driven decisions, enhance customer personalization, reduce operational costs, and gain a competitive edge.",
   },
 ];
+
+const FAQItem = ({ faq, isOpen, onClick }) => {
+  const ref = useRef(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (ref.current) {
+      setHeight(ref.current.scrollHeight);
+    }
+  }, [isOpen]);
+
+  return (
+    <motion.div
+      className="bg-[#EEEEEE] rounded-md shadow-sm overflow-hidden"
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+      }}
+    >
+      {/* Button */}
+      <button
+        className="w-full flex justify-between items-center text-left px-6 py-4 text-gray-800 font-medium focus:outline-none"
+        onClick={onClick}
+      >
+        <span>{faq.question}</span>
+        {isOpen ? (
+          <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 flex-shrink-0" />
+        ) : (
+          <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 flex-shrink-0" />
+        )}
+      </button>
+
+      {/* Answer */}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <div ref={ref} className="px-6 pb-4 text-gray-600 text-sm">
+              {faq.answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+};
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -63,42 +115,12 @@ const FAQSection = () => {
           }}
         >
           {faqs.map((faq, index) => (
-            <motion.div
+            <FAQItem
               key={index}
-              className="bg-[#EEEEEE] rounded-md shadow-sm overflow-hidden"
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-              }}
-            >
-              <button
-                className="w-full flex justify-between items-center text-left px-6 py-4 text-gray-800 font-medium focus:outline-none"
-                onClick={() => toggleFAQ(index)}
-              >
-                <span>{faq.question}</span>
-                {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 flex-shrink-0" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 flex-shrink-0" />
-                )}
-              </button>
-
-              {/* AnimatePresence for smooth open/close */}
-              <AnimatePresence initial={false}>
-                {openIndex === index && (
-                  <motion.div
-                    key="content"
-                    className="px-6 pb-4 text-gray-600 text-sm"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                  >
-                    {faq.answer}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
+              faq={faq}
+              isOpen={openIndex === index}
+              onClick={() => toggleFAQ(index)}
+            />
           ))}
         </motion.div>
       </div>
