@@ -1,4 +1,3 @@
-// components/InnovationSection.jsx
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -34,12 +33,11 @@ const InnovationSection = () => {
           {["27", "28", "29", "30"].map((num, index) => (
             <motion.div
               key={num}
-              className="w-full max-w-[300px] sm:max-w-[280px] md:max-w-[300px] lg:max-w-[328px] h-[250px] sm:h-[280px] md:h-[320px] lg:h-[362px] rounded-[18px] overflow-hidden"
+              className="w-full h-100 rounded-2xl overflow-hidden"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
               onMouseEnter={() => setHovered(index)}
               onMouseLeave={() => setHovered(null)}
             >
@@ -65,7 +63,7 @@ const InnovationSection = () => {
           viewport={{ once: true }}
           whileHover={{ scale: 1.05 }}
         >
-          <button className="hover:text-black hover:bg-white text-[20px] flex items-center justify-center gap-2 py-2 w-full max-w-[200px] sm:max-w-[150px] rounded-md border border-white text-white font-heading font-normal text-base sm:text-sm transition-all duration-300">
+          <button className="hover:text-black hover:bg-white text-md flex items-center justify-center gap-2 py-2 w-full max-w-45 rounded-md border border-white text-white transition-all duration-300">
             See All Testimonials
           </button>
         </motion.div>

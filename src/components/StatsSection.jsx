@@ -28,7 +28,7 @@ const StatsSection = () => {
     <section className="pt-4 lg:pt-7 md:pb-10 lg:pb-20 bg-gray-50 font-gilroy">
       <div className="container max-w-full mx-auto px-6 md:px-12 lg:px-24">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-12"
+          className="grid grid-cols-1 md:grid-cols-3 px-16 gap-10 lg:gap-20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -50,10 +50,10 @@ const StatsSection = () => {
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <motion.div
-                className="text-5xl font-extrabold mb-4"
+                className="text-5xl font-extrabold mb-2"
                 style={{
                   background:
-                    "linear-gradient(109.77deg, #06F7C4 -5.67%, #4359FF 26.82%)",
+                    "linear-gradient(to bottom right, #06F7C4 1%, #4359FF 99%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -65,10 +65,12 @@ const StatsSection = () => {
                 {stat.value}
               </motion.div>
 
-              <h3 className="text-xl font-bold text-gray-800 mb-4">
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
                 {stat.label}
               </h3>
-              <p className="text-gray-600 text-md font-figtree">{stat.description}</p>
+              <p className="text-gray-600 text-sm">
+                {stat.description}
+              </p>
             </motion.div>
           ))}
         </motion.div>

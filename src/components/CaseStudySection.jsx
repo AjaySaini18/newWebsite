@@ -1,4 +1,3 @@
-// components/CaseStudySection.jsx
 import React, { useRef, useState, useEffect } from "react";
 
 const CaseStudySection = () => {
@@ -7,6 +6,7 @@ const CaseStudySection = () => {
 
   const [thumbTop, setThumbTop] = useState(0);
   const [thumbHeight, setThumbHeight] = useState(30); // default %
+  const [visibleItems, setVisibleItems] = useState(1); // Start with first item visible
 
   useEffect(() => {
     const container = scrollRef.current;
@@ -21,6 +21,12 @@ const CaseStudySection = () => {
 
       setThumbHeight(newThumbHeight);
       setThumbTop(newThumbTop);
+
+      // Reveal next item instantly when user scrolls at all
+      const totalItems = 6;
+      if (scrollTop > 0 && visibleItems < totalItems) {
+        setVisibleItems((prev) => Math.min(prev + 1, totalItems));
+      }
     };
 
     handleScroll(); // initial sync
@@ -31,9 +37,9 @@ const CaseStudySection = () => {
       container?.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
     };
-  }, []);
+  }, [visibleItems]);
 
-  // Drag logic for thumb
+  // Drag logic for scrollbar thumb
   useEffect(() => {
     const container = scrollRef.current;
     const thumb = thumbRef.current;
@@ -58,7 +64,6 @@ const CaseStudySection = () => {
 
       setThumbTop(newTop);
 
-      // Sync container scroll
       const newScrollTop =
         (newTop / maxThumbTop) * (scrollHeight - clientHeight);
       container.scrollTop = newScrollTop;
@@ -80,13 +85,13 @@ const CaseStudySection = () => {
     };
   }, [thumbTop, thumbHeight]);
 
-  // Single case study block
-  const CaseStudyItem = () => (
+  // Single Case Study Item
+  const CaseStudyItem = ({ title, result, downloads, traffic }) => (
     <div className="flex flex-col lg:flex-row items-start justify-center gap-10 lg:gap-16 w-full mb-16">
       {/* Left Content */}
       <div className="lg:w-[380px] flex flex-col">
         <h2 className="text-[20px] sm:text-[22px] md:text-[28px] font-bold text-white mb-3">
-          Microsoft
+          {title}
         </h2>
 
         <p className="text-[12px] sm:text-[13px] md:text-[18px] text-gray-200 mb-8">
@@ -99,7 +104,7 @@ const CaseStudySection = () => {
           <div className="pr-8 sm:pr-10">
             <div className="text-[14px] text-[#9F9F9F]">Result</div>
             <div className="text-[18px] sm:text-[20px] font-medium text-white mb-1">
-              10M+
+              {result}
             </div>
             <div className="text-[14px] text-[#9F9F9F]">App downloads</div>
           </div>
@@ -108,7 +113,7 @@ const CaseStudySection = () => {
 
           <div className="pl-8 sm:pl-10">
             <div className="text-[18px] sm:text-[20px] font-medium text-white mb-1">
-              15M+
+              {traffic}
             </div>
             <div className="text-[14px] text-[#9F9F9F]">Monthly Traffic</div>
           </div>
@@ -125,7 +130,7 @@ const CaseStudySection = () => {
           <div className="w-full max-w-[825px] h-[350px] md:h-[410px] overflow-hidden rounded-[11px] shadow-xl">
             <img
               src="/assets/Rectangle20.png"
-              alt="Microsoft Case Study"
+              alt={`${title} Case Study`}
               className="w-full h-auto object-cover"
             />
           </div>
@@ -162,7 +167,19 @@ const CaseStudySection = () => {
             className="max-h-[500px] overflow-y-scroll no-scrollbar pr-6 flex-1"
           >
             {[...Array(6)].map((_, i) => (
-              <CaseStudyItem key={i} />
+              <div
+                key={i}
+                className={`transition-opacity duration-500 ${
+                  i < visibleItems ? "opacity-100" : "opacity-30"
+                }`}
+              >
+                <CaseStudyItem
+                  title={`Microsoft Case ${i + 1}`}
+                  result={`${10 + i}M+`}
+                  downloads={`${5 + i}M+`}
+                  traffic={`${15 + i}M+`}
+                />
+              </div>
             ))}
           </div>
 
