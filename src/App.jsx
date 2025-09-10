@@ -12,6 +12,7 @@ import InsightsPage from './pages/InsightsPage'
 import Team from './pages/Team'
 import CareersPage from './pages/CareersPage'
 import ScrollToTop from './components/ScrollToTop'
+import IndustriesPage from './pages/IndustriesPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contact" element={<GetInTouch/>} />
           <Route path="/team" element={<Team />} />
           <Route path="/Careers" element={<CareersPage />} />
+          <Route path="/industries" element={<IndustriesPage />} />
         </Routes>
         <Footer/>
     </Router>
