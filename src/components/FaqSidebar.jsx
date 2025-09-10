@@ -1,0 +1,39 @@
+import React from "react";
+import CreditCard from "/assets/secure-payment-line.svg";
+import BookOpen from "/assets/graduation-cap-line.svg";
+import RefreshCw from "/assets/swap-2-line.svg";
+import HelpCircle from "/assets/customer-service-line.svg";
+
+const categories = [
+  { name: "Payment and Invoice", icon: CreditCard },
+  { name: "Course and Faculty", icon: BookOpen },
+  { name: "Return & Credit", icon: RefreshCw },
+  { name: "Helpdesk", icon: HelpCircle },
+];
+
+const FaqSidebar = ({ activeCategory, setActiveCategory }) => {
+  return (
+    <aside className="bg-[#F5F6FE] shadow-xs rounded-xl p-6 space-y-2">
+      {categories.map((item, idx) => {
+        const isActive = activeCategory === idx;
+        return (
+          <button
+            key={idx}
+            onClick={() => setActiveCategory(idx)}
+            className={`flex items-center justify-start space-x-2 w-full cursor-pointer shadow-xs px-3 py-2 rounded-md font-medium  transition
+              ${
+                isActive
+                  ? "bg-white shadow-sm"
+                  : "bg-transparent hover:bg-indigo-50"
+              }`}
+          >
+            <img src={item.icon} alt={item.name} className="w-5 h-5" />
+            <span className="text-sm font-semibold">{item.name}</span>
+          </button>
+        );
+      })}
+    </aside>
+  );
+};
+
+export default FaqSidebar;

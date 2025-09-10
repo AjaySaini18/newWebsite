@@ -12,6 +12,7 @@ import InsightsPage from './pages/InsightsPage'
 import Team from './pages/Team'
 import CareersPage from './pages/CareersPage'
 import ScrollToTop from './components/ScrollToTop'
+import Faq from './pages/Faq'
 import IndustriesPage from './pages/IndustriesPage'
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
           <Route path="/insights" element={<InsightsPage />} />
           <Route path="/contact" element={<GetInTouch/>} />
           <Route path="/team" element={<Team />} />
-          <Route path="/Careers" element={<CareersPage />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/careers" element={<CareersPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
         </Routes>
         <Footer/>
