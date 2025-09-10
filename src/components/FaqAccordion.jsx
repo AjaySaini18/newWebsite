@@ -33,7 +33,7 @@ const FaqAccordion = ({ activeCategory }) => {
       {faqs.map((faq, idx) => {
         const isOpen = openIndex === idx;
         return (
-          <div key={idx} onClick={() => setOpenIndex(isOpen ? null : idx)} className="border-b last:border-none">
+          <div key={idx} onClick={() => setOpenIndex(isOpen ? null : idx)} className="border-b border-[#D0D2E7] last:border-none">
             <button
               className="flex justify-between items-center w-full py-3 text-left font-bold cursor-pointer text-gray-900"
             >
