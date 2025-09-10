@@ -52,9 +52,9 @@ const TeamSection = () => {
               alt={member.name}
               className="w-full h-[240px] object-cover rounded-2xl mb-2"
             />
-            <h3 className="text-sm font-bold text-[#282828]">{member.name}</h3>
-            <p className="text-[12px] font-semibold text-[#282828]">{member.role}</p>
-            <p className="text-[10px] font-semibold text-gray-600 mt-1">{member.desc}</p>
+            <h3 className="text-lg font-bold text-[#282828]">{member.name}</h3>
+            <p className="text-sm font-semibold text-[#282828]">{member.role}</p>
+            <p className="text-[13px] font-semibold text-gray-600 mt-1">{member.desc}</p>
           </motion.div>
         ))}
       </div>
