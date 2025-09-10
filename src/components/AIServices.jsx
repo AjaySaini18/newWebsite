@@ -2,22 +2,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const services = [
-  { title: "AI Chatbot Development", content: "We build intelligent chatbots for customer engagement and automation." },
-  { title: "Machine Learning Solutions", content: "Custom ML models tailored to your business needs." },
-  { title: "Computer Vision & OCR", content: "Image recognition, OCR, and video analytics solutions." },
-  { title: "Natural Language Processing (NLP)", content: "Advanced NLP for sentiment analysis, text classification, and more." },
-  { title: "Generative AI", content: "AI solutions powered by generative models for text, images, and beyond." },
-  { title: "Generative AI", content: "AI solutions powered by generative models for text, images, and beyond." },
-  { title: "Generative AI", content: "AI solutions powered by generative models for text, images, and beyond." },
-  { title: "Generative AI", content: "AI solutions powered by generative models for text, images, and beyond." },
-  { title: "Generative AI", content: "AI solutions powered by generative models for text, images, and beyond." },
-  { title: "Generative AI", content: "AI solutions powered by generative models for text, images, and beyond." },
-  { title: "Generative AI", content: "AI solutions powered by generative models for text, images, and beyond." },
-  { title: "Generative AI", content: "AI solutions powered by generative models for text, images, and beyond." },
-];
-
-export default function AIServices() {
+export default function AIServices({ heading, services = [], rightImage }) {
   const [openIndex, setOpenIndex] = useState(null);
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -26,7 +11,11 @@ export default function AIServices() {
   // Framer motion variants
   const containerVariants = {
     hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { staggerChildren: 0.1, duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { staggerChildren: 0.1, duration: 0.6, ease: "easeOut" },
+    },
   };
 
   const itemVariants = {
@@ -37,7 +26,6 @@ export default function AIServices() {
   return (
     <section className="w-full bg-[#F8F8F8] py-10 px-4 sm:px-8 md:px-12 lg:px-24 font-gilroy">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
-
         {/* Left Section */}
         <motion.div
           variants={containerVariants}
@@ -49,11 +37,11 @@ export default function AIServices() {
             className="lg:text-3xl sm:text-lg md:text-2xl font-[700] text-gray-900 mb-6 leading-snug"
             variants={itemVariants}
           >
-            Delivering Cutting-Edge AI & ML Development Services
+            {heading}
           </motion.h2>
 
-          {/* Scrollable Accordion */}
-          <div className="space-y-3 overflow-y-auto pr-2 custom-scroll max-h-[300px] sm:max-h-[300px] md:max-h-[224px] lg:max-h-[280px]">
+          {/* Accordion */}
+          <div className="space-y-3">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -66,7 +54,11 @@ export default function AIServices() {
                 >
                   <span className="text-sm sm:text-base">{service.title}</span>
                   <span className="ml-2 text-xl">
-                    {openIndex === index ? <ChevronUp className="w-5 h-5 text-gray-700" /> : <ChevronDown className="w-5 h-5 text-gray-700" />}
+                    {openIndex === index ? (
+                      <ChevronUp className="w-5 h-5 text-gray-700" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 text-gray-700" />
+                    )}
                   </span>
                 </button>
 
@@ -89,20 +81,21 @@ export default function AIServices() {
         </motion.div>
 
         {/* Right Section */}
-        <motion.div
-          className="flex justify-center mt-8 md:mt-0"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
-        >
-          <img
-            src="/assets/image 4.svg"
-            alt="AI Services"
-            className="rounded-lg shadow-lg w-full max-w-sm sm:max-w-md md:max-w-full"
-          />
-        </motion.div>
-
+        {rightImage && (
+          <motion.div
+            className="flex justify-center mt-8 md:mt-0"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src={rightImage}
+              alt="AI Services"
+              className="rounded-lg shadow-lg w-full max-w-sm sm:max-w-md md:max-w-full"
+            />
+          </motion.div>
+        )}
       </div>
     </section>
   );

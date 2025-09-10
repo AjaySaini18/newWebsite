@@ -123,11 +123,11 @@ const Footer = () => {
           >
             <h3 className="text-[14px] 2xl:text-2xl font-semibold mb-3 text-[#525252]">Industries</h3>
             <ul className="space-y-1 font-medium text-[12px] 2xl:text-[16px] text-[#525252]">
-              <li>Healthcare</li>
-              <li>Education</li>
-              <li>Logistics</li>
-              <li>SaaS</li>
-              <li>eCommerce</li>
+              <Link to={"/healthcare"}><li>Healthcare</li></Link>
+              <Link to={"/education"}><li>Education</li></Link>
+              <Link to={"/logistics"}><li>Logistics</li></Link>
+              <Link to={"/saas"}><li>SaaS</li></Link>
+              <Link to={"/e-commerce"}><li>eCommerce</li></Link>
             </ul>
           </motion.div>
         </div>

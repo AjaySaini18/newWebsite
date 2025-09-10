@@ -15,6 +15,11 @@ import ScrollToTop from './components/ScrollToTop'
 import Faq from './pages/Faq'
 import IndustriesPage from './pages/IndustriesPage'
 import TermsAndPolicy from './pages/TermsAndPolicy'
+import HealthCare from './pages/HealthCare'
+import Education from './pages/Education'
+import Logistics from './pages/Logistics'
+import SaaS from './pages/SaaS'
+import ECommerce from './pages/ECommerce'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -34,6 +39,11 @@ function App() {
           <Route path="/careers" element={<CareersPage />} />
           <Route path="/industries" element={<IndustriesPage />} />
           <Route path="/terms-and-policy" element={<TermsAndPolicy />} />
+          <Route path="/healthcare" element={<HealthCare/>} />
+          <Route path="/education" element={<Education/>} />
+          <Route path="/logistics" element={<Logistics/>} />
+          <Route path="/saas" element={<SaaS/>} />
+          <Route path="/e-commerce" element={<ECommerce/>} />
         </Routes>
         <Footer/>
     </Router>
