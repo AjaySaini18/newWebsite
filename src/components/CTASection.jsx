@@ -1,4 +1,3 @@
-// components/CTASection.jsx
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,8 +7,8 @@ const testimonials = [
     id: 1,
     title: "AI ML Development",
     description:
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." ,   
-profileImg: "/assets/Rectangle38.png",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    profileImg: "/assets/Rectangle38.png",
     name: "Milan Anshuman",
     role: "Sr. UI UX Designer",
     company: "American Instant Food (Subway Group)",
@@ -19,7 +18,7 @@ profileImg: "/assets/Rectangle38.png",
     id: 2,
     title: "AI ML Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     profileImg: "/assets/Rectangle38.png",
     name: "Jane Doe",
     role: "Product Manager",
@@ -30,7 +29,7 @@ profileImg: "/assets/Rectangle38.png",
     id: 3,
     title: "Cloud Migration",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     profileImg: "/assets/Rectangle38.png",
     name: "John Smith",
     role: "CTO",
@@ -50,7 +49,7 @@ const CTASection = () => {
 
   return (
     <section
-      className="relative w-full pt-10 pb-20 px-4 sm:px-6 lg:px-24 bg-cover bg-center"
+      className="relative w-full pt-10 pb-20 px-4 px-6 md:px-12 lg:px-24 bg-cover bg-center"
       style={{ backgroundImage: "url('/assets/bg_casestudy.png')" }}
     >
       <div className="max-w-full mx-auto">
@@ -62,11 +61,10 @@ const CTASection = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-lg sm:text-xl md:text-[26px] font-gilroy font-semibold leading-[28px] sm:leading-[36px] text-white">
+          <h2 className="text-3xl font-gilroy font-medium leading-[28px] sm:leading-[36px] text-white">
             Partnership Success Stories, In Their Own Words
           </h2>
 
-          {/* Arrow Buttons with Gradient Border */}
           <motion.div
             className="flex gap-2 self-end sm:self-auto"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -82,9 +80,7 @@ const CTASection = () => {
                 onClick={btn.onClick}
                 className="group relative rounded-full p-[1px] transition-all duration-300"
               >
-                {/* Gradient Border */}
                 <span className="absolute inset-0 rounded-full bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                {/* Inner Button */}
                 <span className="relative flex items-center justify-center w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] rounded-full bg-[#1E1E1E] group-hover:bg-[#1E1E1E]">
                   {btn.icon}
                 </span>
@@ -105,7 +101,7 @@ const CTASection = () => {
               <AnimatePresence key={item.id} mode="wait">
                 <motion.div
                   key={item.id}
-                  className={`   group relative min-w-[90%] sm:min-w-[66.66%] md:min-w-[50%] lg:min-w-[70%] transition-opacity duration-500 ${
+                  className={`group relative min-w-[90%] sm:min-w-[66.66%] md:min-w-[50%] lg:min-w-[70%] transition-opacity duration-500 ${
                     index === current ? "opacity-100" : "opacity-30"
                   }`}
                   initial={{ opacity: 0, y: 30 }}
@@ -113,35 +109,30 @@ const CTASection = () => {
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.6 }}
                 >
-                  {/* Gradient Border Wrapper */}
                   <div className="relative rounded-2xl p-[1px]">
-                    {/* Gradient border */}
                     <span className="absolute inset-0 rounded-2xl bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></span>
 
-                    {/* Card Content */}
                     <div className="relative z-10 bg-[#1E1E1E] rounded-2xl p-4 sm:p-6 md:p-8 text-white flex flex-col justify-between shadow-lg min-h-[240px] sm:min-h-[260px]">
-                      {/* Title & Desc */}
                       <div>
-                        <h3 className="text-[14px] 2xl:text-[18px] sm:text-[16px]  font-bold text-[#AFAFAF] mb-2">
+                        <h3 className="text-lg font-bold text-[#AFAFAF] mb-2">
                           {item.title}
                         </h3>
-                        <p className="text-[13px] sm:text-[13px] 2xl:text-[15px] leading-snug font-figtree  sm:leading-[18px] text-[#D4D4D4] line-clamp-3 sm:line-clamp-4">
+                        <p className="text-sm leading-normal text-[#D4D4D4] line-clamp-3 sm:line-clamp-4">
                           {item.description}
                         </p>
                       </div>
 
-                      {/* Divider */}
                       <div className="border-t border-[#2B2B2B] my-3 sm:my-4"></div>
 
-                      {/* Profile & Logo */}
-                      <div className="flex items-center justify-between gap-3 sm:gap-6">
-                        <div className="flex items-center gap-2 sm:gap-3">
+                      {/* Responsive Profile & Logo */}
+                      <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between gap-4 sm:gap-3">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-end gap-2 sm:gap-3">
                           <img
                             src={item.profileImg}
                             alt={item.name}
-                            className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-md object-cover"
+                            className="w-20 h-20 rounded-md object-cover"
                           />
-                          <div>
+                          <div className="text-center sm:text-left">
                             <p className="2xl:text-[13px] text-[11px] sm:text-[12px] font-semibold text-[#D4D4D4]">
                               {item.name}
                             </p>
@@ -157,7 +148,7 @@ const CTASection = () => {
                         <img
                           src={item.companyLogo}
                           alt="Company Logo"
-                          className="w-[100px] sm:w-[80px] h-[20px] sm:h-[26px] object-contain"
+                          className="lg:w-40 lg:h-8 md:w-20 md:h-5 object-contain"
                         />
                       </div>
                     </div>

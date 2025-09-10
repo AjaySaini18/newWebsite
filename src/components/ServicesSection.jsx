@@ -8,7 +8,7 @@ const ServicesSection = () => {
       <div className="container max-w-full mx-auto px-6 sm:px-12 lg:px-24">
         {/* Heading */}
         <motion.h2
-          className="text-[22px] sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-center text-gray-800 mb-12 leading-tight"
+          className="text-[22px] sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-center text-gray-800 mb-12 leading-tight"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -58,7 +58,7 @@ const ServicesSection = () => {
 
               {/* Title */}
               <h3
-                className="text-md  xl:text-lg font-bold text-gray-800 mb-3 transition-all duration-300 
+                className="text-md  xl:text-lg font-bold text-gray-800 mb-1 transition-all duration-300 
                            group-hover:text-white"
               >
                 AI ML Development
@@ -66,7 +66,7 @@ const ServicesSection = () => {
 
               {/* Description */}
               <p
-                className="text-[12px] 2xl:text-[15px] text-gray-600 font-medium font-figtree leading-relaxed transition-all duration-300 
+                className="text-sm text-[#585858] leading-normal transition-all duration-300 
                            group-hover:text-white"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod

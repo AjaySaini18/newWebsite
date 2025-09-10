@@ -17,8 +17,8 @@ const clients = [
 
 const ClientsSection = () => {
   return (
-    <section className="w-full bg-white py-7 sm:py-11 md:py-15 px-6 lg:px-24 font-gilroy">
-      <div className="max-w-[1421px] mx-auto">
+    <section className="w-full bg-white py-7 sm:py-11 md:py-15 px-6 md:px-12 lg:px-24 font-gilroy">
+      <div className="max-full mx-auto">
         {/* Heading */}
         <motion.div
           className="grid grid-cols-12 mb-9"
@@ -27,7 +27,7 @@ const ClientsSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="col-span-12 text-left text-[20px] sm:text-[24px] md:text-[28px] font-bold leading-snug sm:leading-[32px] md:leading-[36px] text-black">
+          <h2 className="col-span-12 text-left text-3xl font-bold leading-snug sm:leading-[32px] md:leading-[36px] text-black">
             Creating New Ways to Experience the World’s <br className="hidden sm:block" />
             Most Influential Brands
           </h2>

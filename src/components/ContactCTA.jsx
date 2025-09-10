@@ -23,7 +23,7 @@ const ContactCTA = () => {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="text-white text-base sm:text-lg md:text-xl lg:text-[22px] 2xl:text-[28px] font-semibold leading-snug"
+            className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-medium leading-snug"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -48,7 +48,7 @@ const ContactCTA = () => {
 
         {/* Right Box */}
         <motion.div
-          className="col-span-12 lg:col-span-5 flex flex-row flex-wrap justify-center lg:justify-end gap-6"
+          className="col-span-12 lg:col-span-5 flex flex-row flex-wrap justify-center lg:justify-end gap-12"
           initial="hidden"
           whileInView="visible"
           variants={{
@@ -73,13 +73,13 @@ const ContactCTA = () => {
               <img
                 src="/assets/us.svg"
                 alt="USA"
-                className="w-[55px] sm:w-[65px] h-[55px] sm:h-[65px] object-contain"
+                className="w-18 h-18 object-contain"
               />
             </div>
-            <h3 className="text-[13px] sm:text-[14px] 2xl:text-[17px] font-bold mb-1">
+            <h3 className="text-md font-semibold mb-1">
               United States of America
             </h3>
-            <p className="text-[10px] sm:text-[11px] 2xl:text-[14px] font-semibold text-[#E5E5E5]">
+            <p className="text-sm text-[#E5E5E5]">
               6065 Roswell Road, Suite 450,
               <br />
               Atlanta, GA 30328-4011
@@ -99,11 +99,11 @@ const ContactCTA = () => {
               <img
                 src="/assets/india.svg"
                 alt="India"
-                className="w-[55px] sm:w-[65px] h-[55px] sm:h-[65px] object-contain"
+                className="w-18 h-18 object-contain"
               />
             </div>
-            <h3 className="text-[13px] sm:text-[14px] 2xl:text-[17px] font-bold mb-1">India</h3>
-            <p className="text-[10px] sm:text-[11px] 2xl:text-[14px] font-semibold text-[#E5E5E5]">
+            <h3 className="text-md font-semibold mb-1">India</h3>
+            <p className="text-sm text-[#E5E5E5]">
               6065 Roswell Road, Suite 450,
               <br />
               Atlanta, GA 30328-4011

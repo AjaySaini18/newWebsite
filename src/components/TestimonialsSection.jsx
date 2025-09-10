@@ -67,7 +67,7 @@ const TestimonialsSection = () => {
       className="w-full bg-cover bg-center text-white py-16 sm:py-20 md:py-24 px-6 sm:px-12 md:px-16 lg:px-24 font-gilroy"
       style={{ backgroundImage: "url('/assets/Rectangle19.png')" }}
     >
-      <div className="max-w-[1676px] mx-auto">
+      <div className="max-full mx-auto">
         {/* Heading + Button */}
         <motion.div
           className="grid grid-cols-12 items-start mb-12 gap-6"
@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="col-span-12 md:col-span-9 text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight">
+          <h2 className="col-span-12 md:col-span-9 text-4xl md:text-3xl lg:text-5xl font-semibold leading-tight">
             Pioneering Innovation Through <br /> World-Class Engineering
           </h2>
 
@@ -84,7 +84,7 @@ const TestimonialsSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="hover:border-hidden px-4 sm:px-6 py-2 2xl:text-[15px] sm:text-[13px] border border-white rounded-sm hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] transition-colors duration-500 ease-in-out"
+              className="hover:border-hidden px-4 sm:px-6 py-2 text-sm border border-white rounded-sm hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] transition-colors duration-500 ease-in-out"
             >
               All Services
             </motion.button>
@@ -122,7 +122,7 @@ const TestimonialsSection = () => {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[12px] sm:text-[12px] 2xl:text-[15px] font-figtree font-medium text-[#AFAFAF] leading-relaxed">
+                  <p className="text-sm text-[#AFAFAF] leading-relaxed">
                     {service.description}
                   </p>
                 </div>

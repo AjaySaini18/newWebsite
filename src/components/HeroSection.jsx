@@ -38,8 +38,6 @@ const HeroSection = () => {
         backgroundSize: "cover",
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-full container mx-auto px-6 md:px-12 lg:px-24 pt-20 sm:pt-36 lg:pt-40">
@@ -71,19 +69,19 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600"></div>
               <div className="absolute inset-0 shimmer"></div>
             </div>
-            <p className="text-gray-200 mb-3 leading-relaxed text-[10px] sm:text-[11px] font-figtree lg:text-[12px] 2xl:text-[15px] font-medium">
+            <p className="text-[#D1D4E7] font-medium mb-3 leading-relaxed text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip.
             </p>
-            <div className="flex items-center gap-2 font-semibold cursor-pointer hover:opacity-80 text-[12px] sm:text-[11px] 2xl:text-[16px]">
+            <div className="flex items-center gap-2 font-semibold cursor-pointer hover:opacity-80 text-md">
               <span>See what we do</span>
               <div className="relative inline-block p-[2px] rounded-sm overflow-hidden animate-border-shimmer">
                 <img
                   src="/assets/arrow.svg"
                   alt="Arrow"
-                  className="h-3 w-3 sm:h-4 sm:w-4 block bg-black rounded-sm"
+                  className="h-4 w-4 block bg-black rounded-sm"
                 />
               </div>
             </div>
@@ -106,7 +104,7 @@ const HeroSection = () => {
             <motion.div
               onClick={() => navigate("/ai")}
               key={idx}
-              className="relative h-[350px] 2xl:h-[450px] w-full bg-cover bg-center overflow-hidden group"
+              className="relative h-[380px] 2xl:h-[450px] w-full bg-cover bg-center overflow-hidden group"
               style={{ backgroundImage: `url(${card.img})` }}
               variants={{
                 hidden: { opacity: 0, scale: 0.9, y: 30 },

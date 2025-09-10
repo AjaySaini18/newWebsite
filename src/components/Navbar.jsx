@@ -18,13 +18,13 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="font-gilroy fixed top-0 w-full bg-black/70 backdrop-blur-sm z-50">
+    <nav className="font-gilroy fixed top-0 w-full bg-black/80 backdrop-blur-sm z-50">
       <div className="max-w-full container mx-auto px-6 md:px-12 lg:px-24 py-5 flex justify-between items-center relative">
         {/* Logo */}
         <Link to={"/"}>
           <div className="flex items-center">
             <img src="/assets/logo.svg" alt="Logo" className="h-6 w-6 mr-2 sm:mr-3" />
-            <span className="text-white font-bold font-gilroy text-md sm:text-lg">SYNOPIX</span>
+            <span className="text-white font-bold font-gilroy text-lg sm:text-lg">SYNOPIX</span>
           </div>
         </Link>
 
@@ -63,7 +63,7 @@ const Navbar = () => {
         {/* Right section */}
         <div className="hidden lg:flex items-center space-x-4 relative">
           {/* Search Toggle */}
-          <div className="flex items-center -ml-12 w-32 justify-end">
+          <div className="flex items-center -ml-45 w-55 justify-end">
             {!showSearch ? (
               <img
                 src="/assets/search.svg"
@@ -77,7 +77,7 @@ const Navbar = () => {
                 placeholder="Search..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="bg-white text-black px-2 py-1 rounded-md text-sm outline-none w-full"
+                className="bg-white/80 text-black px-2 py-1 rounded-xs text-sm outline-none w-full"
                 autoFocus
                 onBlur={() => setShowSearch(false)}
               />
