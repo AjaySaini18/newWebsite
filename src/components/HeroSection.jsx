@@ -125,17 +125,17 @@ const HeroSection = () => {
               ></div>
 
               {/* Title */}
-              <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-extrabold text-sm sm:text-base md:text-lg z-30">
+              <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-extrabold text-sm sm:text-base md:text-lg  z-30">
                 {card.title}
               </div>
 
               {/* Hover Content */}
               <div className="absolute inset-0 flex flex-col justify-center items-start p-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-                <p className="text-[12px] leading-relaxed mb-4 mt-10">
+                <p className="md:text-sm 2xl:text-md leading-relaxed mb-4 mt-10">
                   {card.desc}
                 </p>
                 <div className="absolute bottom-4 right-4">
-                  <span className="text-xs font-semibold cursor-pointer hover:underline">
+                  <span className="text-sm font-semibold cursor-pointer hover:underline">
                     Read More
                   </span>
                 </div>

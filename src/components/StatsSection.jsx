@@ -68,7 +68,7 @@ const StatsSection = () => {
               <h3 className="text-xl font-bold text-gray-800 mb-4">
                 {stat.label}
               </h3>
-              <p className="text-gray-600">{stat.description}</p>
+              <p className="text-gray-600 text-md font-figtree">{stat.description}</p>
             </motion.div>
           ))}
         </motion.div>

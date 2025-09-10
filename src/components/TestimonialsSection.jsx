@@ -84,7 +84,7 @@ const TestimonialsSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="hover:border-hidden px-4 sm:px-6 py-2 text-[11px] sm:text-[12px] border border-white rounded-sm hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] transition-colors duration-500 ease-in-out"
+              className="hover:border-hidden px-4 sm:px-6 py-2 2xl:text-[15px] sm:text-[13px] border border-white rounded-sm hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] transition-colors duration-500 ease-in-out"
             >
               All Services
             </motion.button>
@@ -122,7 +122,7 @@ const TestimonialsSection = () => {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-[11px] sm:text-[12px] font-medium text-[#AFAFAF] leading-relaxed">
+                  <p className="text-[12px] sm:text-[12px] 2xl:text-[15px] font-figtree font-medium text-[#AFAFAF] leading-relaxed">
                     {service.description}
                   </p>
                 </div>
