@@ -2,6 +2,7 @@
 import React from "react";
 import { Phone } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const ContactCTA = () => {
   return (
@@ -32,7 +33,7 @@ const ContactCTA = () => {
             Unlock smarter, faster, and more secure solutions— talk to our
             experts today and take your business to the next level.
           </motion.h2>
-
+          <Link to={"/contact-us"}>
           <motion.button
             className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 bg-white text-black rounded-lg text-sm sm:text-base font-semibold shadow hover:shadow-lg transition"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -44,6 +45,8 @@ const ContactCTA = () => {
             <Phone size={16} />
             Contact Us
           </motion.button>
+          </Link>
+          
         </motion.div>
 
         {/* Right Box */}

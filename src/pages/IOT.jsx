@@ -59,7 +59,7 @@ const faqData = [
 We provide a full suite of end-to-end IoT solutions that help organisations connect devices, gather real-time insights, automate operations, ensure data security, and reduce maintenance costs — leading to improved efficiency and customer satisfaction."
         buttonText="Consult Now"
         buttonLink="/contact"
-        rightImage="/assets/iot-1.jpg"
+        rightImage="/assets/iot-11.webp"
         backgroundImage="/assets/Rectangle 1.png"
         stats={statsData}
       />
@@ -67,7 +67,7 @@ We provide a full suite of end-to-end IoT solutions that help organisations conn
     <AIServices
             heading="Delivering Cutting-Edge Healthcare Services"
             services={servicesData}
-            rightImage="/assets/iot-2.jpg"
+            rightImage="/assets/iot-22.webp"    
           />
 
     <IndustriesSection/>

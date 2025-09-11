@@ -59,7 +59,7 @@ const faqData = [
 We provide a full suite of end-to-end SaaS solutions that help organisations build, deploy, and scale secure cloud-based products, improve operational efficiency, ensure compliance, and reduce costs — leading to better customer retention and sustainable growth."
         buttonText="Consult Now"
         buttonLink="/contact"
-        rightImage="/assets/saas-1.jpg"
+        rightImage="/assets/saas-1.webp"
         backgroundImage="/assets/Rectangle 1.png"
         stats={statsData}
       />
@@ -67,7 +67,7 @@ We provide a full suite of end-to-end SaaS solutions that help organisations bui
     <AIServices
             heading="Delivering Cutting-Edge Healthcare Services"
             services={servicesData}
-            rightImage="/assets/saas-2.jpg"
+            rightImage="/assets/saas-2.webp"
           />
 
     <IndustriesSection/>

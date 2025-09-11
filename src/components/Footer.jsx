@@ -69,9 +69,9 @@ const Footer = () => {
           >
             <h3 className="text-lg font-semibold mb-3 text-[#525252]">About</h3>
             <ul className="leading-7 text-sm text-[#525252]">
-              <li>Our Company</li>
-              <li>Core Team</li>
-              <li>Career</li>
+              <Link to={"/contact-us"}><li>Our Company</li></Link>
+              <Link to={"/team"}><li>Core Team</li></Link>
+              <Link to={"/careers"}><li>Career</li></Link>
               <li>CSR</li>
               <li>How We Work</li>
             </ul>
@@ -106,10 +106,10 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-3 text-[#525252]">Technology</h3>
             <ul className="leading-7 text-sm text-[#525252]">
               <Link to={"/blockchain"}><li>Blockchain</li></Link>
-              <li>Artificial Intelligence</li>
-              <li>AR & VR</li>
-              <li>Cloud Computing</li>
-              <li>Internet of Things</li>
+              <Link to={"/ai"}><li>Artificial Intelligence</li></Link>
+              <Link to={"/ar-vr"}><li>AR & VR</li></Link>
+              <Link to={"/cloud-computing"}><li>Cloud Computing</li></Link>
+              <Link to={"/iot"}><li>Internet of Things</li></Link>
             </ul>
           </motion.div>
 
@@ -143,13 +143,13 @@ const Footer = () => {
   <div className="max-w-full mr-10 mx-auto px-6 md:px-12 lg:px-24 text-sm py-6 flex lg:flex-row items-start md:flex-col lg:justify-between gap-6 text-[#525252]">
     <p><span className="">©</span> 2022–2025 Synopix LLC</p>
     <div className=" flex flex-wrap justify-start gap-12">
-      <span>Contact us</span>
+      <Link to={"/contact-us"}><span>Contact us</span></Link>
       <span>Sustainability</span>
       <span>Accessibility</span>
-      <span>Terms of use</span>
+      <Link to={"/terms-and-policy"}><span>Terms of use</span></Link>
       <span>Privacy</span>
       <span>Cookie Policy</span>
-      <Link ><span>FAQ</span></Link>
+      <Link to={"/faq"} ><span>FAQ</span></Link>
     </div>
   </div>
 </motion.div>

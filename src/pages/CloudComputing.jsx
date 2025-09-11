@@ -55,7 +55,7 @@ const faqData = [
 We provide a full suite of end-to-end cloud solutions that help organisations migrate, optimise, and scale securely on the cloud, improve agility, ensure compliance, and reduce infrastructure costs — leading to greater innovation and business resilience."
         buttonText="Consult Now"
         buttonLink="/contact"
-        rightImage="/assets/cloudcomputing-1.jpg"
+        rightImage="/assets/cloudcomputing-11.webp"
         backgroundImage="/assets/Rectangle 1.png"
         stats={statsData}
       />
@@ -63,7 +63,7 @@ We provide a full suite of end-to-end cloud solutions that help organisations mi
     <AIServices
             heading="Delivering Cutting-Edge Healthcare Services"
             services={servicesData}
-            rightImage="/assets/cloudcomputing-2.jpg"
+            rightImage="/assets/cloudcomputing-22.webp"
           />
 
     <IndustriesSection/>

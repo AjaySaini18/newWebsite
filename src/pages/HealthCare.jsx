@@ -55,7 +55,7 @@ const HealthCare = () => {
 We provide a full suite of end-to-end healthcare solutions that help providers deliver superior patient care, improve operational efficiency, ensure regulatory compliance, and reduce costs — leading to better outcomes and sustainable growth."
         buttonText="Consult Now"
         buttonLink="/contact"
-        rightImage="/assets/healthcare-1.jpg"
+        rightImage="/assets/healthcare-11.webp"
         backgroundImage="/assets/Rectangle 1.png"
         stats={statsData}
       />
@@ -63,7 +63,7 @@ We provide a full suite of end-to-end healthcare solutions that help providers d
     <AIServices
             heading="Delivering Cutting-Edge Healthcare Services"
             services={servicesData}
-            rightImage="/assets/healthcare-2.jpg"
+            rightImage="/assets/healthcare-22.webp"
           />
 
     <IndustriesSection/>

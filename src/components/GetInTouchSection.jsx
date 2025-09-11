@@ -66,7 +66,7 @@ const GetInTouchSection = () => {
                 </p>
                 <p className="flex items-center text-xs sm:text-[13px] mt-2">
                   <Mail className="w-3 h-3 mr-2" />
-                  info@synopix.com
+                  hello@synopix.com
                 </p>
                 <p className="flex items-center text-xs sm:text-[13px] mt-2">
                   <Phone className="w-3 h-3 mr-2" />
@@ -100,7 +100,7 @@ const GetInTouchSection = () => {
                 </p>
                 <p className="flex items-center text-xs sm:text-[13px] mt-2">
                   <Mail className="w-3 h-3 mr-2" />
-                  info@synopix.com
+                  hello@synopix.com
                 </p>
                 <p className="flex items-center text-xs sm:text-[13px] mt-2">
                   <Phone className="w-3 h-3 mr-2" />

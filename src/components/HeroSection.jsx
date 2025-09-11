@@ -32,7 +32,7 @@ const HeroSection = () => {
     <section
       className="relative min-h-screen flex flex-col justify-center text-white font-gilroy"
       style={{
-        backgroundImage: "url('/assets/herosection_background.png')",
+        backgroundImage: "url('/assets/herosection_background.webp')",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
