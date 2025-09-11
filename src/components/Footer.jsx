@@ -105,7 +105,7 @@ const Footer = () => {
           >
             <h3 className="text-lg font-semibold mb-3 text-[#525252]">Technology</h3>
             <ul className="leading-7 text-sm text-[#525252]">
-              <li>Blockchain</li>
+              <Link to={"/blockchain"}><li>Blockchain</li></Link>
               <li>Artificial Intelligence</li>
               <li>AR & VR</li>
               <li>Cloud Computing</li>
