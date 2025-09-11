@@ -15,7 +15,7 @@ const InsightsFeatureThree = () => {
 
   return (
     <section
-      className="w-full relative py-10 lg:py-20 px-6 md:px-12 lg:px-24 font-gilroy text-white"
+      className="w-full relative py-10 lg:py-24 px-6 md:px-12 lg:px-24 font-gilroy text-white"
       style={{
         backgroundImage: "url('/assets/Rectangle-19.png')",
         backgroundSize: "cover",
@@ -35,7 +35,7 @@ const InsightsFeatureThree = () => {
           <img
             src="/assets/Rectangle-7774.jpg"
             alt="Artificial Intelligence Video"
-            className="rounded-xl shadow-lg w-full h-[420px] lg:h-[360px] object-cover"
+            className="rounded-xl shadow-lg w-full h-full object-cover"
           />
         </motion.div>
 
@@ -47,18 +47,18 @@ const InsightsFeatureThree = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={textVariants}
         >
-          <h2 className="2xl:text-4xl text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 lg:mb-6 text-[#CACACA]">
+          <h2 className="text-xl md:text-2xl lg:text-4xl font-bold mb-4 lg:mb-6 text-[#CACACA]">
             Providing Different Artificial <br className="hidden md:block"/>
             Intelligence Development Services
           </h2>
-          <p className="2xl:text-lg text-sm font-medium font-base text-[#B7B7B7] leading-[1.4] mb-4 lg:mb-6">
+          <p className="sm:text-sm md:text-md lg:text-lg text-[#B7B7B7] leading-[1.4] mb-4 lg:mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus eros 
             aliquet convallis ultricies. Morbi vitae ligula id nunc ullamcorper viverra. Sed 
             id urna sed leo hendrerit tincidunt sit amet at massa. Suspendisse potenti. Cras 
             sit amet aliquet lorem. Integer posuere ligula non sapien semper, in vulputate 
             risus commodo.
           </p>
-          <p className="2xl:text-lg text-sm font-medium text-[#B7B7B7] leading-[1.4]">
+          <p className="sm:text-sm md:text-md lg:text-lg text-[#B7B7B7] leading-[1.4]">
             Nullam id felis a arcu maximus pretium. Sed euismod purus ac purus sollicitudin, 
             vel pulvinar orci viverra. Etiam sed dapibus sem, nec ultricies magna. Curabitur 
           </p>
