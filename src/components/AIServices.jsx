@@ -24,8 +24,8 @@ export default function AIServices({ heading, services = [], rightImage }) {
   };
 
   return (
-    <section className="w-full bg-[#F8F8F8] py-10 px-4 sm:px-8 md:px-12 lg:px-24 font-gilroy">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+    <section className="w-full bg-[#F8F8F8] py-20 px-4 sm:px-8 md:px-12 lg:px-24 font-gilroy">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-25 items-end">
         {/* Left Section */}
         <motion.div
           variants={containerVariants}
@@ -34,7 +34,7 @@ export default function AIServices({ heading, services = [], rightImage }) {
           viewport={{ once: true }}
         >
           <motion.h2
-            className="lg:text-3xl sm:text-lg md:text-2xl font-[700] text-gray-900 mb-6 leading-snug"
+            className="lg:text-4xl sm:text-lg md:text-2xl font-[700] text-gray-900 mb-6 leading-snug"
             variants={itemVariants}
           >
             {heading}
@@ -45,12 +45,12 @@ export default function AIServices({ heading, services = [], rightImage }) {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="rounded-lg bg-[#EEEEEE] w-full md:max-w-[480px]"
+                className="rounded-lg bg-[#EEEEEE] w-full"
                 variants={itemVariants}
               >
                 <button
                   onClick={() => toggleAccordion(index)}
-                  className="w-full flex justify-between items-center px-4 py-3 text-left text-[#282828]"
+                  className="w-full flex justify-between items-center px-4 py-4 text-left text-[#282828]"
                 >
                   <span className="text-sm sm:text-base">{service.title}</span>
                   <span className="ml-2 text-xl">

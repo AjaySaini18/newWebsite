@@ -17,7 +17,7 @@ const InsightsHero = () => {
 
   return (
     <section
-      className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] font-gilroy flex items-center justify-center text-center text-white px-4"
+      className="relative w-full font-gilroy flex items-center justify-center text-center text-white pb-35 pt-60 px-6 md:px-12 lg:px-24"
       style={{
         backgroundImage: "url('/assets/insightBg.jpg')",
         backgroundSize: "cover",
@@ -45,7 +45,7 @@ const InsightsHero = () => {
 
         {/* Paragraph */}
         <motion.p
-          className="2xl:text-lg font-medium text-xs sm:text-sm md:text-base leading-relaxed sm:leading-[1.4] md:leading-[1.3] text-[#D1D4E7]"
+          className="2xl:text-lg font-medium text-xs sm:text-sm md:text-base leading-relaxed sm:leading-[1.4] md:leading-[1.5] text-[#D1D4E7]"
           variants={itemVariants}
         >
           A progressive AI ML development company, winning the trust of global

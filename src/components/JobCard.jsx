@@ -31,13 +31,13 @@ const JobCard = ({
       </div>
 
       {/* Title */}
-      <h3 className="text-sm sm:text-md font-bold text-gray-900">{title}</h3>
-      <p className="text-[11px] sm:text-[12px] text-[#808080] font-semibold mb-1 sm:mb-2">
+      <h3 className="text-md font-semibold text-gray-900">{title}</h3>
+      <p className="text-[11px] sm:text-[12px] text-[#808080] font-medium mb-3">
         Posted {posted} • {openings} opening available
       </p>
 
       {/* Description */}
-      <p className="text-[#282828] font-medium leading-snug text-[12px] sm:text-[13px] mb-3 sm:mb-4">
+      <p className="text-[#282828] font-medium leading-snug text-xs lg:text-sm mb-3 sm:mb-4">
         {description}
       </p>
 

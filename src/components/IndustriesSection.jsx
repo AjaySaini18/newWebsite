@@ -35,7 +35,7 @@ const cardVariants = {
 const IndustriesSection = () => {
   return (
     <section
-      className="relative py-16 px-4 sm:py-16 sm:px-12 lg:px-24 font-gilroy"
+      className="relative py-20 px-4 sm:px-12 lg:px-24 font-gilroy"
       style={{
         backgroundImage: "url('/assets/Rectangle19.png')",
         backgroundSize: "cover",
@@ -43,16 +43,16 @@ const IndustriesSection = () => {
       }}
     >
       {/* Content */}
-      <div className="relative py-10 z-10 max-w-full mx-auto text-center">
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 gap-4">
+      <div className="relative z-10 max-w-full mx-auto text-center">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 lg:mb-14 gap-4">
           <motion.h2
-            className="text-base sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-left text-white max-w-[900px]"
+            className="md:text-3xl lg:text-5xl font-semibold text-left text-white leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            A Unified Vision That Caters To Diverse Industry Demands
+            A Unified Vision That Caters To Diverse<br />Industry Demands
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ const IndustriesSection = () => {
             transition={{ type: "spring", stiffness: 300 }}
             viewport={{ once: true }}
           >
-            <button className="hover:text-white hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] hover:border-hidden px-4 py-2 border text-[12px] border-[#D6D6D6] text-[#D6D6D6] rounded-sm transition">
+            <button className="hover:text-white hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] hover:border-hidden px-5 py-2 border text-sm border-[#D6D6D6] text-[#D6D6D6] rounded-sm transition">
               Learn More
             </button>
           </motion.div>

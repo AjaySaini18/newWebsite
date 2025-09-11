@@ -81,14 +81,14 @@ const JobsSection = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.h2
-          className="text-2xl md:text-3xl font-bold text-gray-900 leading-relaxed"
+          className="sm:text-xl md:text-2xl lg:text-4xl font-semibold text-gray-900 leading-relaxed"
           variants={fadeUp}
           custom={1}
         >
           We are embarking on profound mission
         </motion.h2>
         <motion.p
-          className="text-[#5C5C5C] text-sm md:text-[14px] leading-snug tracking-tight font-semibold max-w-xs md:max-w-[430px] mx-auto md:mx-0 mt-2"
+          className="text-[#5C5C5C] text-sm lg:text-md leading-snug tracking-tight max-w-lg  mx-auto md:mx-0 mt-2"
           variants={fadeUp}
           custom={2}
         >
