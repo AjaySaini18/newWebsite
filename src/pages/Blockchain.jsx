@@ -59,7 +59,7 @@ const faqData = [
 We provide a full suite of end-to-end blockchain solutions that help organisations build secure decentralised applications, improve transparency, reduce fraud, ensure regulatory compliance, and cut costs — leading to greater trust and operational efficiency."
         buttonText="Consult Now"
         buttonLink="/contact"
-        rightImage="/assets/blockchain-1.jpg"
+        rightImage="/assets/blockchain-12.webp"
         backgroundImage="/assets/Rectangle 1.png"
         stats={statsData}
       />
