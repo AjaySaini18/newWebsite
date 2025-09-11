@@ -50,7 +50,7 @@ const TeamSection = () => {
             <img
               src={member.img}
               alt={member.name}
-              className="w-full 2xl:h-full h-[240px] object-cover rounded-2xl mb-2"
+              className="w-full h-auto object-cover rounded-2xl mb-2"
             />
             <h3 className="text-xl font-bold text-[#282828]">{member.name}</h3>
             <p className="text-md font-semibold text-[#282828]">{member.role}</p>
@@ -66,10 +66,10 @@ const TeamSection = () => {
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <h3 className="2xl:text-[38px] text-[30px] 2xl:max-w-[750px] max-w-[580px] font-semibold text-[#282828] mb-4 leading-[1.2]">
+        <h3 className="text-4xl 2xl:max-w-[750px] max-w-[700px] font-medium text-[#282828] mb-4 leading-[1.2]">
           Be part of our outstanding team and help shape the future together.
         </h3>
-        <button className="px-6 py-3 2xl:text-xl bg-[#4359FF] hover:bg-indigo-700 text-white rounded-md font-medium transition">
+        <button className="px-8 py-4 2xl:text-xl bg-[#4359FF] hover:bg-indigo-700 text-white rounded-md font-medium transition">
           Join our Team
         </button>
       </motion.div>
