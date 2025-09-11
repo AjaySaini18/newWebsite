@@ -11,8 +11,8 @@ const Footer = () => {
   return (
     <footer className="relative w-full font-gilroy">
       {/* Top Section */}
-      <div className="bg-[#F4F4F4] max-w-full px-6 md:px-12 lg:px-24 py-16 pb-24">
-        <div className="max-w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-16">
+      <div className="bg-[#F4F4F4] px-6 md:px-12 lg:px-24 py-16 pb-24">
+        <div className="mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 lg:gap-16">
           {/* Logo + Address */}
           <motion.div
             className="space-y-4"
@@ -24,7 +24,7 @@ const Footer = () => {
             {/* Logo */}
             <div className="flex items-center gap-2">
               <img src="/assets/logo.svg" alt="Synopix Logo" className="w-6 h-6 2xl:w-7 2xl:h-7" />
-              <span className="text-[18px] 2xl:text-[20px] font-bold text-[#525252]">SYNOPIX</span>
+              <span className="text-lg font-bold text-[#525252]">SYNOPIX</span>
             </div>
 
             {/* Social Icons */}
@@ -45,7 +45,7 @@ const Footer = () => {
                   <img
                     src={`/assets/${icon}.svg`}
                     alt={icon}
-                    className="w-5 h-5 2xl:w-6 2xl:h-6"
+                    className="w-6 h-6"
                   />
                 </motion.a>
               ))}
@@ -53,7 +53,7 @@ const Footer = () => {
 
 
             {/* Address */}
-            <p className="text-[#525252] text-xs font-semibold 2xl:text-[14px]">
+            <p className="text-[#525252] text-sm">
               6065 Roswell Road, Suite 450, <br />
               Atlanta, GA 30328-4011
             </p>
@@ -67,8 +67,8 @@ const Footer = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="text-[14px] 2xl:text-2xl font-semibold mb-3 text-[#525252]">About</h3>
-            <ul className="space-y-1 font-medium text-[12px] 2xl:text-[16px] text-[#525252]">
+            <h3 className="text-lg font-semibold mb-3 text-[#525252]">About</h3>
+            <ul className="leading-7 text-sm text-[#525252]">
               <li>Our Company</li>
               <li>Core Team</li>
               <li>Career</li>
@@ -85,8 +85,8 @@ const Footer = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="text-[14px] 2xl:text-2xl font-semibold mb-3 text-[#525252]">Services</h3>
-            <ul className="space-y-1 font-medium text-[12px] 2xl:text-[16px] text-[#525252]">
+            <h3 className="text-lg font-semibold mb-3 text-[#525252]">Services</h3>
+            <ul className="leading-7 text-sm text-[#525252]">
               <li>iOS App Development</li>
               <li>Android App Development</li>
               <li>Software Development</li>
@@ -103,8 +103,8 @@ const Footer = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="text-[14px] 2xl:text-2xl font-semibold mb-3 text-[#525252]">Technology</h3>
-            <ul className="space-y-1 font-medium text-[12px] 2xl:text-[16px] text-[#525252]">
+            <h3 className="text-lg font-semibold mb-3 text-[#525252]">Technology</h3>
+            <ul className="leading-7 text-sm text-[#525252]">
               <li>Blockchain</li>
               <li>Artificial Intelligence</li>
               <li>AR & VR</li>
@@ -121,8 +121,8 @@ const Footer = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="text-[14px] 2xl:text-2xl font-semibold mb-3 text-[#525252]">Industries</h3>
-            <ul className="space-y-1 font-medium text-[12px] 2xl:text-[16px] text-[#525252]">
+            <h3 className="text-lg font-semibold mb-3 text-[#525252]">Industries</h3>
+            <ul className="leading-7 text-sm text-[#525252]">
               <Link to={"/healthcare"}><li>Healthcare</li></Link>
               <Link to={"/education"}><li>Education</li></Link>
               <Link to={"/logistics"}><li>Logistics</li></Link>
@@ -140,9 +140,9 @@ const Footer = () => {
   transition={{ duration: 0.6 }}
   viewport={{ once: true }}
 >
-  <div className="max-w-full mx-auto px-6 md:px-12 lg:px-24 text-[12px] 2xl:text-[16px] font-medium py-6 flex flex-col md:flex-row items-start justify-start gap-6 text-[#525252]">
-    <p><span className="2xl:text-lg">©</span> 2022–2025 Synopix LLC</p>
-    <div className=" lg:ml-50 flex flex-wrap justify-start gap-6 md:gap-10">
+  <div className="max-w-full mr-10 mx-auto px-6 md:px-12 lg:px-24 text-sm py-6 flex lg:flex-row items-start md:flex-col lg:justify-between gap-6 text-[#525252]">
+    <p><span className="">©</span> 2022–2025 Synopix LLC</p>
+    <div className=" flex flex-wrap justify-start gap-12">
       <span>Contact us</span>
       <span>Sustainability</span>
       <span>Accessibility</span>
