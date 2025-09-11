@@ -10,10 +10,10 @@ const TAndCHeroSection = () => {
         
         {/* Left Side - Text (aligned to start) */}
         <div className="flex flex-col justify-center space-y-6 items-start">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
             Terms <br /> and Policy
           </h1>
-          <p className="font-semibold leading-tight max-w-lg text-sm">
+          <p className="font-medium leading-normal max-w-xl text-md">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
             praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
             excepturi sint occaecati cupiditate non provident.
@@ -22,11 +22,11 @@ const TAndCHeroSection = () => {
       </div>
 
       {/* Right Side - Illustration touching bottom */}
-      <div className="absolute bottom-0 right-12 max-w-[400px] w-[70%] md:w-[400px]">
+      <div className="absolute bottom-0 sm:right-8 md:right-12 lg:right-20 max-w-[400px] w-[70%] md:w-[400px]">
         <img
           src="/assets/OBJECTS.svg"
           alt="FAQ Illustration"
-          className="w-full h-50 md:h-60"
+          className="w-full h-60 md:h-75 "
         />
       </div>
     </section>

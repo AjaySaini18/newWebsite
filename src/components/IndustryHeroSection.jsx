@@ -7,7 +7,7 @@ import heroImg from "../../public/assets/IndustryHero-img.jpg"; // replace with 
 const IndustryHeroSection = () => {
   return (
     <motion.section
-      className="relative w-full font-gilroy bg-cover bg-center lg:px-24 md:px-12 px-6 py-16"
+      className="relative w-full font-gilroy bg-cover bg-center lg:px-24 md:px-12 px-6 pt-28 pb-18"
       style={{ backgroundImage: `url(${bgImage})` }}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}

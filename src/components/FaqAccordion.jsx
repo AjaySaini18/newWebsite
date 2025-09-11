@@ -35,7 +35,7 @@ const FaqAccordion = ({ activeCategory }) => {
         return (
           <div key={idx} onClick={() => setOpenIndex(isOpen ? null : idx)} className="border-b border-[#D0D2E7] last:border-none">
             <button
-              className="flex justify-between items-center w-full py-3 text-left font-bold cursor-pointer text-gray-900"
+              className="flex justify-between items-center w-full py-3 text-left text-xl font-semibold cursor-pointer text-gray-900"
             >
               {faq.question}
               <ChevronDown
@@ -45,7 +45,7 @@ const FaqAccordion = ({ activeCategory }) => {
               />
             </button>
             {isOpen && (
-              <div className="pb-4 text-gray-600 font-medium text-sm">{faq.answer}</div>
+              <div className="pb-4 text-gray-600 text-md">{faq.answer}</div>
             )}
           </div>
         );

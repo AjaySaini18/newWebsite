@@ -46,7 +46,7 @@ const TandCAccordion = ({ activeCategory }) => {
       <h2 className="text-lg md:text-xl  font-bold text-gray-900">
         {content.title}
       </h2>
-      <p className="text-gray-700 leading-relaxed font-medium text-sm md:text-base">
+      <p className="text-gray-700 leading-relaxed text-sm md:text-base">
         {content.description}
       </p>
     </div>
