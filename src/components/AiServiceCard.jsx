@@ -10,7 +10,7 @@ const AiServiceCard = ({ icon: Icon, title, description }) => {
         className="h-14 w-14 mb-3"
       />
       <h3 className="text-lg font-bold text-gray-800 mb-3">{title}</h3>
-      <p className="text-[15px] text-[#585858] font-figtree font-medium line-clamp-5 text-center  leading-snug ">{description}</p>
+      <p className="text-sm text-[#585858] line-clamp-5 text-center leading-normal ">{description}</p>
     </div>
   );
 };

@@ -30,10 +30,10 @@ const AIHeroSection = ({
         backgroundSize: "cover",
       }}
     >
-      <div className="container max-w-full mx-auto px-4 sm:px-6 lg:px-24 pt-28 pb-20">
+      <div className="container max-w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-24 pb-20 pt-28">
         
         {/* Hero Section */}
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
+        <div className="grid lg:grid-cols-2 gap-20 items-start">
           
           {/* Left Content */}
           <motion.div
@@ -45,7 +45,7 @@ const AIHeroSection = ({
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-snug">
               {title}
             </h1>
-            <p className="mt-3 text-sm sm:text-md lg:text-lg font-medium text-[#D1D4E7] max-w-xl leading-6">
+            <p className="mt-3 text-lg font-medium text-[#D1D4E7] mb-3">
               {description}
             </p>
             {buttonText && (
@@ -98,7 +98,7 @@ const AIHeroSection = ({
                     <div className="absolute inset-0 shimmer"></div>
                   </div>
                 </div>
-                <p className="mt-3 text-[#A9A9A9] text-xs sm:text-sm text-left leading-5">
+                <p className="mt-3 text-[#A9A9A9] text-sm text-left leading-5">
                   {item.text}
                 </p>
               </motion.div>

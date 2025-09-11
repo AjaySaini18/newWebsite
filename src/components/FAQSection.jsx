@@ -62,7 +62,7 @@ const FAQSection = ({ heading, faqs = [] }) => {
   };
 
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 font-gilroy">
+    <section className="bg-white py-16 px-6 md:px-12 lg:px-8 font-gilroy">
       <div className="max-w-3xl mx-auto">
         {/* Heading */}
         <motion.h2

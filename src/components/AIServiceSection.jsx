@@ -58,11 +58,11 @@ const cardVariants = {
 
 const AiServiceSection = () => {
   return (
-    <section className="pt-10 pb-10 bg-white font-gilroy">
+    <section className="py-20 bg-white font-gilroy">
       <div className="container max-w-full mx-auto px-6 sm:px-12 lg:px-24">
         {/* Heading */}
         <motion.h2
-          className="text-[22px] sm:text-3xl md:text-4xl lg:text-[30px] font-bold text-left text-gray-800 mb-12 leading-tight"
+          className="text-4xl font-semibold text-left text-gray-800 mb-12 leading-tight"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

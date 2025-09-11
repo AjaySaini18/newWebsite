@@ -17,7 +17,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="relative py-16 lg:px-24 sm:px-6 font-gilroy">
+    <section className="relative py-16 px-6 md:px-12 lg:px-24 font-gilroy">
       {/* Background Gradient */}
       <div className="absolute inset-0">
         <img
@@ -38,7 +38,7 @@ const ContactSection = () => {
 
       {/* Content Wrapper */}
       <motion.div
-        className="relative max-w-3xl text-white px-4 sm:px-0 flex flex-col sm:block items-center sm:items-start"
+        className="relative max-w-4xl text-white px-4 sm:px-0 flex flex-col sm:block items-center sm:items-start"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
@@ -46,7 +46,7 @@ const ContactSection = () => {
       >
         {/* Heading */}
         <motion.h2
-          className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-11 mb-2 text-center sm:text-left"
+          className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight mb-2 text-center sm:text-left"
           variants={itemVariants}
         >
           Looking to build a digital product?
@@ -63,7 +63,7 @@ const ContactSection = () => {
         </motion.p>
 
         {/* Form */}
-        <motion.form className="space-y-6 w-full" variants={containerVariants}>
+        <motion.form className="space-y-6 max-w-3xl" variants={containerVariants}>
           {/* First Row */}
           <motion.div
             className="grid grid-cols-1 sm:grid-cols-2 gap-4"
@@ -127,7 +127,7 @@ const ContactSection = () => {
               />
             </button>
 
-            <label className="text-xs sm:text-sm text-[#A8C2E7]">
+            <label className="text-sm text-[#A8C2E7]">
               I consent to receive marketing communication from Synopix LLC
             </label>
           </motion.div>
@@ -135,7 +135,7 @@ const ContactSection = () => {
           {/* Submit Button */}
           <motion.button
             type="submit"
-            className="px-6 py-3 bg-white text-[#050505] font-semibold rounded-md hover:bg-gray-100 transition w-full sm:w-auto"
+            className="px-10 py-4 bg-white text-[#050505] font-semibold rounded-md hover:bg-gray-100 transition w-full sm:w-auto"
             variants={itemVariants}
           >
             Submit
