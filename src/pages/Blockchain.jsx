@@ -67,7 +67,7 @@ We provide a full suite of end-to-end blockchain solutions that help organisatio
     <AIServices
             heading="Delivering Cutting-Edge Healthcare Services"
             services={servicesData}
-            rightImage="/assets/blockchain-2.jpg"
+            rightImage="/assets/blockchain-22.webp"
           />
 
     <IndustriesSection/>

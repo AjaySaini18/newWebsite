@@ -59,7 +59,7 @@ const faqData = [
 We provide a full suite of end-to-end logistics solutions that help businesses optimise routes, improve operational efficiency, ensure compliance with transport regulations, and reduce costs — leading to faster deliveries and sustainable growth."
         buttonText="Consult Now"
         buttonLink="/contact"
-        rightImage="/assets/logistics-1.jpg"
+        rightImage="/assets/logistics-11.webp"
         backgroundImage="/assets/Rectangle 1.png"
         stats={statsData}
       />
@@ -67,7 +67,7 @@ We provide a full suite of end-to-end logistics solutions that help businesses o
     <AIServices
             heading="Delivering Cutting-Edge Healthcare Services"
             services={servicesData}
-            rightImage="/assets/logistics-2.jpg"
+            rightImage="/assets/logistics-22.webp"
           />
 
     <IndustriesSection/>

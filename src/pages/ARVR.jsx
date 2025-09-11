@@ -58,7 +58,7 @@ const faqData = [
 We provide a full suite of end-to-end AR/VR solutions that help organisations deliver immersive experiences, improve training outcomes, boost engagement, and ensure security — leading to higher customer satisfaction and operational efficiency."
         buttonText="Consult Now"
         buttonLink="/contact"
-        rightImage="/assets/arvr-1.jpg"
+        rightImage="/assets/arvr-11.webp"
         backgroundImage="/assets/Rectangle 1.png"
         stats={statsData}
       />
@@ -66,7 +66,7 @@ We provide a full suite of end-to-end AR/VR solutions that help organisations de
     <AIServices
             heading="Delivering Cutting-Edge Healthcare Services"
             services={servicesData}
-            rightImage="/assets/arvr-2.jpg"
+            rightImage="/assets/arvr-22.webp"
           />
 
     <IndustriesSection/>

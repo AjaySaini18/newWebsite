@@ -58,7 +58,7 @@ const faqData = [
 We provide a full suite of end-to-end eCommerce solutions that help businesses launch and scale online stores, improve operational efficiency, ensure compliance, and increase revenue — leading to better shopping experiences and sustainable growth."
         buttonText="Consult Now"
         buttonLink="/contact"
-        rightImage="/assets/ecommerce-1.jpg"
+        rightImage="/assets/ecommerce-11.webp"
         backgroundImage="/assets/Rectangle 1.png"
         stats={statsData}
       />
@@ -66,8 +66,8 @@ We provide a full suite of end-to-end eCommerce solutions that help businesses l
     <AIServices
             heading="Delivering Cutting-Edge Healthcare Services"
             services={servicesData}
-            rightImage="/assets/ecommerce-2.jpg"
-          />
+            rightImage="/assets/ecommerce-22.webp"
+    />
 
     <IndustriesSection/>
 

@@ -58,7 +58,7 @@ const Education = () => {
 We provide a full suite of end-to-end education solutions that help institutions deliver high-quality learning experiences, improve operational efficiency, ensure compliance with education standards, and reduce costs — leading to better learning outcomes and sustainable growth."
         buttonText="Consult Now"
         buttonLink="/contact"
-        rightImage="/assets/education-1.jpg"
+        rightImage="/assets/education-11.webp"
         backgroundImage="/assets/Rectangle 1.png"
         stats={statsData}
       />
@@ -66,7 +66,7 @@ We provide a full suite of end-to-end education solutions that help institutions
     <AIServices
             heading="Delivering Cutting-Edge Healthcare Services"
             services={servicesData}
-            rightImage="/assets/education-2.jpg"
+            rightImage="/assets/education-22.webp"
           />
 
     <IndustriesSection/>
