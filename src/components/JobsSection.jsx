@@ -88,7 +88,7 @@ const JobsSection = () => {
           We are embarking on profound mission
         </motion.h2>
         <motion.p
-          className="text-[#5C5C5C] text-sm lg:text-md leading-snug tracking-tight max-w-lg  mx-auto md:mx-0 mt-2"
+          className="text-[#5C5C5C] text-sm lg:text-[15px] leading-normal tracking-tight max-w-lg  mx-auto md:mx-0 mt-2"
           variants={fadeUp}
           custom={2}
         >
@@ -108,21 +108,21 @@ const JobsSection = () => {
           <input
             type="text"
             placeholder="Search for a job"
-            className="w-full placeholder-[#939393] pl-4 pr-8 py-2 md:py-3 text-sm md:text-[12px] bg-[#F6FAFD] border border-[#E5EEF5] rounded-full focus:outline-none focus:ring-1 focus:ring-gray-300"
+            className="w-full placeholder-[#939393] pl-4 pr-8 py-3 text-sm md:text-sm bg-[#F6FAFD] border border-[#E5EEF5] rounded-full focus:outline-none focus:ring-1 focus:ring-gray-300"
           />
           <Search className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
         </motion.div>
 
-        <motion.div className="relative inline-block flex-1 min-w-[150px] md:flex-none" variants={fadeUp} custom={2}>
-          <select className="appearance-none w-full text-sm md:text-[12px] text-[#939393] px-4 py-2 md:py-3 pr-10 bg-[#F6FAFD] border border-[#E5EEF5] rounded-full focus:outline-none">
-            <option>Location</option>
+        <motion.div className="relative flex-1 min-w-[150px]" variants={fadeUp} custom={2}>
+          <select className="appearance-none w-full text-sm text-[#939393] px-4 py-3 pr-10 bg-[#F6FAFD] border border-[#E5EEF5] rounded-full focus:outline-none focus:ring-1 focus:ring-gray-300">
+            <option value="">Location</option>
           </select>
           <ChevronDown className="absolute text-[#939393] right-3 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none" />
         </motion.div>
 
-        <motion.div className="relative inline-block flex-1 min-w-[150px] md:flex-none" variants={fadeUp} custom={3}>
-          <select className="appearance-none w-full text-sm md:text-[12px] text-[#939393] px-4 py-2 md:py-3 pr-10 bg-[#F6FAFD] border border-[#E5EEF5] rounded-full focus:outline-none">
-            <option>Budget Range</option>
+        <motion.div className="relative flex-1 min-w-[150px]" variants={fadeUp} custom={3}>
+          <select className="appearance-none w-full text-sm text-[#939393] px-4 py-3 pr-10 bg-[#F6FAFD] border border-[#E5EEF5] rounded-full focus:outline-none focus:ring-1 focus:ring-gray-300">
+            <option value="">Budget Range</option>
           </select>
           <ChevronDown className="absolute text-[#939393] right-3 top-1/2 -translate-y-1/2 w-4 h-4 pointer-events-none" />
         </motion.div>
@@ -131,7 +131,7 @@ const JobsSection = () => {
           {["All", "Finance", "Business", "Development", "Design"].map((filter, idx) => (
             <button
               key={idx}
-              className={`px-3 md:px-5 py-1.5 md:py-2 text-xs md:text-sm font-medium rounded-full transition-all ${
+              className={`px-3 md:px-5 py-2 md:py-3 text-xs md:text-sm font-medium rounded-full transition-all ${
                 filter === "All"
                   ? "bg-white text-gray-900 shadow-xs"
                   : "text-gray-500 hover:text-gray-900"
