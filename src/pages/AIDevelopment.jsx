@@ -7,7 +7,7 @@ import CTASection from '../components/CTASection'
 import ContactCTA from '../components/ContactCTA'
 import FAQSection from '../components/FAQSection'
 import ContactSection from '../components/ContactSection'
-import { useScroll } from '../Context/ScrollContext'
+import { useScroll } from '../context/ScrollContext'
 
 const AIDevelopment = () => {
   const statsData = [

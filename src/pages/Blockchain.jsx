@@ -6,7 +6,7 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import CTASection from '../components/CTASection';
 import ContactCTA from '../components/ContactCTA';
-import { useScroll } from '../Context/ScrollContext';
+import { useScroll } from '../context/ScrollContext';
 
 
 const Blockchain = () => {
