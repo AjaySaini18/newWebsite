@@ -31,8 +31,8 @@ const JobCard = ({
       </div>
 
       {/* Title */}
-      <h3 className="text-md font-semibold text-gray-900">{title}</h3>
-      <p className="text-[11px] sm:text-[12px] text-[#808080] font-medium mb-3">
+      <h3 className="text-md lg:text-lg font-semibold text-gray-900">{title}</h3>
+      <p className="text-[11px] sm:text-[13px] text-[#808080] font-medium mb-3">
         Posted {posted} • {openings} opening available
       </p>
 
@@ -42,7 +42,7 @@ const JobCard = ({
       </p>
 
       {/* Job Info */}
-      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-[11px] sm:text-[12px] text-gray-500">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-sm text-gray-500">
         <span className="flex items-center gap-1.5">
           <img src="/assets/fulltime.svg" alt="Full time" className="w-3 h-3" />
           {type}
