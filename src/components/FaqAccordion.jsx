@@ -25,7 +25,7 @@ const faqData = {
 };
 
 const FaqAccordion = ({ activeCategory }) => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
   const faqs = faqData[activeCategory] || [];
 
   return (

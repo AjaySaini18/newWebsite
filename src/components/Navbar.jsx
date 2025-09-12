@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Menu, X } from "lucide-react";
+import React, { useState, useEffect, useRef } from "react";
+import { Menu, X, ChevronDown } from "lucide-react"; // ✅ Added ChevronDown
 import WhatWeDoModal from "../modals/WhatWeDoModal";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -12,13 +12,27 @@ const Navbar = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("India");
   const navigate = useNavigate();
 
+  const langRef = useRef(null);
+
   const handleLanguageSelect = (lang) => {
     setSelectedLanguage(lang);
     setShowLanguageDropdown(false);
   };
 
+  // ✅ Close language dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (langRef.current && !langRef.current.contains(event.target)) {
+        setShowLanguageDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   return (
-    <nav className="font-gilroy fixed top-0 w-full bg-black/80 backdrop-blur-sm z-50">
+    <nav className="font-gilroy fixed top-0 w-full bg-black backdrop-blur-sm z-50">
       <div className="max-w-full container mx-auto px-6 md:px-12 lg:px-24 py-5 flex justify-between items-center relative">
         {/* Logo */}
         <Link to={"/"}>
@@ -30,14 +44,16 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-6 font-opensans text-[14px] relative">
-          {/* What we do (with modal) */}
+          {/* What we do (with modal + chevron) */}
           <div
             className="flex items-center text-white cursor-pointer relative"
             onMouseEnter={() => setShowWhatWeDo(true)}
             onMouseLeave={() => setShowWhatWeDo(false)}
           >
-            <span className="2xl:text-[17px] text-[14px]">What we do</span>
-  
+            <span className="2xl:text-[17px] text-[14px] flex items-center">
+              What we do
+              <ChevronDown className="ml-1 w-4 h-4" /> {/* ✅ Added chevron */}
+            </span>
             {showWhatWeDo && <WhatWeDoModal />}
           </div>
 
@@ -56,7 +72,6 @@ const Navbar = () => {
             onClick={() => navigate("/careers")}
           >
             <span className="2xl:text-[17px] text-[14px]">Careers</span>
-           
           </div>
         </div>
 
@@ -84,9 +99,9 @@ const Navbar = () => {
             )}
           </div>
 
-
           {/* Language Dropdown */}
           <div
+            ref={langRef} // ✅ Ref added
             className="flex items-center text-white cursor-pointer text-[14px] w-10 mr-6 relative"
             onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
           >
@@ -121,7 +136,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (unchanged) */}
       {isOpen && (
         <div className="lg:hidden bg-black/90 backdrop-blur-md px-6 py-4 space-y-4 text-sm">
           <div className="flex flex-col space-y-3 text-white">

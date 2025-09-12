@@ -6,6 +6,7 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import CTASection from '../components/CTASection';
 import ContactCTA from '../components/ContactCTA';
+import { useScroll } from '../Context/ScrollContext';
 
 
 const CloudComputing = () => {
@@ -47,6 +48,8 @@ const faqData = [
   },
 ];
 
+const {contactRef} = useScroll();
+
   return (
     <>
     <AIHeroSection
@@ -72,7 +75,9 @@ We provide a full suite of end-to-end cloud solutions that help organisations mi
     heading="FAQs Related to Cloud Computing Solutions"
     faqs={faqData}
     />
-    <ContactSection/>
+    <div ref={contactRef}>
+      <ContactSection />
+    </div>
     <CTASection/>
     <ContactCTA/>
     </>

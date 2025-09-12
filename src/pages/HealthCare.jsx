@@ -6,6 +6,7 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import CTASection from '../components/CTASection';
 import ContactCTA from '../components/ContactCTA';
+import { useScroll } from '../Context/ScrollContext';
 
 const HealthCare = () => {
     const statsData = [
@@ -46,6 +47,7 @@ const HealthCare = () => {
     },
   ];
 
+  const {contactRef} = useScroll();
 
   return (
     <>
@@ -72,7 +74,9 @@ We provide a full suite of end-to-end healthcare solutions that help providers d
     heading="FAQs Related to Healthcare Solutions"
     faqs={faqData}
     />
-    <ContactSection/>
+    <div ref={contactRef}>
+        <ContactSection />
+      </div>
     <CTASection/>
     <ContactCTA/>
     </>
