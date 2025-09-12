@@ -6,7 +6,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import { ScrollProvider } from "./Context/ScrollContext";
+import { ScrollProvider } from "./context/ScrollContext";
 
 // Lazy load all pages
 const Home = lazy(() => import("./pages/Home"));
