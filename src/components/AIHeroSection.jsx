@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useScroll } from "../Context/ScrollContext";
+import { useScroll } from "../context/ScrollContext";
 
 const AIHeroSection = ({
   title,
