@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion , AnimatePresence} from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
@@ -30,7 +30,6 @@ const HeroSection = () => {
     },
   ];
 
-  // Detect mobile screens
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // breakpoint for mobile
@@ -49,6 +48,8 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [isMobile, cards.length]);
 
+
+
   return (
     <section
       className="relative min-h-screen flex flex-col justify-center text-white font-gilroy"
@@ -59,34 +60,33 @@ const HeroSection = () => {
         backgroundSize: "cover",
       }}
     >
-      {/* Main Content */}
-      <div className="relative z-10 max-w-full container mx-auto px-6 md:px-12 lg:px-24 pt-20 sm:pt-36 lg:pt-40">
-        <div className="grid grid-cols-1 lg:grid-cols-13 gap-8 lg:gap-10 2xl:gap-12 items-start py-10">
+
+      {/* Content */}
+      <div className="relative z-10 max-w-full container mx-auto px-6 md:px-12 lg:px-24 pt-28 md:pt-36 lg:pt-40">
+        <div className="grid grid-cols-1 lg:grid-cols-13 gap-8 lg:gap-10 2xl:gap-12 items-start">
           {/* Left Headings */}
           <motion.div
-            className="w-full lg:col-span-9 2xl:col-span-9"
+            className="max-w-xl md:max-w-5xl lg:col-span-9 2xl:col-span-9"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-extrabold text-[clamp(24px,6vw,50px)] sm:text-[clamp(36px,6vw,70px)] lg:text-[clamp(22px,6vw,60px)] 2xl:text-[clamp(30px,10vw,80px)] 2xl:leading-[60px] lg:leading-[80px]  text-left whitespace-nowrap">
+            <h1 className="font-extrabold text-[clamp(26px,7vw,62px)] lg:text-[clamp(22px,6vw,60px)] 2xl:text-[clamp(30px,10vw,80px)] 2xl:leading-[80px] md:leading-[60px] leading-[30px] text-left">
               CREATE. COLLABORATE.
             </h1>
-
-            <h1 className="mt-2 sm:mt-4 font-extrabold text-[clamp(22px,6vw,50px)] sm:text-[clamp(36px,6vw,70px)] lg:text-[clamp(22px,6vw,60px)] 2xl:text-[clamp(30px,10vw,80px)] 2xl:leading-[60px] lg:leading-[80px]  bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-right">
+            <h1 className="mt-2 sm:mt-4 font-extrabold text-[clamp(31px,8vw,65px)] lg:text-[clamp(22px,6vw,60px)] 2xl:text-[clamp(30px,10vw,80px)] 2xl:leading-[80px] md:leading-[60px] leading-[30px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-left md:text-right lg:text-right">
               CHANGE THE WORLD.
             </h1>
-
-
           </motion.div>
 
-          {/* Right Block */}
+          {/* Right aligned text block */}
           <motion.div
             className="lg:col-span-4 2xl:col-span- flex flex-col justify-start mt-4 lg:mt-3 max-w-[380px] xl:max-w-[420px] 2xl:max-w-[480px]"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
+            {/* Sparkling / Shimmer Strip */}
             <div className="relative w-[54px] h-[5px] mb-3 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600"></div>
               <div className="absolute inset-0 shimmer"></div>
@@ -200,7 +200,7 @@ const HeroSection = () => {
         )}
       </div>
 
-      {/* Black divider */}
+      {/* Black divider under cards */}
       <div className="bg-black h-[50px] sm:h-[70px] lg:h-[90px] w-full"></div>
     </section>
   );
