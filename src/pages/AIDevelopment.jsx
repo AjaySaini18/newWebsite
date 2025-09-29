@@ -7,6 +7,7 @@ import CTASection from '../components/CTASection'
 import ContactCTA from '../components/ContactCTA'
 import FAQSection from '../components/FAQSection'
 import ContactSection from '../components/ContactSection'
+import { useScroll } from '../context/ScrollContext'
 
 const AIDevelopment = () => {
   const statsData = [
@@ -47,13 +48,14 @@ const AIDevelopment = () => {
     },
   ];
 
+  const { contactRef } = useScroll();
+
   return (
     <>
       <AIHeroSection
         title="AI ML DEVELOPMENT"
         description="A progressive AI ML development company, winning the trust of global businesses across industries. We offer a suite of end-to-end AI ML development services that help businesses to achieve intelligent process automation, leading to better productivity and competitive growth."
         buttonText="Consult Now"
-        buttonLink="/contact"
         rightImage="/assets/Rectangle 41.svg"
         backgroundImage="/assets/Rectangle 1.png"
         stats={statsData}
@@ -73,7 +75,9 @@ const AIDevelopment = () => {
         faqs={faqData}
       />
 
-      <ContactSection/>
+      <div ref={contactRef}>
+        <ContactSection />
+      </div>
       <CTASection/>
       <ContactCTA/>
     </>

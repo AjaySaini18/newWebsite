@@ -6,6 +6,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import { ScrollProvider } from "./context/ScrollContext";
 
 // Lazy load all pages
 const Home = lazy(() => import("./pages/Home"));
@@ -32,11 +33,13 @@ function App() {
 
   return (
     <Router>
+      <ScrollProvider> 
       <ScrollToTop />
       <Navbar />
       {/* Suspense shows fallback until lazy components are loaded */}
       <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route path="/ai" element={<AIDevelopment />} />
           <Route path="/insights" element={<InsightsPage />} />
@@ -55,9 +58,11 @@ function App() {
           <Route path="/ar-vr" element={<ARVR />} />
           <Route path="/cloud-computing" element={<CloudComputing />} />
           <Route path="/iot" element={<IOT />} />
+          
         </Routes>
       </Suspense>
       <Footer />
+      </ScrollProvider>
     </Router>
   );
 }

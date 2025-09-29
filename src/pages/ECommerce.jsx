@@ -6,6 +6,7 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import CTASection from '../components/CTASection';
 import ContactCTA from '../components/ContactCTA';
+import { useScroll } from '../context/ScrollContext';
 
 const ECommerce = () => {
 const statsData = [
@@ -47,7 +48,7 @@ const faqData = [
 ];
 
 
-
+const {contactRef} = useScroll();
 
 
   return (
@@ -75,7 +76,9 @@ We provide a full suite of end-to-end eCommerce solutions that help businesses l
     heading="FAQs Related to E-Commerce Solutions"
     faqs={faqData}
     />
-    <ContactSection/>
+    <div ref={contactRef}>
+        <ContactSection />
+      </div>
     <CTASection/>
     <ContactCTA/>
     </>

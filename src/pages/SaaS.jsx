@@ -7,10 +7,11 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import CTASection from '../components/CTASection';
 import ContactCTA from '../components/ContactCTA';
+import { useScroll } from '../context/ScrollContext';
 
 const SaaS = () => {
 
-    const statsData = [
+const statsData = [
   { value: "95%", text: "Customer satisfaction rate achieved with our SaaS solutions" },
   { value: "70%", text: "Faster product launches through agile SaaS development" },
   { value: "85%", text: "Increased user engagement with integrated analytics & automation" },
@@ -48,7 +49,7 @@ const faqData = [
   },
 ];
 
-
+const {contactRef} = useScroll();
 
 
   return (
@@ -76,7 +77,9 @@ We provide a full suite of end-to-end SaaS solutions that help organisations bui
     heading="FAQs Related to Logistics Solutions"
     faqs={faqData}
     />
-    <ContactSection/>
+    <div ref={contactRef}>
+        <ContactSection />
+      </div>
     <CTASection/>
     <ContactCTA/>
     </>

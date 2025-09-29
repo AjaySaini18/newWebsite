@@ -6,6 +6,7 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import CTASection from '../components/CTASection';
 import ContactCTA from '../components/ContactCTA';
+import { useScroll } from '../context/ScrollContext';
 
 const IOT = () => {
 const statsData = [
@@ -46,7 +47,7 @@ const faqData = [
   },
 ];
 
-
+const {contactRef} = useScroll();
 
 
 
@@ -76,7 +77,9 @@ We provide a full suite of end-to-end IoT solutions that help organisations conn
     heading="FAQs Related to IoT Solutions"
     faqs={faqData}
     />
-    <ContactSection/>
+    <div ref={contactRef}>
+      <ContactSection />
+    </div>
     <CTASection/>
     <ContactCTA/>
     </>

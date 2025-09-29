@@ -7,11 +7,12 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import CTASection from '../components/CTASection';
 import ContactCTA from '../components/ContactCTA';
+import { useScroll } from '../context/ScrollContext';
 
 
 const Logistics = () => {
 
-    const statsData = [
+const statsData = [
   { value: "92%", text: "On-time delivery rate achieved with our logistics solutions" },
   { value: "60%", text: "Reduction in operational overhead through automated processes" },
   { value: "80%", text: "Increased supply chain visibility and real-time tracking" },
@@ -49,6 +50,7 @@ const faqData = [
   },
 ];
 
+const {contactRef} = useScroll();
 
 
   return (
@@ -76,7 +78,9 @@ We provide a full suite of end-to-end logistics solutions that help businesses o
     heading="FAQs Related to Logistics Solutions"
     faqs={faqData}
     />
-    <ContactSection/>
+    <div ref={contactRef}>
+        <ContactSection />
+      </div>
     <CTASection/>
     <ContactCTA/>
     </>

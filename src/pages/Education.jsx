@@ -6,11 +6,12 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import CTASection from '../components/CTASection';
 import ContactCTA from '../components/ContactCTA';
+import { useScroll } from '../context/ScrollContext';
 
 
 const Education = () => {
 
-    const statsData = [
+  const statsData = [
     { value: "93%", text: "Student satisfaction rate achieved with our digital learning solutions" },
     { value: "65%", text: "Reduction in administrative workload through streamlined processes" },
     { value: "85%", text: "Faster course delivery and student engagement with integrated systems" },
@@ -48,7 +49,7 @@ const Education = () => {
     },
   ];
 
-
+  const {contactRef} = useScroll();
 
   return (
     <>
@@ -75,7 +76,9 @@ We provide a full suite of end-to-end education solutions that help institutions
     heading="FAQs Related to Education Solutions"
     faqs={faqData}
     />
-    <ContactSection/>
+    <div ref={contactRef}>
+        <ContactSection />
+      </div>
     <CTASection/>
     <ContactCTA/>
     </>

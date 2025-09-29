@@ -6,6 +6,7 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import CTASection from '../components/CTASection';
 import ContactCTA from '../components/ContactCTA';
+import { useScroll } from '../context/ScrollContext';
 
 const ARVR = () => {
   const statsData = [
@@ -47,7 +48,7 @@ const faqData = [
 ];
 
 
-
+const {contactRef} = useScroll();
 
 
   return (
@@ -75,7 +76,9 @@ We provide a full suite of end-to-end AR/VR solutions that help organisations de
     heading="FAQs Related to AR & VR Solutions"
     faqs={faqData}
     />
-    <ContactSection/>
+    <div ref={contactRef}>
+        <ContactSection />
+    </div>
     <CTASection/>
     <ContactCTA/>
     </>

@@ -6,6 +6,7 @@ import FAQSection from '../components/FAQSection';
 import ContactSection from '../components/ContactSection';
 import CTASection from '../components/CTASection';
 import ContactCTA from '../components/ContactCTA';
+import { useScroll } from '../context/ScrollContext';
 
 
 const Blockchain = () => {
@@ -48,7 +49,7 @@ const faqData = [
 ];
 
 
-
+const {contactRef} = useScroll();
 
 
   return (
@@ -76,7 +77,9 @@ We provide a full suite of end-to-end blockchain solutions that help organisatio
     heading="FAQs Related to BlockChain Solutions"
     faqs={faqData}
     />
-    <ContactSection/>
+    <div ref={contactRef}>
+      <ContactSection />
+    </div>
     <CTASection/>
     <ContactCTA/>
     </>

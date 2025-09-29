@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useScroll } from "../context/ScrollContext";
 
 const AIHeroSection = ({
   title,
   description,
   buttonText,
-  buttonLink = "#",
   leftImage,
   rightImage,
   stats = [],
@@ -19,6 +19,8 @@ const AIHeroSection = ({
       transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
     }),
   };
+
+  const { scrollToContact } = useScroll();
 
   return (
     <section
@@ -50,10 +52,10 @@ const AIHeroSection = ({
             </p>
             {buttonText && (
               <motion.a
-                href={buttonLink}
+                onClick={scrollToContact} 
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-5 inline-block px-5 py-2 hover:border-hidden border border-white rounded-md hover:bg-white transition-colors duration-500 ease-in-out text-sm sm:text-base"
+                className="cursor-pointer hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-5 inline-block px-5 py-2 hover:border-hidden border border-white rounded-md hover:bg-white transition-colors duration-500 ease-in-out text-sm sm:text-base"
               >
                 {buttonText}
               </motion.a>
