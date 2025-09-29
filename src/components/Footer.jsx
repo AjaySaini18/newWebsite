@@ -24,11 +24,10 @@ const Footer = () => {
             {/* Logo */}
             <div className="flex items-center gap-2">
               <img
-                src="/assets/logo.svg"
+                src="/assets/Logo 3x - Dark Tagline.png"
                 alt="Synopix Logo"
-                className="w-6 h-6 2xl:w-7 2xl:h-7"
+                className="w-auto h-10  2xl:h-9"
               />
-              <span className="text-lg font-bold text-[#525252]">SYNOPIX</span>
             </div>
 
             {/* Social Icons */}
