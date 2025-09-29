@@ -61,7 +61,7 @@ const CTASection = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-gilroy font-medium leading-[28px] sm:leading-[36px] text-white">
+          <h2 className="text-xl lg:text-2xl lg:text-3xl font-gilroy font-medium leading-[28px] sm:leading-[36px] text-white">
             Partnership Success Stories, In Their Own Words
           </h2>
 
@@ -72,8 +72,19 @@ const CTASection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            {[{ onClick: prevSlide, icon: <ChevronLeft className="text-white w-5 h-5 sm:w-6 sm:h-6" /> },
-              { onClick: nextSlide, icon: <ChevronRight className="text-white w-5 h-5 sm:w-6 sm:h-6" /> }
+            {[
+              {
+                onClick: prevSlide,
+                icon: (
+                  <ChevronLeft className="text-white w-5 h-5 sm:w-6 sm:h-6" />
+                ),
+              },
+              {
+                onClick: nextSlide,
+                icon: (
+                  <ChevronRight className="text-white w-5 h-5 sm:w-6 sm:h-6" />
+                ),
+              },
             ].map((btn, idx) => (
               <button
                 key={idx}
