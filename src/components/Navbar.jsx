@@ -33,12 +33,20 @@ const Navbar = () => {
 
   return (
     <nav className="font-gilroy fixed top-0 w-full bg-black backdrop-blur-sm z-50">
-      <div className="max-w-full container mx-auto px-6 md:px-12 lg:px-24 py-5 flex justify-between items-center relative">
+      <div className="max-w-full container mx-auto px-6 md:px-12 lg:px-24 py-3 flex justify-between items-center relative">
         {/* Logo */}
         <Link to={"/"}>
           <div className="flex items-center">
-            <img src="/assets/logo.svg" alt="Logo" className="h-6 w-6 mr-2 sm:mr-3" />
-            <span className="text-white font-bold font-gilroy text-lg sm:text-lg">SYNOPIX</span>
+            <img
+              src="/assets/Synopix_Logo.png"
+              alt="Logo"
+              className="
+                h-10 sm:h-12 md:h-13 lg:h-25 2xl:h-30
+                w-auto
+                max-h-10
+               
+              "
+            />
           </div>
         </Link>
 
@@ -131,7 +139,7 @@ const Navbar = () => {
         {/* Mobile Hamburger */}
         <div className="lg:hidden flex items-center">
           <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X className="text-white h-6 w-6" /> : <Menu className="text-white h-6 w-6" />}
+            {isOpen ? <X className="text-white h-6 w-6" /> : <img src="/assets/menu_icon.svg" alt="Menu" className="h-10 w-auto" />}
           </button>
         </div>
       </div>
