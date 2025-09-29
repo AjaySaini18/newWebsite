@@ -1,62 +1,109 @@
 import React, { useRef, useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+const TOTAL_ITEMS = 6;
 
 const CaseStudySection = () => {
-  const scrollRef = useRef(null);
+  // separate refs for horizontal (mobile) and vertical (desktop)
+  const hScrollRef = useRef(null);
+  const vScrollRef = useRef(null);
   const thumbRef = useRef(null);
 
-  const [thumbTop, setThumbTop] = useState(0);
-  const [thumbHeight, setThumbHeight] = useState(30); // default %
-  const [visibleItems, setVisibleItems] = useState(1); // Start with first item visible
+  // thumb state for desktop vertical scrollbar
+  const [thumbTop, setThumbTop] = useState(0); // percentage
+  const [thumbHeight, setThumbHeight] = useState(30); // percentage
 
+  // Mobile horizontal scroll by viewport width
+  const scrollHorizontal = (dir) => {
+    const el = hScrollRef.current;
+    if (!el) return;
+    const width = el.clientWidth;
+    el.scrollBy({ left: dir === "left" ? -width : width, behavior: "smooth" });
+  };
+
+  // Update thumb position/height based on vertical scroll container
   useEffect(() => {
-    const container = scrollRef.current;
+    const container = vScrollRef.current;
+    if (!container) return;
 
-    const handleScroll = () => {
-      if (!container) return;
-      const { scrollTop, scrollHeight, clientHeight } = container;
+    let rafId = null;
 
-      const newThumbHeight = (clientHeight / scrollHeight) * 100;
-      const newThumbTop =
-        (scrollTop / (scrollHeight - clientHeight)) * (100 - newThumbHeight);
-
-      setThumbHeight(newThumbHeight);
-      setThumbTop(newThumbTop);
-
-      // Reveal next item instantly when user scrolls at all
-      const totalItems = 6;
-      if (scrollTop > 0 && visibleItems < totalItems) {
-        setVisibleItems((prev) => Math.min(prev + 1, totalItems));
+    const isVisible = () => {
+      // if element is not currently visible (e.g., display: none on small screens), skip
+      try {
+        const style = window.getComputedStyle(container);
+        if (!style) return false;
+        return style.display !== "none" && container.clientHeight > 0;
+      } catch {
+        return false;
       }
     };
 
-    handleScroll(); // initial sync
-    container?.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleScroll);
+    const updateThumb = () => {
+      if (!isVisible()) return;
+      const { scrollTop, scrollHeight, clientHeight } = container;
+
+      if (scrollHeight <= clientHeight) {
+        setThumbHeight(100);
+        setThumbTop(0);
+        return;
+      }
+
+      const newThumbHeight = Math.max((clientHeight / scrollHeight) * 100, 5); // min 5% so it's visible
+      const maxThumbTop = 100 - newThumbHeight;
+      const newThumbTop = (scrollTop / (scrollHeight - clientHeight)) * maxThumbTop;
+
+      setThumbHeight(newThumbHeight);
+      setThumbTop(newThumbTop);
+    };
+
+    // use RAF for smoother updates on scroll
+    const onScroll = () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(updateThumb);
+    };
+
+    updateThumb();
+    container.addEventListener("scroll", onScroll);
+    window.addEventListener("resize", updateThumb);
 
     return () => {
-      container?.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
+      container.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", updateThumb);
+      if (rafId) cancelAnimationFrame(rafId);
     };
-  }, [visibleItems]);
+  }, []); // run once, listeners handle updates
 
-  // Drag logic for scrollbar thumb
+  // Drag logic for the thumb (desktop vertical)
   useEffect(() => {
-    const container = scrollRef.current;
+    const container = vScrollRef.current;
     const thumb = thumbRef.current;
+    if (!container || !thumb) return;
+
     let isDragging = false;
     let startY = 0;
     let startTop = 0;
 
+    const isVisible = () => {
+      try {
+        const style = window.getComputedStyle(container);
+        return style.display !== "none" && container.clientHeight > 0;
+      } catch {
+        return false;
+      }
+    };
+
     const onMouseDown = (e) => {
+      if (!isVisible()) return;
       isDragging = true;
       startY = e.clientY;
       startTop = thumbTop;
-      document.body.style.userSelect = "none"; // prevent text select
+      document.body.style.userSelect = "none";
+      e.preventDefault();
     };
 
     const onMouseMove = (e) => {
-      if (!isDragging || !container) return;
-
+      if (!isDragging || !isVisible()) return;
       const { clientHeight, scrollHeight } = container;
       const maxThumbTop = 100 - thumbHeight;
       const deltaY = ((e.clientY - startY) / clientHeight) * 100;
@@ -64,75 +111,108 @@ const CaseStudySection = () => {
 
       setThumbTop(newTop);
 
-      const newScrollTop =
-        (newTop / maxThumbTop) * (scrollHeight - clientHeight);
+      // convert thumb position to scrollTop
+      const newScrollTop = (newTop / maxThumbTop) * (scrollHeight - clientHeight) || 0;
       container.scrollTop = newScrollTop;
     };
 
     const onMouseUp = () => {
+      if (!isDragging) return;
       isDragging = false;
       document.body.style.userSelect = "auto";
     };
 
-    thumb?.addEventListener("mousedown", onMouseDown);
+    // Touch equivalents
+    const onTouchStart = (e) => {
+      if (!isVisible()) return;
+      isDragging = true;
+      startY = e.touches[0].clientY;
+      startTop = thumbTop;
+    };
+
+    const onTouchMove = (e) => {
+      if (!isDragging || !isVisible()) return;
+      const { clientHeight, scrollHeight } = container;
+      const maxThumbTop = 100 - thumbHeight;
+      const deltaY = ((e.touches[0].clientY - startY) / clientHeight) * 100;
+      const newTop = Math.min(Math.max(startTop + deltaY, 0), maxThumbTop);
+
+      setThumbTop(newTop);
+      const newScrollTop = (newTop / maxThumbTop) * (scrollHeight - clientHeight) || 0;
+      container.scrollTop = newScrollTop;
+      e.preventDefault();
+    };
+
+    thumb.addEventListener("mousedown", onMouseDown);
     window.addEventListener("mousemove", onMouseMove);
     window.addEventListener("mouseup", onMouseUp);
 
+    thumb.addEventListener("touchstart", onTouchStart, { passive: false });
+    window.addEventListener("touchmove", onTouchMove, { passive: false });
+    window.addEventListener("touchend", onMouseUp);
+
     return () => {
-      thumb?.removeEventListener("mousedown", onMouseDown);
+      thumb.removeEventListener("mousedown", onMouseDown);
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("mouseup", onMouseUp);
+
+      thumb.removeEventListener("touchstart", onTouchStart);
+      window.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("touchend", onMouseUp);
     };
   }, [thumbTop, thumbHeight]);
 
-  // Single Case Study Item
+  // Single Case Study Item (kept same layout as before)
   const CaseStudyItem = ({ title, result, downloads, traffic }) => (
-    <div className="flex flex-col lg:flex-row items-start justify-center gap-10 lg:gap-16 w-full mb-16">
-      {/* Left Content */}
-      <div className="lg:w-[380px] flex flex-col">
-        <h2 className="text-[20px] sm:text-[22px] md:text-[28px] font-bold text-white mb-3">
-          {title}
-        </h2>
+    <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-full">
+      <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-16 w-full mb-16">
+        {/* Left Content */}
+        <div className="w-full lg:w-[380px] flex flex-col">
+          <h2 className="text-[20px] sm:text-[22px] md:text-[28px] font-bold text-white mb-3">
+            {title}
+          </h2>
 
-        <p className="text-[12px] sm:text-[13px] md:text-[18px] text-gray-200 mb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+          <p className="text-[12px] sm:text-[13px] md:text-[16px] text-gray-200 mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
 
-        {/* Metrics */}
-        <div className="flex items-start sm:items-end">
-          <div className="pr-8 sm:pr-10">
-            <div className="text-[14px] text-[#9F9F9F]">Result</div>
-            <div className="text-[18px] sm:text-[20px] font-medium text-white mb-1">
-              {result}
+          {/* Metrics */}
+          <div className="flex items-center justify-between w-full mb-6">
+            <div className="text-center flex-1">
+              <div className="text-[14px] text-[#9F9F9F]">Result</div>
+              <div className="text-[18px] sm:text-[20px] font-medium text-white mb-1">
+                {result}
+              </div>
+              <div className="text-[14px] text-[#9F9F9F]">App downloads</div>
             </div>
-            <div className="text-[14px] text-[#9F9F9F]">App downloads</div>
+
+            <div className="w-px bg-[#0E3F48] h-[40px] hidden sm:block"></div>
+
+            <div className="text-center flex-1">
+              <div className="text-[18px] sm:text-[20px] font-medium text-white mb-1">
+                {traffic}
+              </div>
+              <div className="text-[14px] text-[#9F9F9F]">Monthly Traffic</div>
+            </div>
           </div>
 
-          <div className="w-px bg-[#0E3F48] h-[50px] hidden sm:block"></div>
-
-          <div className="pl-8 sm:pl-10">
-            <div className="text-[18px] sm:text-[20px] font-medium text-white mb-1">
-              {traffic}
-            </div>
-            <div className="text-[14px] text-[#9F9F9F]">Monthly Traffic</div>
-          </div>
+          {/* Button */}
+          <button className="w-[150px] h-[38px] text-[14px] hover:border-hidden border border-[#D6D6D6] text-[#D6D6D6] rounded-[5px] flex items-center justify-center hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)]">
+            View Case Study
+          </button>
         </div>
 
-        <button className="w-[150px] h-[38px] text-[14px] hover:border-hidden border border-[#D6D6D6] text-[#D6D6D6] rounded-[5px] flex items-center justify-center hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-8">
-          View Case Study
-        </button>
-      </div>
-
-      {/* Right Image */}
-      <div className="flex-1 flex items-start justify-center">
-        <div className="relative flex">
-          <div className="w-full max-w-[825px] h-[350px] md:h-[410px] overflow-hidden rounded-[11px] shadow-xl">
-            <img
-              src="/assets/Rectangle20.png"
-              alt={`${title} Case Study`}
-              className="w-full h-auto object-cover"
-            />
+        {/* Right Image */}
+        <div className="w-full flex items-start justify-center">
+          <div className="relative flex w-full">
+            <div className="w-full max-w-full lg:max-w-[825px] h-[220px] sm:h-[280px] md:h-[350px] lg:h-[410px] overflow-hidden rounded-[11px] shadow-xl">
+              <img
+                src="/assets/Rectangle20.png"
+                alt={`${title} Case Study`}
+                className="w-full h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -150,52 +230,81 @@ const CaseStudySection = () => {
           backgroundPosition: "center",
         }}
       >
-        {/* Heading */}
-        <div className="mb-6">
+        {/* Heading row with arrows */}
+        <div className="mb-6 flex items-center justify-between">
           <img
             src="/assets/CaseStudy.svg"
             alt="Case Study Logo"
             className="h-[18px] w-auto inline-block align-middle"
           />
+
+          {/* Arrows (only mobile) */}
+          <div className="flex gap-2 lg:hidden">
+            <button
+              onClick={() => scrollHorizontal("left")}
+              className="p-2 bg-white/10 hover:bg-white/20 rounded"
+            >
+              <ChevronLeft className="w-4 h-4 text-white" />
+            </button>
+            <button
+              onClick={() => scrollHorizontal("right")}
+              className="p-2 bg-white/10 hover:bg-white/20 rounded"
+            >
+              <ChevronRight className="w-4 h-4 text-white" />
+            </button>
+          </div>
         </div>
 
         {/* Wrapper */}
         <div className="relative flex">
-          {/* Scrollable Content */}
+          {/* Mobile: Horizontal scroll */}
           <div
-            ref={scrollRef}
-            className="max-h-[500px] overflow-y-scroll no-scrollbar pr-6 flex-1"
+            ref={hScrollRef}
+            className="flex lg:hidden gap-6 overflow-x-auto no-scrollbar scroll-smooth"
+            aria-label="Case studies carousel"
           >
-            {[...Array(6)].map((_, i) => (
-              <div
+            {[...Array(TOTAL_ITEMS)].map((_, i) => (
+              <CaseStudyItem
                 key={i}
-                className={`transition-opacity duration-500 ${
-                  i < visibleItems ? "opacity-100" : "opacity-30"
-                }`}
-              >
+                title={`Microsoft Case ${i + 1}`}
+                result={`${10 + i}M+`}
+                downloads={`${5 + i}M+`}
+                traffic={`${15 + i}M+`}
+              />
+            ))}
+          </div>
+
+          {/* Desktop: Vertical scroll with gradient scrollbar */}
+          <div className="hidden lg:flex relative flex-1 items-start">
+            <div
+              ref={vScrollRef}
+              className="max-h-[500px] overflow-y-scroll no-scrollbar pr-6 flex-1"
+            >
+              {[...Array(TOTAL_ITEMS)].map((_, i) => (
                 <CaseStudyItem
+                  key={i}
                   title={`Microsoft Case ${i + 1}`}
                   result={`${10 + i}M+`}
                   downloads={`${5 + i}M+`}
                   traffic={`${15 + i}M+`}
                 />
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          {/* Custom Gradient Scrollbar */}
-          <div className="absolute right-0 top-0 h-full hidden sm:flex items-start">
-            <div className="w-[3px] h-full bg-gray-600/50 rounded-full relative">
-              <div
-                ref={thumbRef}
-                className="absolute left-0 w-full cursor-pointer rounded-full"
-                style={{
-                  top: `${thumbTop}%`,
-                  height: `${thumbHeight}%`,
-                  background:
-                    "linear-gradient(180deg, #06F7C4 0%, #4359FF 100%)",
-                }}
-              ></div>
+            {/* Gradient Scrollbar (desktop only) */}
+            <div className="absolute right-0 top-0 h-full flex items-start">
+              <div className="w-[3px] h-full bg-gray-600/50 rounded-full relative">
+                <div
+                  ref={thumbRef}
+                  className="absolute left-0 w-full cursor-pointer rounded-full"
+                  style={{
+                    top: `${thumbTop}%`,
+                    height: `${thumbHeight}%`,
+                    background: "linear-gradient(180deg, #06F7C4 0%, #4359FF 100%)",
+                  }}
+                  aria-hidden="true"
+                />
+              </div>
             </div>
           </div>
         </div>

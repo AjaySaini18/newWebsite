@@ -8,7 +8,7 @@ const ServicesSection = () => {
       <div className="container max-w-full mx-auto px-6 sm:px-12 lg:px-24">
         {/* Heading */}
         <motion.h2
-          className="text-[22px] sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-center text-gray-800 mb-12 leading-tight"
+          className="text-[26px] sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-center text-gray-800 mb-10 leading-tight"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
