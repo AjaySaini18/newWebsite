@@ -29,7 +29,7 @@ const FaqAccordion = ({ activeCategory }) => {
   const faqs = faqData[activeCategory] || [];
 
   return (
-    <div className="bg-[#F5F6FE] shadow-xs rounded-2xl p-6 space-y-4">
+    <div className="bg-[#F5F6FE] shadow-sm rounded-2xl p-6 space-y-4">
       {faqs.map((faq, idx) => {
         const isOpen = openIndex === idx;
         return (

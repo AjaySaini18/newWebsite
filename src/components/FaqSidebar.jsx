@@ -13,7 +13,7 @@ const categories = [
 
 const FaqSidebar = ({ activeCategory, setActiveCategory }) => {
   return (
-    <aside className="bg-[#F5F6FE] shadow-xs rounded-xl p-6 space-y-2">
+    <aside className="bg-[#F5F6FE] shadow-sm rounded-xl p-6 space-y-2">
       {categories.map((item, idx) => {
         const isActive = activeCategory === idx;
         return (

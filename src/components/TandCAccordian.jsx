@@ -42,7 +42,7 @@ const TandCAccordion = ({ activeCategory }) => {
   if (!content) return null;
 
   return (
-    <div className="bg-[#F5F6FE] font-gilroy rounded-3xl p-16 space-y-4">
+    <div className="bg-[#F5F6FE]  font-gilroy rounded-3xl p-16 space-y-4">
       <h2 className="text-lg md:text-xl  font-bold text-gray-900">
         {content.title}
       </h2>
