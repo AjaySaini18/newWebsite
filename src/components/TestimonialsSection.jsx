@@ -64,7 +64,7 @@ const services = [
 const TestimonialsSection = () => {
   return (
     <section
-      className="w-full bg-cover bg-center text-white py-12 md:py-16 md:py-24 px-6 sm:px-12 md:px-16 lg:px-24 font-gilroy"
+      className="w-full bg-cover bg-center text-white py-12 md:py-16 md:py-24 px-6 md:px-12 lg:px-24 font-gilroy"
       style={{ backgroundImage: "url('/assets/Rectangle19.png')" }}
     >
       <div className="max-full mx-auto">
@@ -77,7 +77,11 @@ const TestimonialsSection = () => {
           viewport={{ once: true }}
         >
           <h2 className="col-span-12 md:col-span-9 text-2xl md:text-3xl lg:text-5xl font-semibold leading-normal lg:leading-tight">
-            Pioneering Innovation Through <br /> World-Class Engineering
+            Pioneering Innovation Through
+            <span className="hidden md:inline">
+              <br />
+            </span>
+            World-Class Engineering
           </h2>
 
           <div className="col-span-12 md:col-span-3 flex md:justify-end">
