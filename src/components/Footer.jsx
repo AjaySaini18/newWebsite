@@ -66,7 +66,7 @@ const Footer = () => {
           </motion.div>
           
           {/* Row 2: About + Services + Technology + Industries */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:contents gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:contents gap-8 lg:gap-16">
           {/* Group 1: About + Services */}
             {/* About */}
             <motion.div
@@ -189,7 +189,7 @@ const Footer = () => {
           <p>
             <span className="">©</span> 2022–2025 Synopix LLC
           </p>
-          <div className=" flex flex-wrap justify-start space-x-4 gap-2 lg:gap-12">
+          <div className=" flex flex-wrap justify-start space-x-4 lg:space-x-1 gap-2 lg:gap-12">
             <Link to={"/contact-us"}>
               <span>Contact us</span>
             </Link>
