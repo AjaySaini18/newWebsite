@@ -25,10 +25,10 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="pt-4 lg:pt-7 md:pb-10 lg:pb-20 bg-gray-50 font-gilroy">
-      <div className="container max-w-full mx-auto px-6 md:px-12 lg:px-24">
+    <section className="pt-4 py-10 lg:pt-7 md:pb-10 lg:pb-20 bg-gray-50 font-gilroy">
+      <div className="container max-w-full mx-auto px-4 md:px-12 lg:px-24">
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 px-16 gap-10 lg:gap-20"
+          className="grid grid-cols-1 md:grid-cols-3 px-6 gap-10 lg:gap-20"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -68,7 +68,7 @@ const StatsSection = () => {
               <h3 className="text-xl font-bold text-gray-800 mb-2">
                 {stat.label}
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 font-medium text-sm max-w-xs sm:max-w-sm mx-auto">
                 {stat.description}
               </p>
             </motion.div>

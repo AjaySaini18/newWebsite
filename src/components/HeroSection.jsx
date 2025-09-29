@@ -69,11 +69,11 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="font-extrabold text-[clamp(24px,7vw,50px)] sm:text-[clamp(36px,15vw,70px)] lg:text-[clamp(22px,6vw,60px)] 2xl:text-[clamp(30px,10vw,80px)] 2xl:leading-[60px] lg:leading-[50px] leading-[30px] text-left whitespace-nowrap">
+            <h1 className="font-extrabold text-[clamp(24px,6vw,50px)] sm:text-[clamp(36px,6vw,70px)] lg:text-[clamp(22px,6vw,60px)] 2xl:text-[clamp(30px,10vw,80px)] 2xl:leading-[60px] lg:leading-[80px]  text-left whitespace-nowrap">
               CREATE. COLLABORATE.
             </h1>
 
-            <h1 className="mt-2 sm:mt-4 font-extrabold text-[clamp(32px,8vw,180px)] sm:text-[clamp(36px,15vw,70px)] lg:text-[clamp(22px,6vw,60px)] 2xl:text-[clamp(30px,10vw,80px)] 2xl:leading-[60px] lg:leading-[50px] leading-[30px] bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-right">
+            <h1 className="mt-2 sm:mt-4 font-extrabold text-[clamp(22px,6vw,50px)] sm:text-[clamp(36px,6vw,70px)] lg:text-[clamp(22px,6vw,60px)] 2xl:text-[clamp(30px,10vw,80px)] 2xl:leading-[60px] lg:leading-[80px]  bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent text-right">
               CHANGE THE WORLD.
             </h1>
 
