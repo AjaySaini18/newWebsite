@@ -119,9 +119,9 @@ const HeroSection = () => {
                 key={currentCard}
                 className="absolute inset-0 w-full h-full bg-cover bg-center cursor-pointer"
                 style={{ backgroundImage: `url(${cards[currentCard].img})` }}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0  }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 transition={{ duration: 1.8, ease: "easeOut" }}
                 onClick={() => navigate("/ai")}
               >
@@ -132,7 +132,7 @@ const HeroSection = () => {
                       "linear-gradient(109.77deg, #06F7C4 -5.67%, #4359FF 26.82%)",
                   }}
                 ></div>
-                <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-extrabold text-sm sm:text-base md:text-lg z-30">
+                <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-semibold text-lg sm:text-base md:text-lg z-30">
                   {cards[currentCard].title}
                 </div>
                 <div className="absolute inset-0 flex flex-col justify-center items-start p-8 text-white z-20">
