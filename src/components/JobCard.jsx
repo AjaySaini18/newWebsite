@@ -15,26 +15,32 @@ const JobCard = ({
   return (
     <div className="relative rounded-xl p-4 sm:p-5 bg-white shadow-sm hover:shadow-md transition font-gilroy">
       {/* Location Badge Top Right */}
-      <div
-        className={`absolute top-3 right-3 sm:top-4 sm:right-4 inline-flex items-center gap-1 px-2.5 sm:px-3 py-1 text-[10px] sm:text-xs font-medium rounded-full border ${
-          locationType === "remote"
-            ? "text-black border-blue-600 bg-blue-50"
-            : "text-black border-green-600 bg-green-50"
-        }`}
-      >
-        <span
-          className={`w-2 h-2 rounded-full ${
-            locationType === "remote" ? " bg-blue-500" : "bg-green-500"
-          } `}
-        ></span>
-        {location}
+      <div className="flex flex-col lg:flex-row justify-between items-start">
+        <div className="">
+          <h3 className="text-md lg:text-lg font-semibold text-gray-900">{title}</h3>
+          <p className="text-[11px] sm:text-[13px] text-[#808080] font-medium mb-3">
+            Posted {posted} • {openings} opening available
+          </p>
+        </div>
+        <div
+          className={`mb-5  sm:top-4 sm:right-4 inline-flex items-center gap-1 px-2.5 sm:px-3 py-2 text-[10px] sm:text-xs font-medium rounded-full border ${
+            locationType === "remote"
+              ? "text-black border-blue-600 bg-blue-50"
+              : "text-black border-green-600 bg-green-50"
+          }`}
+        >
+          <span
+            className={`w-2 h-2 rounded-full ${
+              locationType === "remote" ? " bg-blue-500" : "bg-green-500"
+            } `}
+          ></span>
+          {location}
+        </div>
       </div>
 
-      {/* Title */}
-      <h3 className="text-md lg:text-lg font-semibold text-gray-900">{title}</h3>
-      <p className="text-[11px] sm:text-[13px] text-[#808080] font-medium mb-3">
-        Posted {posted} • {openings} opening available
-      </p>
+      
+      
+      
 
       {/* Description */}
       <p className="text-[#282828] font-medium leading-snug text-xs lg:text-sm mb-3 sm:mb-4">
