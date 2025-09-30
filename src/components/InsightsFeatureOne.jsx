@@ -32,7 +32,7 @@ const InsightsFeatureOne = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={textVariants}
         >
-          <h2 className="text-3xl md:text-2xl lg:text-4xl font-semibold md:font-bold text-gray-900 mb-3 lg:mb-6 leading-tight">
+          <h2 className="text-3xl lg:text-4xl font-semibold md:font-bold text-gray-900 mb-3 lg:mb-6 leading-tight">
             We Transform Businesses & Society Through Our Data Science Service
           </h2>
           <p className="text-lg text-[#393939] leading-[1.4] mb-3 lg:mb-6">

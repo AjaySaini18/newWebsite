@@ -43,7 +43,7 @@ const InsightsFeatureTwo = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={textVariants}
         >
-          <h2 className="text-3xl md:text-2xl lg:text-4xl font-semibold md:font-bold text-gray-900 mb-4 lg:mb-6">
+          <h2 className="text-3xl lg:text-4xl font-semibold md:font-bold text-gray-900 mb-4 lg:mb-6">
             Providing Different Artificial <br className="hidden md:block"/>
             Intelligence Development Services
           </h2>
