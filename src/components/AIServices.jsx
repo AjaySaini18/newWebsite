@@ -24,17 +24,41 @@ export default function AIServices({ heading, services = [], rightImage }) {
   };
 
   return (
-    <section className="w-full bg-[#F8F8F8] py-20 px-4 sm:px-8 md:px-12 lg:px-24 font-gilroy">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-25 items-end">
-        {/* Left Section */}
+    <section className="w-full bg-[#F8F8F8] py-10 md:py-20 px-6 sm:px-8 md:px-12 lg:px-24 font-gilroy">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 md:gap-25">
+        <motion.h2
+          className="text-[1.7rem] md:hidden lg:text-4xl sm:text-xl md:text-2xl font-[700] text-gray-900  leading-snug order-1 col-span-1 md:col-span-2"
+          variants={itemVariants}
+        >
+          {heading}
+        </motion.h2>
+        {/* Right Section (Image) */}
+        {rightImage && (
+          <motion.div
+            className="flex justify-center  md:mt-0 order-1 md:order-2"
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <img
+              src={rightImage}
+              alt="AI Services"
+              className="rounded-lg shadow-lg object-cover w-full max-w-sm sm:max-w-md md:max-w-full"
+            />
+          </motion.div>
+        )}
+
+        {/* Left Section (Accordion) */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          className="order-2 md:order-1 "
         >
           <motion.h2
-            className="lg:text-4xl sm:text-lg md:text-2xl font-[700] text-gray-900 mb-6 leading-snug"
+            className="text-[1.7rem] hidden sm:block  lg:text-4xl sm:text-xl md:text-2xl font-[700] text-gray-900 mb-6 leading-snug"
             variants={itemVariants}
           >
             {heading}
@@ -79,23 +103,6 @@ export default function AIServices({ heading, services = [], rightImage }) {
             ))}
           </div>
         </motion.div>
-
-        {/* Right Section */}
-        {rightImage && (
-          <motion.div
-            className="flex justify-center mt-8 md:mt-0"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src={rightImage}
-              alt="AI Services"
-              className="rounded-lg shadow-lg w-full max-w-sm sm:max-w-md md:max-w-full"
-            />
-          </motion.div>
-        )}
       </div>
     </section>
   );

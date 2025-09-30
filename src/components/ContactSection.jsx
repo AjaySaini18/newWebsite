@@ -28,7 +28,7 @@ const ContactSection = () => {
       </div>
 
       {/* Right Side Shapes */}
-      <div className="absolute right-0 top-0 h-full">
+      <div className="absolute right-0 top-0 h-full hidden sm:block">
         <img
           src="/assets/ContactFormShapes.png"
           alt="decorative shapes"
@@ -115,19 +115,19 @@ const ContactSection = () => {
               type="button"
               onClick={() => setEnabled(!enabled)}
               className={`relative inline-flex 
-                h-2 w-4 sm:h-4 sm:w-7
+                h-4 w-8 sm:h-4 sm:w-7
                 items-center rounded-full transition 
                 ${enabled ? "bg-green-600" : "bg-gray-300"}`}
             >
               <span
                 className={`inline-block 
-                h-1 w-1 sm:h-2 sm:w-2
+                h-2 w-2 sm:h-2 sm:w-2
                 transform rounded-full bg-white transition 
-                ${enabled ? "translate-x-2 sm:translate-x-4" : "translate-x-0.5 sm:translate-x-1"}`}
+                ${enabled ? "translate-x-3 sm:translate-x-4" : "translate-x-1 sm:translate-x-1"}`}
               />
             </button>
 
-            <label className="text-sm text-[#A8C2E7]">
+            <label className="text-xs sm:text-sm  text-[#A8C2E7]">
               I consent to receive marketing communication from Synopix LLC
             </label>
           </motion.div>

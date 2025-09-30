@@ -38,46 +38,69 @@ const AIHeroSection = ({
         <div className="grid lg:grid-cols-2 gap-20 items-start">
           
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-snug">
-              {title}
-            </h1>
-            <p className="mt-3 text-lg font-medium text-[#D1D4E7] mb-3">
-              {description}
-            </p>
-            {buttonText && (
-              <motion.a
-                onClick={scrollToContact} 
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-                className="cursor-pointer hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-5 inline-block px-5 py-2 hover:border-hidden border border-white rounded-md hover:bg-white transition-colors duration-500 ease-in-out text-sm sm:text-base"
-              >
-                {buttonText}
-              </motion.a>
-            )}
-          </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7 }}
+  viewport={{ once: true }}
+  className="order-1 lg:order-1" // left stays first on desktop
+>
+  <h1 className="text-5xl sm:text-xl lg:text-5xl font-extrabold leading-snug">
+    {title}
+  </h1>
 
-          {/* Right Image */}
-          {rightImage && (
-            <motion.div
-              className="flex justify-center lg:justify-end"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-            >
-              <img
-                src={rightImage}
-                alt="Hero Illustration"
-                className="rounded-xl shadow-lg max-w-full w-4/5 sm:w-3/4 lg:w-full"
-              />
-            </motion.div>
-          )}
+  {/* Move description + button below image on mobile */}
+  <div className="lg:block hidden">
+    <p className="mt-3 text-lg font-medium text-[#D1D4E7] mb-3">
+      {description}
+    </p>
+    {buttonText && (
+      <motion.a
+        onClick={scrollToContact}
+        whileHover={{ scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        className="cursor-pointer hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-5 inline-block px-5 py-2 hover:border-hidden border border-white rounded-md hover:bg-white transition-colors duration-500 ease-in-out text-sm sm:text-base"
+      >
+        {buttonText}
+      </motion.a>
+    )}
+  </div>
+</motion.div>
+
+{/* Right Image */}
+{rightImage && (
+  <motion.div
+    className="order-2 lg:order-2 flex justify-center lg:justify-end"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7 }}
+    viewport={{ once: true }}
+  >
+    <img
+      src={rightImage}
+      alt="Hero Illustration"
+      className="rounded-xl shadow-lg w-full sm:w-3/4 lg:w-full max-w-full h-auto object-contain"
+    />
+  </motion.div>
+)}
+
+{/* Description + Button for mobile */}
+<div className="order-3 lg:hidden">
+  <p className="mt-3 text-lg font-medium text-[#FFFFFF] mb-3">
+    {description}
+  </p>
+  {buttonText && (
+    <motion.a
+      onClick={scrollToContact}
+      whileHover={{ scale: 1.05 }}
+      transition={{ type: "spring", stiffness: 300 }}
+      className="cursor-pointer hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-5 inline-block  px-5 py-2 hover:border-hidden border border-white rounded-md hover:bg-white transition-colors duration-500 ease-in-out text-sm sm:text-base"
+    >
+      {buttonText}
+    </motion.a>
+  )}
+</div>
+
         </div>
 
         {/* Stats Section */}
