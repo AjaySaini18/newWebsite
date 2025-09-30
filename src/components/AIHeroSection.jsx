@@ -24,7 +24,7 @@ const AIHeroSection = ({
 
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-center text-white font-gilroy"
+      className="relative  flex flex-col justify-center text-white font-gilroy"
       style={{
         backgroundImage: `url("/assets/Rectangle 1.png")`,
         backgroundPosition: "center",
@@ -32,60 +32,65 @@ const AIHeroSection = ({
         backgroundSize: "cover",
       }}
     >
-      <div className="container max-w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-24 pb-20 pt-28">
+      <div className="container max-w-full mx-auto px-6 sm:px-6 md:px-12 lg:px-24 pb-20 pt-28">
         
         {/* Hero Section */}
         <div className="grid lg:grid-cols-2 gap-20 items-start">
           
           {/* Left Content */}
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7 }}
-  viewport={{ once: true }}
-  className="order-1 lg:order-1" // left stays first on desktop
->
-  <h1 className="text-5xl sm:text-xl lg:text-5xl font-extrabold leading-snug">
-    {title}
-  </h1>
-
-  {/* Move description + button below image on mobile */}
-  <div className="lg:block hidden">
-    <p className="mt-3 text-lg font-medium text-[#D1D4E7] mb-3">
-      {description}
-    </p>
-    {buttonText && (
-      <motion.a
-        onClick={scrollToContact}
-        whileHover={{ scale: 1.05 }}
-        transition={{ type: "spring", stiffness: 300 }}
-        className="cursor-pointer hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-5 inline-block px-5 py-2 hover:border-hidden border border-white rounded-md hover:bg-white transition-colors duration-500 ease-in-out text-sm sm:text-base"
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="order-1 lg:order-1" // left stays first on desktop
       >
-        {buttonText}
-      </motion.a>
-    )}
-  </div>
-</motion.div>
+        <h1 className="text-5xl sm:text-xl lg:text-5xl font-extrabold leading-snug">
+          {title}
+        </h1>
 
-{/* Right Image */}
-{rightImage && (
-  <motion.div
-    className="order-2 lg:order-2 flex justify-center lg:justify-end"
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.7 }}
-    viewport={{ once: true }}
-  >
-    <img
-      src={rightImage}
-      alt="Hero Illustration"
-      className="rounded-xl shadow-lg w-full sm:w-3/4 lg:w-full max-w-full h-auto object-contain"
-    />
-  </motion.div>
-)}
+        {/* Move description + button below image on mobile */}
+        <div className="lg:block hidden">
+          <p className="mt-3 text-lg font-medium text-[#D1D4E7] mb-3">
+            {description}
+          </p>
+          {buttonText && (
+            <motion.a
+              onClick={scrollToContact}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="cursor-pointer hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] mt-5 inline-block px-5 py-2 hover:border-hidden border border-white rounded-md hover:bg-white transition-colors duration-500 ease-in-out text-sm sm:text-base"
+            >
+              {buttonText}
+            </motion.a>
+          )}
+        </div>
+      </motion.div>
+
+      {/* Right Image */}
+      {rightImage && (
+        <motion.div
+          className="order-2 lg:order-2 flex justify-center lg:justify-end"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          <img
+            src={rightImage}
+            alt="Hero Illustration"
+            className="rounded-xl shadow-lg w-full sm:w-3/4 lg:w-full max-w-full h-auto object-contain"
+          />
+        </motion.div>
+      )}
+      
 
 {/* Description + Button for mobile */}
 <div className="order-3 lg:hidden">
+  <div className="relative w-[54px] h-[5px] mb-3 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r rounded-sm from-green-100 via-blue-300 to-purple-400"></div>
+              <div className="absolute inset-0 shimmer"></div>
+        </div>
   <p className="mt-3 text-lg font-medium text-[#FFFFFF] mb-3">
     {description}
   </p>

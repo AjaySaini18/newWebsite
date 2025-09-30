@@ -38,7 +38,7 @@ const ContactSection = () => {
 
       {/* Content Wrapper */}
       <motion.div
-        className="relative max-w-4xl text-white px-4 sm:px-0 flex flex-col sm:block items-center sm:items-start"
+        className="relative max-w-4xl text-white sm:px-0 flex flex-col sm:block items-center sm:items-start"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"

@@ -35,7 +35,7 @@ const cardVariants = {
 const IndustriesSection = () => {
   return (
     <section
-      className="relative py-20 px-4 sm:px-12 lg:px-24 font-gilroy"
+      className="relative py-20 px-6 md:px-12 lg:px-24 font-gilroy"
       style={{
         backgroundImage: "url('/assets/Rectangle19.png')",
         backgroundSize: "cover",

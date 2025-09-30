@@ -149,17 +149,17 @@ const Navbar = () => {
         <div className="lg:hidden bg-black/90 backdrop-blur-md px-6 py-4 space-y-4 text-sm">
           <div className="flex flex-col space-y-3 text-white">
             <div className="flex items-center cursor-pointer">
-              <span>What we do</span>
-              <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-4 w-4 ml-1" />
+              <Link to={"/insights"}><span>What we do</span></Link>
+              {/* <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-4 w-4 ml-1" /> */}
             </div>
             <div className="cursor-pointer">What we think</div>
             <div className="flex items-center cursor-pointer">
-              <span>Who we are</span>
-              <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-4 w-4 ml-1" />
+              <Link to={"/team"}><span>Who we are</span></Link>
+              {/* <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-4 w-4 ml-1" /> */}
             </div>
             <div className="flex items-center cursor-pointer">
-              <span>Careers</span>
-              <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-4 w-4 ml-1" />
+              <Link to={"/careers"}><span>Careers</span></Link>
+              {/* <img src="/assets/arrow-down-s-line.svg" alt="Dropdown" className="h-4 w-4 ml-1" /> */}
             </div>
           </div>
 
