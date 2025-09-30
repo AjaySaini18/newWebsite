@@ -25,10 +25,10 @@ const GetInTouchSection = () => {
       >
         {/* Heading */}
         <motion.div className="text-left mb-10" variants={fadeUp}>
-          <h2 className="text-3xl font-bold text-gray-800">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
             Get in Touch with Our Team
           </h2>
-          <p className="text-gray-600 text-md max-w-4xl mt-2">
+          <p className="text-[#5C5C5C] text-md font-medium leading-tight max-w-4xl mt-2">
             We’re here to answer your questions, discuss your project, and help
             you find the best solutions for your software needs. Reach out to
             us, and let’s start building something great together.
@@ -57,9 +57,9 @@ const GetInTouchSection = () => {
           {/* Contact Info */}
           <motion.div className="space-y-6 text-[#282828]" variants={fadeUp}>
             {/* Card 1 */}
-            <motion.div className="flex flex-col sm:flex-row items-start justify-between p-4 border border-[#DDDDDD] rounded-lg" variants={fadeUp}>
+            <motion.div className="flex flex-col sm:flex-row items-start font-medium justify-between p-4 border border-[#DDDDDD] rounded-lg" variants={fadeUp}>
               <div className="flex-1">
-                <h4 className="text-md font-medium">Georgia, USA</h4>
+                <h4 className="text-md font-semibold">Georgia, USA</h4>
                 <p className="flex items-start text-sm sm:text-[13px] mt-2">
                   <MapPin className="w-4 h-4 mr-2" />
                   6065 Roswell Road, Suite 450, Atlanta, GA 30328-4011
@@ -91,9 +91,9 @@ const GetInTouchSection = () => {
             </motion.div>
 
             {/* Card 2 */}
-            <motion.div className="flex flex-col sm:flex-row items-start justify-between p-4 border border-[#DDDDDD] rounded-lg" variants={fadeUp}>
+            <motion.div className="flex flex-col sm:flex-row items-start justify-between font-medium p-4 border border-[#DDDDDD] rounded-lg" variants={fadeUp}>
               <div className="flex-1">
-                <h4 className="text-md font-medium">Noida, India</h4>
+                <h4 className="text-md font-semibold">Noida, India</h4>
                 <p className="flex items-start text-xs sm:text-[13px] mt-2">
                   <MapPin className="w-4 h-4 mr-2" />
                   51/2 The Corenthum, Sector 62, Noida Uttar Pradesh 201301
