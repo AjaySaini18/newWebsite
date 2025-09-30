@@ -88,9 +88,9 @@ const HeroSection = () => {
           >
             {/* Sparkling / Shimmer Strip */}
             <div className="relative w-[54px] h-[5px] mb-3 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600"></div>
+              <div className="absolute inset-0 bg-gradient-to-r rounded-sm from-green-100 via-blue-300 to-purple-400"></div>
               <div className="absolute inset-0 shimmer"></div>
-            </div>
+        </div>
             <p className="text-[#D1D4E7] font-medium mb-3 leading-relaxed text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
