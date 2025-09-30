@@ -88,9 +88,9 @@ const HeroSection = () => {
           >
             {/* Sparkling / Shimmer Strip */}
             <div className="relative w-[54px] h-[5px] mb-3 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-blue-500 to-purple-600"></div>
+              <div className="absolute inset-0 bg-gradient-to-r rounded-sm from-green-100 via-blue-300 to-purple-400"></div>
               <div className="absolute inset-0 shimmer"></div>
-            </div>
+        </div>
             <p className="text-[#D1D4E7] font-medium mb-3 leading-relaxed text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -119,9 +119,9 @@ const HeroSection = () => {
                 key={currentCard}
                 className="absolute inset-0 w-full h-full bg-cover bg-center cursor-pointer"
                 style={{ backgroundImage: `url(${cards[currentCard].img})` }}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0  }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 transition={{ duration: 1.8, ease: "easeOut" }}
                 onClick={() => navigate("/ai")}
               >
@@ -132,7 +132,7 @@ const HeroSection = () => {
                       "linear-gradient(109.77deg, #06F7C4 -5.67%, #4359FF 26.82%)",
                   }}
                 ></div>
-                <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-extrabold text-sm sm:text-base md:text-lg z-30">
+                <div className="absolute top-4 sm:top-6 left-4 sm:left-6 text-white font-semibold text-lg sm:text-base md:text-lg z-30">
                   {cards[currentCard].title}
                 </div>
                 <div className="absolute inset-0 flex flex-col justify-center items-start p-8 text-white z-20">
