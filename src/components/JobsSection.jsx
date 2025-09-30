@@ -81,14 +81,14 @@ const JobsSection = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.h2
-          className="text-left md:text-center  text-xl md:text-2xl lg:text-4xl font-semibold text-gray-900 leading-tight"
+          className="text-left md:text-center  text-[1.7rem] md:text-2xl lg:text-4xl font-bold text-gray-900 leading-tight"
           variants={fadeUp}
           custom={1}
         >
           We are embarking on profound mission
         </motion.h2>
         <motion.p
-          className="text-left md:text-center text-[#5C5C5C] text-sm lg:text-[15px] leading-normal tracking-tight max-w-lg  mx-auto md:mx-0 mt-2"
+          className="text-left md:text-center text-[#5C5C5C] font-medium text-sm lg:text-[15px] leading-normal tracking-tight max-w-lg  mx-auto md:mx-0 mt-2"
           variants={fadeUp}
           custom={2}
         >
@@ -131,7 +131,7 @@ const JobsSection = () => {
           {["All", "Finance", "Business", "Development", "Design"].map((filter, idx) => (
             <button
               key={idx}
-              className={`px-3 md:px-5 py-2 md:py-3 text-xs md:text-sm font-medium rounded-full transition-all ${
+              className={`px-2.5 md:px-5 py-2 md:py-3 text-xs md:text-sm font-medium rounded-full transition-all ${
                 filter === "All"
                   ? "bg-white text-gray-900 shadow-xs"
                   : "text-gray-500 hover:text-gray-900"
