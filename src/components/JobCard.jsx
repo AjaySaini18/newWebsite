@@ -43,15 +43,15 @@ const JobCard = ({
 
       {/* Job Info */}
       <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-sm text-gray-500">
-        <span className="flex items-center gap-1.5">
+        <span className="flex items-center font-medium gap-1.5">
           <img src="/assets/fulltime.svg" alt="Full time" className="w-3 h-3" />
           {type}
         </span>
-        <span className="flex items-center gap-1.5">
+        <span className="flex items-center font-medium gap-1.5">
           <img src="/assets/dollar.svg" alt="Salary" className="w-3 h-3" />
           {salary}
         </span>
-        <span className="flex items-center gap-1.5">
+        <span className="flex items-center font-medium gap-1.5">
           <img src="/assets/experience.svg" alt="Experience" className="w-3 h-3" />
           Experience: {experience}
         </span>

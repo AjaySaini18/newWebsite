@@ -22,12 +22,12 @@ const TeamSection = () => {
     <section className="w-full bg-white py-16 px-6 md:px-12 lg:px-24 font-gilroy">
       {/* Heading */}
       <motion.div 
-        className="text-center mb-10"
+        className="text-left  md:text-center mb-10"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <motion.h2 className="2xl:text-5xl text-2xl md:text-3xl lg:text-4xl font-bold mt-10 lg:mt-25 text-gray-900" variants={fadeUp}>
+        <motion.h2 className="text-left md:text-center 2xl:text-5xl text-2xl md:text-3xl lg:text-4xl font-bold mt-10 lg:mt-25 text-gray-900" variants={fadeUp}>
           Meet our great Team
         </motion.h2>
         <motion.p className="text-[#5C5C5C] mt-1 2xl:text-lg font-medium text-[14px] max-w-[600px] mx-auto" variants={fadeUp}>
@@ -66,7 +66,7 @@ const TeamSection = () => {
         whileInView={{ opacity: 1, y: 0, transition: { duration: 0.7 } }}
         viewport={{ once: true, amount: 0.3 }}
       >
-        <h3 className="text-4xl 2xl:max-w-[750px] max-w-[700px] font-medium text-[#282828] mb-4 leading-[1.2]">
+        <h3 className="text-3xl md:text-4xl 2xl:max-w-[750px] max-w-[700px] font-semibold text-[#282828] mb-6 leading-[1.2]">
           Be part of our outstanding team and help shape the future together.
         </h3>
         <button className="px-8 py-4 2xl:text-xl bg-[#4359FF] hover:bg-indigo-700 text-white rounded-md font-medium transition">

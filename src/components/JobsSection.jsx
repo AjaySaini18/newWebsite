@@ -65,12 +65,12 @@ const JobsSection = () => {
   };
 
   return (
-    <section className="relative mt-16 bg-white py-12 px-6 md:px-12 lg:px-24 font-gilroy">
+    <section className="relative mt-16 bg-white py-6 lg:py-12 px-6 md:px-12 lg:px-24 font-gilroy">
       {/* Circle vector at top right */}
       <img
         src="/assets/Ellipse 2.svg"
         alt="circle"
-        className="absolute -mt-12 top-0 right-0 w-28 md:w-40 opacity-85 pointer-events-none"
+        className="hidden sm:block absolute -mt-12 top-0 right-0 w-28 md:w-40 opacity-85 pointer-events-none"
       />
 
       {/* Heading */}
@@ -81,14 +81,14 @@ const JobsSection = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <motion.h2
-          className="sm:text-xl md:text-2xl lg:text-4xl font-semibold text-gray-900 leading-relaxed"
+          className="text-left md:text-center  text-xl md:text-2xl lg:text-4xl font-semibold text-gray-900 leading-tight"
           variants={fadeUp}
           custom={1}
         >
           We are embarking on profound mission
         </motion.h2>
         <motion.p
-          className="text-[#5C5C5C] text-sm lg:text-[15px] leading-normal tracking-tight max-w-lg  mx-auto md:mx-0 mt-2"
+          className="text-left md:text-center text-[#5C5C5C] text-sm lg:text-[15px] leading-normal tracking-tight max-w-lg  mx-auto md:mx-0 mt-2"
           variants={fadeUp}
           custom={2}
         >
