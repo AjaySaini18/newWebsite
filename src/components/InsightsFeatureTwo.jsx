@@ -19,7 +19,7 @@ const InsightsFeatureTwo = () => {
 
         {/* Left Content - Image */}
         <motion.div
-          className="flex-1 flex justify-center md:justify-start w-full"
+          className="flex-1 hidden sm:block flex justify-center md:justify-start w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -37,24 +37,40 @@ const InsightsFeatureTwo = () => {
 
         {/* Right Content - Text */}
         <motion.div
-          className="flex-1 text-center md:text-left w-full"
+          className="flex-1 text-left md:text-center md:text-left w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={textVariants}
         >
-          <h2 className="text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-4 lg:mb-6">
+          <h2 className="text-3xl md:text-2xl lg:text-4xl font-semibold md:font-bold text-gray-900 mb-4 lg:mb-6">
             Providing Different Artificial <br className="hidden md:block"/>
             Intelligence Development Services
           </h2>
-          <p className="sm:text-sm md:text-md lg:text-lg text-[#393939] leading-[1.4] mb-4 lg:mb-6">
+          <motion.div
+          className="flex-1 md:hidden mb-5 flex justify-center md:justify-start w-full"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={imageVariants}
+        >
+          <img
+            src="/assets/appDevelopment.jpg"
+            alt="Artificial Intelligence Development"
+            className="rounded-xl shadow-lg 
+                       w-full 
+                       h-auto  
+                       object-cover"
+          />
+        </motion.div>
+          <p className="text-lg text-[#393939] leading-[1.4] mb-4 lg:mb-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus eros 
             aliquet convallis ultricies. Morbi vitae ligula id nunc ullamcorper viverra. Sed 
             id urna sed leo hendrerit tincidunt sit amet at massa. Suspendisse potenti. Cras 
             sit amet aliquet lorem. Integer posuere ligula non sapien semper, in vulputate 
             risus commodo.
           </p>
-          <p className="sm:text-sm md:text-md lg:text-lg text-[#393939] leading-[1.4]">
+          <p className="text-lg text-[#393939] leading-[1.4]">
             Nullam id felis a arcu maximus pretium. Sed euismod purus ac purus sollicitudin, 
             vel pulvinar orci viverra. Etiam sed dapibus sem, nec ultricies magna. Curabitur 
             auctor ligula eu dui dictum varius. Maecenas volutpat massa at lectus vestibulum 
@@ -62,6 +78,7 @@ const InsightsFeatureTwo = () => {
             fames ac turpis egestas.
           </p>
         </motion.div>
+
 
       </div>
     </section>

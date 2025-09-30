@@ -35,7 +35,7 @@ const InsightsFeatureOne = () => {
           <h2 className="text-3xl md:text-2xl lg:text-4xl font-semibold md:font-bold text-gray-900 mb-3 lg:mb-6 leading-tight">
             We Transform Businesses & Society Through Our Data Science Service
           </h2>
-          <p className="sm:text-sm md:text-md lg:text-lg text-[#393939] leading-[1.4] mb-3 lg:mb-6">
+          <p className="text-lg text-[#393939] leading-[1.4] mb-3 lg:mb-6">
             Phasellus vitae justo id sapien volutpat vulputate vitae sed eros.
             Aliquam ac felis nec velit fermentum suscipit a sit amet orci. Sed
             gravida, ex nec commodo bibendum, magna libero tristique mi, non
@@ -43,7 +43,7 @@ const InsightsFeatureOne = () => {
             ultrices magna. Ut tempor augue nec nisi fermentum, et feugiat nisi
             egestas.
           </p>
-          <p className="sm:text-sm md:text-md lg:text-lg text-[#393939] leading-[1.4]">
+          <p className="text-lg text-[#393939] leading-[1.4]">
             Fusce pretium porttitor nisi, eget volutpat odio facilisis et. Nam
             fermentum lectus a justo ultrices, non efficitur nunc sollicitudin.
             Quisque ut sapien vel felis bibendum porttitor. Duis sodales, magna
