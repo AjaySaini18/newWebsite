@@ -56,10 +56,12 @@ const Navbar = () => {
             onMouseEnter={() => setShowWhatWeDo(true)}
             onMouseLeave={() => setShowWhatWeDo(false)}
           >
-            <span className="2xl:text-[17px] text-[14px] flex items-center">
-              What we do
-              <ChevronDown className="ml-1 w-4 h-4" />
-            </span>
+            <Link to={"/industries"}>
+              <span className="2xl:text-[17px] text-[14px] flex items-center">
+                What we do
+                <ChevronDown className="ml-1 w-4 h-4" />
+              </span>
+            </Link>
             {showWhatWeDo && <WhatWeDoModal />}
           </div>
           <Link to={"/insights"}>
@@ -150,9 +152,9 @@ const Navbar = () => {
           >
             <div className="flex flex-col space-y-3 text-white">
               <div className="flex items-center cursor-pointer">
-                <Link to={"/insights"}><span>What we do</span></Link>
+                <Link to={"/industries"}><span>What we do</span></Link>
               </div>
-              <div className="cursor-pointer">What we think</div>
+              <Link to={"/insights"}><div className="cursor-pointer">What we think</div></Link>
               <div className="flex items-center cursor-pointer">
                 <Link to={"/team"}><span>Who we are</span></Link>
               </div>
