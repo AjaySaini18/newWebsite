@@ -26,7 +26,7 @@ const InsightsFeatureOne = () => {
       <div className="flex flex-col md:flex-row items-start gap-10">
         {/* Left Content */}
         <motion.div
-          className="flex-1 text-left"
+          className="flex-1 text-left order-1 md:order-1"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
@@ -35,6 +35,34 @@ const InsightsFeatureOne = () => {
           <h2 className="text-3xl lg:text-4xl font-semibold md:font-bold text-gray-900 mb-3 lg:mb-6 leading-tight">
             We Transform Businesses & Society Through Our Data Science Service
           </h2>
+
+          {/* 👉 Image comes right after heading on mobile */}
+          <motion.div
+            className="block md:hidden m-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={imageVariants}
+          >
+            <div className="relative flex justify-left">
+              {/* Main App Image */}
+              <img
+                src="/assets/appDevelopment.jpg"
+                alt="App Development"
+                className="rounded-xl shadow-lg 
+                  w-[250px] h-[300px] object-cover z-10 "
+              />
+
+              {/* Rectangle Image */}
+              <img
+                src="/assets/Rectangle-7772.png"
+                alt="Data Science"
+                className="rounded-xl shadow-md absolute right-[-5px] top-4 
+                  w-[180px] h-[260px]"
+              />
+            </div>
+          </motion.div>
+
           <p className="text-lg text-[#393939] leading-[1.4] mb-3 lg:mb-6">
             Phasellus vitae justo id sapien volutpat vulputate vitae sed eros.
             Aliquam ac felis nec velit fermentum suscipit a sit amet orci. Sed
@@ -52,17 +80,16 @@ const InsightsFeatureOne = () => {
           </p>
         </motion.div>
 
-        {/* Right Content - Images */}
+        {/* Right Content - Images (hidden on mobile, shown from md+) */}
         <motion.div
-          className="flex-1 relative flex justify-center items-end min-h-[360px] sm:min-h-[400px] md:min-h-[420px]"
+          className="flex-1 relative hidden md:flex justify-center items-end min-h-[360px] sm:min-h-[400px] md:min-h-[420px] order-2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={imageVariants}
         >
           <div className="relative flex items-end gap-6">
-
-            {/* Main App Image (overlaps slightly to the left) */}
+            {/* Main App Image */}
             <img
               src="/assets/appDevelopment.jpg"
               alt="App Development"
@@ -84,8 +111,6 @@ const InsightsFeatureOne = () => {
                  w-[280px] md:w-[180px] lg:w-[200px]
                  h-[380px] md:h-[200px] lg:h-[260px]"
             />
-
-            
           </div>
         </motion.div>
       </div>
