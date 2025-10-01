@@ -11,6 +11,7 @@ const CaseStudySection = () => {
   const [thumbTop, setThumbTop] = useState(0);
   const [thumbHeight, setThumbHeight] = useState(30);
 
+  // Horizontal scroll (mobile + md)
   const scrollHorizontal = (dir) => {
     const el = hScrollRef.current;
     if (!el) return;
@@ -18,6 +19,7 @@ const CaseStudySection = () => {
     el.scrollBy({ left: dir === "left" ? -width : width, behavior: "smooth" });
   };
 
+  // Vertical scrollbar logic (lg+)
   useEffect(() => {
     const container = vScrollRef.current;
     if (!container) return;
@@ -67,6 +69,7 @@ const CaseStudySection = () => {
     };
   }, []);
 
+  // Dragging for vertical scrollbar (lg+)
   useEffect(() => {
     const container = vScrollRef.current;
     const thumb = thumbRef.current;
@@ -155,7 +158,7 @@ const CaseStudySection = () => {
   }, [thumbTop, thumbHeight]);
 
   const CaseStudyItem = ({ title, result, downloads, traffic }) => (
-    <div className="flex-shrink-0 w-full sm:w-[320px] md:w-[360px] lg:w-full">
+    <div className="flex-shrink-0 w-full sm:w-[320px] md:w-[500px] lg:w-full">
       <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-16 w-full mb-16">
         <div className="w-full lg:w-[380px] flex flex-col">
           <h2 className="text-[20px] sm:text-[22px] md:text-[28px] font-bold text-white mb-3">
@@ -191,11 +194,9 @@ const CaseStudySection = () => {
           </button>
         </div>
 
-        
-
         <div className="w-full flex items-start justify-center">
           <div className="relative flex w-full">
-            <div className="w-full max-w-full lg:max-w-[825px] h-[220px] sm:h-[280px] md:h-[350px] lg:h-[410px] overflow-hidden rounded-[11px] shadow-xl">
+            <div className="w-full max-w-full md:max-w-[600px] lg:max-w-[825px] h-[220px] sm:h-[280px] md:h-[350px] lg:h-[410px] overflow-hidden rounded-[11px] shadow-xl">
               <img
                 src="/assets/Rectangle20.png"
                 alt={`${title} Case Study`}
@@ -206,7 +207,7 @@ const CaseStudySection = () => {
         </div>
 
         <button className="md:hidden w-[150px] h-[38px] text-[14px] hover:border-hidden border border-[#D6D6D6] text-[#D6D6D6] rounded-[5px] flex items-center justify-center hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)]">
-            View Case Study
+          View Case Study
         </button>
       </div>
     </div>
@@ -215,22 +216,23 @@ const CaseStudySection = () => {
   return (
     <section className="relative w-full overflow-hidden font-gilroy">
       <div
-        className="w-full px-6 md:px-12 lg:px-24 py-12 md:py-16 lg:py-20 
+        className="w-full px-6 md:px-20 lg:px-24 py-12 md:py-16 lg:py-20 
         bg-[url('/assets/Group_17.png')] 
-        md:bg-[url('/assets/bg_casestudy.png')]
-        "
+        md:bg-[url('/assets/bg_casestudy.png')]"
         style={{
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className=" flex items-center justify-between">
+        {/* Header */}
+        <div className="flex items-center justify-between">
           <img
             src="/assets/CaseStudy.svg"
             alt="Case Study Logo"
             className="h-[20px] w-auto inline-block align-middle"
           />
 
+          {/* Horizontal arrows only on mobile + md */}
           <div className="flex gap-2 lg:hidden">
             <button
               onClick={() => scrollHorizontal("left")}
@@ -247,7 +249,9 @@ const CaseStudySection = () => {
           </div>
         </div>
 
+        {/* Content */}
         <div className="relative flex">
+          {/* Horizontal scroll (md and below) */}
           <div
             ref={hScrollRef}
             className="flex lg:hidden gap-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory"
@@ -265,6 +269,7 @@ const CaseStudySection = () => {
             ))}
           </div>
 
+          {/* Vertical scroll (lg and larger) */}
           <div className="hidden lg:flex relative flex-1 items-start">
             <div
               ref={vScrollRef}
