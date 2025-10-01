@@ -65,8 +65,8 @@ const Footer = () => {
           </motion.div>
           
           {/* Row 2: About + Services + Technology + Industries */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:contents gap-8 lg:gap-16">
-          {/* Group 1: About + Services */}
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:contents gap-8 lg:gap-16">
+            {/* Group 1: About + Services */}
             {/* About */}
             <motion.div
               className="min-w-[120px] lg:pl-10"
@@ -78,18 +78,18 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-3 text-[#525252]">
                 About
               </h3>
-              <ul className="leading-7 text-sm text-[#525252]">
-                <Link to={"/contact-us"}>
-                  <li>Our Company</li>
-                </Link>
-                <Link to={"/team"}>
-                  <li>Core Team</li>
-                </Link>
-                <Link to={"/careers"}>
-                  <li>Career</li>
-                </Link>
-                <li>CSR</li>
-                <li>How We Work</li>
+              <ul className="leading-snug text-sm text-[#525252]">
+                <li className="mb-2">
+                  <Link to={"/contact-us"}>Our Company</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to={"/team"}>Core Team</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to={"/careers"}>Career</Link>
+                </li>
+                <li className="mb-2">CSR</li>
+                <li className="mb-2">How We Work</li>
               </ul>
             </motion.div>
 
@@ -104,16 +104,16 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-3 text-[#525252]">
                 Services
               </h3>
-              <ul className="leading-7 text-sm text-[#525252]">
-                <li>iOS App Development</li>
-                <li>Android App Development</li>
-                <li>Software Development</li>
-                <li>Ideation & Design</li>
-                <li>Research & Innovation</li>
+              <ul className="leading-snug text-sm text-[#525252]">
+                <li className="mb-2">iOS App Development</li>
+                <li className="mb-2">Android App Development</li>
+                <li className="mb-2">Software Development</li>
+                <li className="mb-2">Ideation & Design</li>
+                <li className="mb-2">Research & Innovation</li>
               </ul>
             </motion.div>
 
-          {/* Group 2: Technology + Industries */}
+            {/* Group 2: Technology + Industries */}
             {/* Technology */}
             <motion.div
               className="min-w-[120px] lg:pl-6"
@@ -125,22 +125,22 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-3 text-[#525252]">
                 Technology
               </h3>
-              <ul className="leading-7 text-sm text-[#525252]">
-                <Link to={"/blockchain"}>
-                  <li>Blockchain</li>
-                </Link>
-                <Link to={"/ai"}>
-                  <li>Artificial Intelligence</li>
-                </Link>
-                <Link to={"/ar-vr"}>
-                  <li>AR & VR</li>
-                </Link>
-                <Link to={"/cloud-computing"}>
-                  <li>Cloud Computing</li>
-                </Link>
-                <Link to={"/iot"}>
-                  <li>Internet of Things</li>
-                </Link>
+              <ul className="leading-snug text-sm text-[#525252]">
+                <li className="mb-2">
+                  <Link to={"/blockchain"}>Blockchain</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to={"/ai"}>Artificial Intelligence</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to={"/ar-vr"}>AR & VR</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to={"/cloud-computing"}>Cloud Computing</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to={"/iot"}>Internet of Things</Link>
+                </li>
               </ul>
             </motion.div>
 
@@ -155,25 +155,25 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-3 text-[#525252]">
                 Industries
               </h3>
-              <ul className="leading-7 text-sm text-[#525252]">
-                <Link to={"/healthcare"}>
-                  <li>Healthcare</li>
-                </Link>
-                <Link to={"/education"}>
-                  <li>Education</li>
-                </Link>
-                <Link to={"/logistics"}>
-                  <li>Logistics</li>
-                </Link>
-                <Link to={"/saas"}>
-                  <li>SaaS</li>
-                </Link>
-                <Link to={"/e-commerce"}>
-                  <li>eCommerce</li>
-                </Link>
+              <ul className="leading-snug text-sm text-[#525252]">
+                <li className="mb-2">
+                  <Link to={"/healthcare"}>Healthcare</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to={"/education"}>Education</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to={"/logistics"}>Logistics</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to={"/saas"}>SaaS</Link>
+                </li>
+                <li className="mb-2">
+                  <Link to={"/e-commerce"}>eCommerce</Link>
+                </li>
               </ul>
             </motion.div>
-        </div>
+          </div>
         </div>
       </div>
 
@@ -188,7 +188,7 @@ const Footer = () => {
           <p>
             <span className="">©</span> 2022–2025 Synopix LLC
           </p>
-          <div className=" flex flex-wrap justify-start space-x-4 lg:space-x-1 gap-2 lg:gap-12">
+          <div className="flex flex-wrap justify-start space-x-4 lg:space-x-1 gap-2 lg:gap-12">
             <Link to={"/contact-us"}>
               <span>Contact us</span>
             </Link>
