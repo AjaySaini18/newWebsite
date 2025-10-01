@@ -101,11 +101,11 @@ const CTASection = () => {
         </motion.div>
 
         {/* Slider */}
-        <div className="overflow-hidden">
+        <div className="overflow-hidden hidden sm:block">
           <div
             className="flex transition-transform duration-500 ease-in-out gap-6 sm:gap-8 md:gap-16"
             style={{
-              transform: `translateX(-${current * (100 / 1.5)}%)`,
+              transform: `translateX(-${current * (70)}%)`,
             }}
           >
             {testimonials.map((item, index) => (
@@ -169,6 +169,76 @@ const CTASection = () => {
             ))}
           </div>
         </div>
+        {/* For Mobile: Partial Next Slide Preview */}
+        <div className="overflow-hidden md:hidden">
+          <div
+            className="flex transition-transform duration-500 ease-in-out gap-6 sm:gap-8 md:gap-16"
+            style={{
+              transform: `translateX(-${current * 107}%)`, // full width shift
+            }}
+          >
+            {testimonials.map((item, index) => (
+              <AnimatePresence key={item.id} mode="wait">
+                <motion.div
+                  key={item.id}
+                  className={`group relative min-w-full sm:min-w-[66.66%] md:min-w-[50%] lg:min-w-[70%] transition-opacity duration-500 ${
+                    index === current ? "opacity-100" : "opacity-30"
+                  }`}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="relative rounded-2xl p-[1px]">
+                    <span className="absolute inset-0 rounded-2xl bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"></span>
+
+                    <div className="relative z-10 bg-[#1E1E1E] rounded-2xl p-4 sm:p-6 md:p-8 text-white flex flex-col justify-between shadow-lg min-h-[240px] sm:min-h-[260px]">
+                      <div>
+                        <h3 className="text-lg font-bold text-[#AFAFAF] mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm leading-normal text-[#D4D4D4] line-clamp-3 sm:line-clamp-4">
+                          {item.description}
+                        </p>
+                      </div>
+
+                      <div className="border-t border-[#2B2B2B] my-3 sm:my-4"></div>
+
+                      {/* Responsive Profile & Logo */}
+                      <div className="flex flex-col sm:flex-row items-center sm:items-end justify-between gap-4 sm:gap-3">
+                        <div className="flex flex-col sm:flex-row items-center sm:items-end gap-2 sm:gap-3">
+                          <img
+                            src={item.profileImg}
+                            alt={item.name}
+                            className="w-20 h-20 rounded-md object-cover"
+                          />
+                          <div className="text-center sm:text-left">
+                            <p className="2xl:text-[13px] text-[11px] sm:text-[12px] font-semibold text-[#D4D4D4]">
+                              {item.name}
+                            </p>
+                            <p className="text-[11px] 2xl:text-md sm:text-[13px] text-[#D4D4D4]">
+                              {item.role}
+                            </p>
+                            <p className="text-[11px] 2xl:text-md sm:text-[12px] text-[#D4D4D4]">
+                              {item.company}
+                            </p>
+                          </div>
+                        </div>
+
+                        <img
+                          src={item.companyLogo}
+                          alt="Company Logo"
+                          className="lg:w-40 lg:h-8 md:w-20 md:h-5 object-contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            ))}
+          </div>
+        </div>
+      
       </div>
     </section>
   );
