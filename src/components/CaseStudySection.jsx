@@ -167,8 +167,8 @@ const CaseStudySection = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
-          <div className="flex items-center justify-between w-full mb-6">
-            <div className="text-center flex-1">
+          <div className="flex items-end justify-between w-full mb-6">
+            <div className="text-center flex flex-col items-start">
               <div className="text-[14px] text-[#9F9F9F]">Result</div>
               <div className="text-[18px] sm:text-[20px] font-medium text-white mb-1">
                 {result}
@@ -176,9 +176,9 @@ const CaseStudySection = () => {
               <div className="text-[14px] text-[#9F9F9F]">App downloads</div>
             </div>
 
-            <div className="w-px bg-[#fff] h-[40px] hidden sm:block"></div>
+            <div className="w-px bg-[#0E3F48] self-stretch my-3 mx-6"></div>
 
-            <div className="text-center flex-1">
+            <div className="text-center flex flex-col items-start">
               <div className="text-[18px] sm:text-[20px] font-medium text-white mb-1">
                 {traffic}
               </div>
