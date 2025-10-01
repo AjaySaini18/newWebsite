@@ -4,16 +4,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const TOTAL_ITEMS = 6;
 
 const CaseStudySection = () => {
-  // separate refs for horizontal (mobile) and vertical (desktop)
   const hScrollRef = useRef(null);
   const vScrollRef = useRef(null);
   const thumbRef = useRef(null);
 
-  // thumb state for desktop vertical scrollbar
-  const [thumbTop, setThumbTop] = useState(0); // percentage
-  const [thumbHeight, setThumbHeight] = useState(30); // percentage
+  const [thumbTop, setThumbTop] = useState(0);
+  const [thumbHeight, setThumbHeight] = useState(30);
 
-  // Mobile horizontal scroll by viewport width
   const scrollHorizontal = (dir) => {
     const el = hScrollRef.current;
     if (!el) return;
@@ -21,18 +18,14 @@ const CaseStudySection = () => {
     el.scrollBy({ left: dir === "left" ? -width : width, behavior: "smooth" });
   };
 
-  // Update thumb position/height based on vertical scroll container
   useEffect(() => {
     const container = vScrollRef.current;
     if (!container) return;
-
     let rafId = null;
 
     const isVisible = () => {
-      // if element is not currently visible (e.g., display: none on small screens), skip
       try {
         const style = window.getComputedStyle(container);
-        if (!style) return false;
         return style.display !== "none" && container.clientHeight > 0;
       } catch {
         return false;
@@ -49,15 +42,15 @@ const CaseStudySection = () => {
         return;
       }
 
-      const newThumbHeight = Math.max((clientHeight / scrollHeight) * 100, 5); // min 5% so it's visible
+      const newThumbHeight = Math.max((clientHeight / scrollHeight) * 100, 5);
       const maxThumbTop = 100 - newThumbHeight;
-      const newThumbTop = (scrollTop / (scrollHeight - clientHeight)) * maxThumbTop;
+      const newThumbTop =
+        (scrollTop / (scrollHeight - clientHeight)) * maxThumbTop;
 
       setThumbHeight(newThumbHeight);
       setThumbTop(newThumbTop);
     };
 
-    // use RAF for smoother updates on scroll
     const onScroll = () => {
       if (rafId) cancelAnimationFrame(rafId);
       rafId = requestAnimationFrame(updateThumb);
@@ -72,9 +65,8 @@ const CaseStudySection = () => {
       window.removeEventListener("resize", updateThumb);
       if (rafId) cancelAnimationFrame(rafId);
     };
-  }, []); // run once, listeners handle updates
+  }, []);
 
-  // Drag logic for the thumb (desktop vertical)
   useEffect(() => {
     const container = vScrollRef.current;
     const thumb = thumbRef.current;
@@ -111,8 +103,8 @@ const CaseStudySection = () => {
 
       setThumbTop(newTop);
 
-      // convert thumb position to scrollTop
-      const newScrollTop = (newTop / maxThumbTop) * (scrollHeight - clientHeight) || 0;
+      const newScrollTop =
+        (newTop / maxThumbTop) * (scrollHeight - clientHeight) || 0;
       container.scrollTop = newScrollTop;
     };
 
@@ -122,7 +114,6 @@ const CaseStudySection = () => {
       document.body.style.userSelect = "auto";
     };
 
-    // Touch equivalents
     const onTouchStart = (e) => {
       if (!isVisible()) return;
       isDragging = true;
@@ -138,7 +129,8 @@ const CaseStudySection = () => {
       const newTop = Math.min(Math.max(startTop + deltaY, 0), maxThumbTop);
 
       setThumbTop(newTop);
-      const newScrollTop = (newTop / maxThumbTop) * (scrollHeight - clientHeight) || 0;
+      const newScrollTop =
+        (newTop / maxThumbTop) * (scrollHeight - clientHeight) || 0;
       container.scrollTop = newScrollTop;
       e.preventDefault();
     };
@@ -162,11 +154,9 @@ const CaseStudySection = () => {
     };
   }, [thumbTop, thumbHeight]);
 
-  // Single Case Study Item (kept same layout as before)
   const CaseStudyItem = ({ title, result, downloads, traffic }) => (
-    <div className="flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] lg:w-full">
+    <div className="flex-shrink-0 w-full sm:w-[320px] md:w-[360px] lg:w-full">
       <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-16 w-full mb-16">
-        {/* Left Content */}
         <div className="w-full lg:w-[380px] flex flex-col">
           <h2 className="text-[20px] sm:text-[22px] md:text-[28px] font-bold text-white mb-3">
             {title}
@@ -177,7 +167,6 @@ const CaseStudySection = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
 
-          {/* Metrics */}
           <div className="flex items-center justify-between w-full mb-6">
             <div className="text-center flex-1">
               <div className="text-[14px] text-[#9F9F9F]">Result</div>
@@ -187,7 +176,7 @@ const CaseStudySection = () => {
               <div className="text-[14px] text-[#9F9F9F]">App downloads</div>
             </div>
 
-            <div className="w-px bg-[#0E3F48] h-[40px] hidden sm:block"></div>
+            <div className="w-px bg-[#fff] h-[40px] hidden sm:block"></div>
 
             <div className="text-center flex-1">
               <div className="text-[18px] sm:text-[20px] font-medium text-white mb-1">
@@ -197,13 +186,13 @@ const CaseStudySection = () => {
             </div>
           </div>
 
-          {/* Button */}
-          <button className="w-[150px] h-[38px] text-[14px] hover:border-hidden border border-[#D6D6D6] text-[#D6D6D6] rounded-[5px] flex items-center justify-center hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)]">
+          <button className="hidden sm:block w-[150px] h-[38px] text-[14px] hover:border-hidden border border-[#D6D6D6] text-[#D6D6D6] rounded-[5px]  items-center justify-center hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)]">
             View Case Study
           </button>
         </div>
 
-        {/* Right Image */}
+        
+
         <div className="w-full flex items-start justify-center">
           <div className="relative flex w-full">
             <div className="w-full max-w-full lg:max-w-[825px] h-[220px] sm:h-[280px] md:h-[350px] lg:h-[410px] overflow-hidden rounded-[11px] shadow-xl">
@@ -215,66 +204,67 @@ const CaseStudySection = () => {
             </div>
           </div>
         </div>
+
+        <button className="md:hidden w-[150px] h-[38px] text-[14px] hover:border-hidden border border-[#D6D6D6] text-[#D6D6D6] rounded-[5px] flex items-center justify-center hover:bg-[linear-gradient(109.77deg,#06F7C4_-5.67%,#4359FF_26.82%)]">
+            View Case Study
+        </button>
       </div>
     </div>
   );
 
   return (
     <section className="relative w-full overflow-hidden font-gilroy">
-      {/* Background */}
       <div
-        className="w-full px-6 md:px-12 lg:px-24 py-12 md:py-16 lg:py-20 backdrop-blur-[52.9px]"
+        className="w-full px-6 md:px-12 lg:px-24 py-12 md:py-16 lg:py-20 
+        bg-[url('/assets/Group_17.png')] 
+        md:bg-[url('/assets/bg_casestudy.png')]
+        "
         style={{
-          backgroundImage: "url('/assets/bg_casestudy.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        {/* Heading row with arrows */}
-        <div className="mb-6 flex items-center justify-between">
+        <div className=" flex items-center justify-between">
           <img
             src="/assets/CaseStudy.svg"
             alt="Case Study Logo"
-            className="h-[18px] w-auto inline-block align-middle"
+            className="h-[20px] w-auto inline-block align-middle"
           />
 
-          {/* Arrows (only mobile) */}
           <div className="flex gap-2 lg:hidden">
             <button
               onClick={() => scrollHorizontal("left")}
-              className="p-2 bg-white/10 hover:bg-white/20 rounded"
+              className="p-2 border-2 border-[#999999] "
             >
-              <ChevronLeft className="w-4 h-4 text-white" />
+              <ChevronLeft className="w-4 h-4 text-[#999999]" />
             </button>
             <button
               onClick={() => scrollHorizontal("right")}
-              className="p-2 bg-white/10 hover:bg-white/20 rounded"
+              className="p-2  border-[#999999] border-2"
             >
-              <ChevronRight className="w-4 h-4 text-white" />
+              <ChevronRight className="w-4 h-4 text-[#999999]" />
             </button>
           </div>
         </div>
 
-        {/* Wrapper */}
         <div className="relative flex">
-          {/* Mobile: Horizontal scroll */}
           <div
             ref={hScrollRef}
-            className="flex lg:hidden gap-6 overflow-x-auto no-scrollbar scroll-smooth"
+            className="flex lg:hidden gap-6 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory"
             aria-label="Case studies carousel"
           >
             {[...Array(TOTAL_ITEMS)].map((_, i) => (
-              <CaseStudyItem
-                key={i}
-                title={`Microsoft Case ${i + 1}`}
-                result={`${10 + i}M+`}
-                downloads={`${5 + i}M+`}
-                traffic={`${15 + i}M+`}
-              />
+              <div key={i} className="w-full flex-shrink-0 snap-start">
+                <CaseStudyItem
+                  title={`Microsoft ${i + 1}`}
+                  result={`${10 + i}M+`}
+                  downloads={`${5 + i}M+`}
+                  traffic={`${15 + i}M+`}
+                />
+              </div>
             ))}
           </div>
 
-          {/* Desktop: Vertical scroll with gradient scrollbar */}
           <div className="hidden lg:flex relative flex-1 items-start">
             <div
               ref={vScrollRef}
@@ -283,7 +273,7 @@ const CaseStudySection = () => {
               {[...Array(TOTAL_ITEMS)].map((_, i) => (
                 <CaseStudyItem
                   key={i}
-                  title={`Microsoft Case ${i + 1}`}
+                  title={`Microsoft ${i + 1}`}
                   result={`${10 + i}M+`}
                   downloads={`${5 + i}M+`}
                   traffic={`${15 + i}M+`}
@@ -291,7 +281,6 @@ const CaseStudySection = () => {
               ))}
             </div>
 
-            {/* Gradient Scrollbar (desktop only) */}
             <div className="absolute right-0 top-0 h-full flex items-start">
               <div className="w-[3px] h-full bg-gray-600/50 rounded-full relative">
                 <div
@@ -300,7 +289,8 @@ const CaseStudySection = () => {
                   style={{
                     top: `${thumbTop}%`,
                     height: `${thumbHeight}%`,
-                    background: "linear-gradient(180deg, #06F7C4 0%, #4359FF 100%)",
+                    background:
+                      "linear-gradient(180deg, #06F7C4 0%, #4359FF 100%)",
                   }}
                   aria-hidden="true"
                 />
