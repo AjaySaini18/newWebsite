@@ -15,7 +15,7 @@ const InsightsFeatureThree = () => {
 
   return (
     <section
-      className="w-full relative py-10 lg:py-24 px-6 md:px-12 lg:px-24 font-gilroy text-white"
+      className="w-full relative py-10 lg:py-24 px-6 md:px-12 lg:px-24 font-gilroy text-white bg-[url('/assets/Group_18.png')]  md:bg-[url('/assets/Rectangle-19.png')]"
       style={{
         backgroundImage: "url('/assets/Rectangle-19.png')",
         backgroundSize: "cover",
@@ -33,7 +33,7 @@ const InsightsFeatureThree = () => {
           variants={imageVariants}
         >
           <img
-            src="/assets/Rectangle-7774.jpg"
+            src="/assets/Rectangle_7775.webp"
             alt="Artificial Intelligence Video"
             className="rounded-xl shadow-lg w-full h-full object-cover"
           />

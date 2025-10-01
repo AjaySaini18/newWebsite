@@ -7,15 +7,14 @@ import { Link } from "react-router-dom";
 const ContactCTA = () => {
   return (
     <section
-      className="w-full relative py-8 sm:py-12 px-6 md:px-12 lg:px-24 font-gilroy"
+      className="w-full relative py-8 sm:py-12 px-6 md:px-12 lg:px-24 font-gilroy bg-[url('/assets/Rectangle_4420.png')] md:bg-[url('/assets/Rectangle35.png')]"
       style={{
-        backgroundImage: "url('/assets/Rectangle35.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Main container with proper max-width and centered alignment */}
-      <div className="max-w-7xl mx-auto ">
+      <div className="max-w-full mx-auto ">
         <div className="grid grid-cols-1 lg:grid-cols-12 items-end gap-6 sm:gap-8">
           {/* Left Box */}
           <motion.div

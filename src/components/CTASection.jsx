@@ -49,8 +49,8 @@ const CTASection = () => {
 
   return (
     <section
-      className="relative w-full pt-10 pb-20 px-4 px-6 md:px-12 lg:px-24 bg-cover bg-center"
-      style={{ backgroundImage: "url('/assets/bg_casestudy.png')" }}
+      className="relative w-full pt-10 pb-20  px-6 md:px-12 lg:px-24 bg-cover bg-center bg-[url('/assets/Group_1000004166.png')] md:bg-[url('/assets/bg_casestudy.png')]"
+      
     >
       <div className="max-w-full mx-auto">
         {/* Heading + Arrows */}
